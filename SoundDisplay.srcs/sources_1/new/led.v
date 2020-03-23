@@ -20,13 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module led(
+module Led(
     input en,
     input [3:0] num,
     output [15:0] leds
     );
     genvar i;
     for (i=0; i<=15; i=i+1) begin
-        assign leds[i] = en ? num > i : 0;
+        assign leds[i] = en ? num >= i : 0;
     end
 endmodule

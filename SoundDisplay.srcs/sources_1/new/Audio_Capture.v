@@ -8,7 +8,7 @@
 // Project Name: Audio Effects
 // Module Name: Audio_Capture
 // Description: 
-//      This module converts serial MIC input into a 12-bit parallel register [11:0]sample.    
+//      This module converts serial MIC input into a 12-bit parallel register [11:0]sample.
 //
 //      The audio input is sampled by PmodMIC3, the sampling rate of which is assigned to Pin 1 ChipSelect (cs).
 //      The Analog-to-Digital Concertor (ADC) on PmodMIC3 converts the audio analog signal into a 16-bit digital form

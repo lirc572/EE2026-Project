@@ -58,16 +58,16 @@
 //Note that `SegZero == `SegO
 
 //500.00Hz
-module Clk500p00hz(
+module Clk200p00hz(
     input cin,
     output reg cout
     );
-    reg [17:0] counter = 18'b0;
+    reg [19:0] counter = 19'b0;
     always @ (posedge cin) begin
-        counter <= (counter==18'b110000110101000000) ? 18'b0 : counter + 1;
+        counter <= (counter==19'b1111010000100100000) ? 19'b0 : counter + 1;
     end
     always @ (posedge cin) begin
-        cout <= counter == 18'b0;
+        cout <= counter == 19'b0;
     end
 endmodule
 
@@ -85,7 +85,7 @@ module NumToSeg (
                  num==7  ? `SegSeven :
                  num==8  ? `SegEight :
                  num==9  ? `SegNine  :
-                           `SegOff;
+                           `SegOff   ;
 
 endmodule
 
@@ -100,26 +100,27 @@ module SegDisp(
     
     reg [3:0] n_reg;
     reg dp_reg = `DpOff;
-    wire [3:0] n2sn;
+    reg an_reg = `AnAll;
     wire [6:0] n2ss;
-    assign n2sn = n_reg;
     assign seg = en ? n2ss : `SegOff;
     assign dp = en ? dp_reg : `DpOff;
-    assign an = `AnAll;
+    assign an = en ? an_reg : `AnOff;
     
     wire clk;
-    Clk500p00hz c500 (CLK100MHZ, clk);
+    Clk200p00hz c200 (CLK100MHZ, clk);
     
-    NumToSeg n2s (n2sn, n2ss);
+    NumToSeg n2s (n_reg, n2ss);
     reg [1:0] dig_curr = 0;
     
     always @ (posedge clk) begin
-        if (dig_curr<2)
+        if (dig_curr==0) begin
+            n_reg <= num > 'd9 ? num - 'd10 : num;
+        end else if (dig_curr==1) begin
+            n_reg <= num > 'd9 ? 'd1 : 'd10;
+        end else begin
             n_reg <= 'd10;
-        else if (dig_curr==3)
-            n_reg <= num / 10;
-        else
-            n_reg <= num % 10;
+        end
+        an_reg <= dig_curr==0 ? `AnZero : dig_curr==1 ? `AnOne : dig_curr==2 ? `AnTwo : `AnThree;
         dig_curr <= dig_curr + 1;
     end
     

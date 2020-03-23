@@ -14,6 +14,18 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
+module Clk2p00hz(
+    input cin,
+    output reg cout
+    );
+    reg [25:0] counter = 26'b0;
+    always @ (posedge cin) begin
+        counter <= (counter==26'b10111110101111000010000000) ? 26'b0 : counter + 1;
+    end
+    always @ (posedge cin) begin
+        cout <= counter == 26'b0;
+    end
+endmodule
 
 module Top_Student (
     input CLK100MHZ,
@@ -22,22 +34,22 @@ module Top_Student (
     input  J_MIC3_Pin3,   // Connect from this signal to Audio_Capture.v
     output J_MIC3_Pin1,   // Connect to this signal from Audio_Capture.v
     output J_MIC3_Pin4,   // Connect to this signal from Audio_Capture.v
-    output [11:0] led,
+    output [15:0] led,
+    output [6:0] seg,
+    output dp,
+    output [3:0] an,
     output [7:0] JB
     );
     
     wire [11:0] mic_in;
-    
     wire rst;
-    
     reg clk20k, clk6p25m, clk100;
-    
     wire [15:0] oled_data = {5'd0, 6'd0, mic_in[11:7]};
-    
-    assign led = sw[0] ? mic_in : 0;
+    reg [3:0] volume = 0;
+    wire ledout;
+    assign led = sw[0] ? mic_in : ledout;
     
     integer counter_1 = 'd4999, counter_2 = 'd15;
-    
     always @ (posedge CLK100MHZ) begin
         counter_1 <= ( counter_1 == 0 )     ? 'd4999   : counter_1 - 1;
         counter_2 <= ( counter_2 == 0 )     ? 'd15     : counter_2 - 1;
@@ -71,5 +83,22 @@ module Top_Student (
                        .vccen(JB[6]),
                        .pmoden(JB[7]),
                        .teststate(ha5) );
+    
+    SegDisp sd ( .en(1),
+                 .CLK100MHZ(CLK100MHZ),
+                 .num(volume),
+                 .seg(seg),
+                 .dp(dp),
+                 .an(an) );
+    
+    Led ld ( .en(1),
+             .num(volume),
+             .leds(ledout) );
+    
+    wire ccccc;
+    Clk2p00hz c2p0 (CLK100MHZ, ccccc);
+    always @ (posedge ccccc) begin
+        volume <= volume + 1;
+    end
     
 endmodule
