@@ -69,12 +69,12 @@ set rc [catch {
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/rochor/MEGA/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.cache/wt [current_project]
-  set_property parent.project_path /home/rochor/MEGA/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.xpr [current_project]
-  set_property ip_output_repo /home/rochor/MEGA/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.cache/wt [current_project]
+  set_property parent.project_path /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.xpr [current_project]
+  set_property ip_output_repo /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet /home/rochor/MEGA/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.runs/synth_1/Top_Student.dcp
-  read_xdc /home/rochor/MEGA/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc
+  add_files -quiet /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.runs/synth_1/Top_Student.dcp
+  read_xdc /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc
   link_design -top Top_Student -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

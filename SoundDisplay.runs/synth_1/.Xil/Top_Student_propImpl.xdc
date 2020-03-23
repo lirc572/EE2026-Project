@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/rochor/MEGA/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc rfile:../../../SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc rfile:../../../SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports CLK100MHZ]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]

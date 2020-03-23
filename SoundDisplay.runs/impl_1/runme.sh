@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/rochor/MEGA/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.runs/impl_1'
+HD_PWD='/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

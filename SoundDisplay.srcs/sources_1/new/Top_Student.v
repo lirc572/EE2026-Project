@@ -46,10 +46,30 @@ module Top_Student (
         clk6p25m  <= ( counter_2 <  8   )   ? 1 : 0;
     end
     
-    SPO bl (CLK100MHZ, btnC, rst);
+    SPO bl ( CLK100MHZ, btnC, rst );
     
-    Audio_Capture ac ( CLK100MHZ, clk20k, J_MIC3_Pin3, J_MIC3_Pin1, J_MIC3_Pin4, mic_in );
+    Audio_Capture ac ( .CLK(CLK100MHZ),
+                       .cs(clk20k),
+                       .MISO(J_MIC3_Pin3),
+                       .clk_samp(J_MIC3_Pin1),
+                       .sclk(J_MIC3_Pin4),
+                       .sample(mic_in) );
     
-    Oled_Display  od ( clk6p25m, rst, ha1, ha2, ha3, ha4, oled_data, JB[0], JB[1], JB[3], JB[4], JB[5], JB[6], JB[7], ha5 );
+    wire ha1, ha2, ha3, ha4, ha5;
+    Oled_Display  od ( .clk(clk6p25m),
+                       .reset(rst),
+                       .frame_begin(ha1),
+                       .sending_pixels(ha2),
+                       .sample_pixel(ha3),
+                       .pixel_index(ha4),
+                       .pixel_data(oled_data),
+                       .cs(JB[0]),
+                       .sdin(JB[1]),
+                       .sclk(JB[3]),
+                       .d_cn(JB[4]),
+                       .resn(JB[5]),
+                       .vccen(JB[6]),
+                       .pmoden(JB[7]),
+                       .teststate(ha5) );
     
 endmodule
