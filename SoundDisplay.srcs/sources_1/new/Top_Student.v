@@ -14,7 +14,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-`define AVGNUM 1000
+`define AVGNUM 100
 
 module Clk10p0hz(
     input cin,
@@ -54,7 +54,7 @@ module Top_Student (
     integer i;
     initial begin
         for (i=0; i<`AVGNUM; i=i+1) begin
-            mic_in_reg[1] = 'd0;
+            mic_in_reg[i] = 'd0;
         end
     end
     
@@ -73,29 +73,12 @@ module Top_Student (
                        .clk_samp(J_MIC3_Pin1),
                        .sclk(J_MIC3_Pin4),
                        .sample(mic_in) );
-    /*
-    wire ha1, ha2, ha3, ha4, ha5;
-    Oled_Display  od ( .clk(clk6p25m),
-                       .reset(rst),
-                       .frame_begin(ha1),
-                       .sending_pixels(ha2),
-                       .sample_pixel(ha3),
-                       .pixel_index(ha4),
-                       .pixel_data(oled_data),
-                       .cs(JB[0]),
-                       .sdin(JB[1]),
-                       .sclk(JB[3]),
-                       .d_cn(JB[4]),
-                       .resn(JB[5]),
-                       .vccen(JB[6]),
-                       .pmoden(JB[7]),
-                       .teststate(ha5) );*/
-    /*
+    
     OLed_Volume_Display ovd ( .en(1),
                               .rst(rst),
                               .CLK100MHZ(CLK100MHZ),
                               .num(volume),
-                              .JB(JB) );*/
+                              .JB(JB) );
     
     SegDisp sd ( .en(1),
                  .CLK100MHZ(CLK100MHZ),
@@ -108,7 +91,7 @@ module Top_Student (
              .num(volume),
              .leds(ledout) );
     
-    integer j = 0;
+    integer j = 'd0;
     always @ (mic_in) begin
         mic_in_reg[j] <= mic_in;
         j <= (j+1)<`AVGNUM ? j + 1 : 'd0;
@@ -119,18 +102,20 @@ module Top_Student (
     reg [11:0] volume_tmp = 'd0;
     reg [11:0] mic_in_min;
     always @ (mic_in) begin
-        mic_in_min = 'd4095;
-        mic_in_max = 'd0;
-        for (k=0; k<`AVGNUM; k=k+1) begin
-            mic_in_max = mic_in_reg[k]>mic_in_max ? mic_in_reg[k] : mic_in_max;
-            mic_in_min = mic_in_reg[k]<mic_in_min ? mic_in_reg[k] : mic_in_min;
+        if (j==0) begin
+            mic_in_min = 'd4095;
+            mic_in_max = 'd0;
+            for (k=0; k<`AVGNUM; k=k+1) begin
+                mic_in_max = mic_in_reg[k]>mic_in_max ? mic_in_reg[k] : mic_in_max;
+                mic_in_min = mic_in_reg[k]<mic_in_min ? mic_in_reg[k] : mic_in_min;
+            end
+            volume_tmp = mic_in_max-mic_in_min;
         end
-        volume_tmp = mic_in_max-mic_in_min;
     end
     
     wire ccccc;
     Clk10p0hz c10p0 (CLK100MHZ, ccccc);
-    always @ (ccccc) begin //10 times a sec
+    always @ (posedge ccccc) begin //10 times a sec
         volume <= volume_tmp[11:8];
     end
     
