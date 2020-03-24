@@ -14,15 +14,15 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-`define AVGNUM 10
+`define AVGNUM 1000
 
-module Clk2p00hz(
+module Clk10p0hz(
     input cin,
     output reg cout
     );
-    reg [25:0] counter = 26'b0;
+    reg [23:0] counter = 24'b0;
     always @ (posedge cin) begin
-        counter <= (counter==26'b10111110101111000010000000) ? 26'b0 : counter + 1;
+        counter <= (counter=='b100110001001011010000000) ? 'b0 : counter + 1;
     end
     always @ (posedge cin) begin
         cout <= counter < 'b1011111010111100001000000;
@@ -45,8 +45,8 @@ module Top_Student (
     wire [11:0] mic_in;
     reg [11:0] mic_in_reg [0:`AVGNUM-1];
     wire rst;
-    reg clk20k, clk6p25m, clk100;
-    wire [15:0] oled_data = {5'd0, 6'd0, mic_in[11:7]};
+    reg clk20k, clk100;
+    //wire [15:0] oled_data = {5'd0, 6'd0, mic_in[11:7]};
     reg [3:0] volume = 0;
     wire [15:0] ledout;
     assign led = sw[0] ? mic_in : ledout;
@@ -58,13 +58,11 @@ module Top_Student (
         end
     end
     
-    integer counter_1 = 'd4999, counter_2 = 'd15;
+    integer counter_1 = 'd4999;
     always @ (posedge CLK100MHZ) begin
         counter_1 <= ( counter_1 == 0 )     ? 'd4999   : counter_1 - 1;
-        counter_2 <= ( counter_2 == 0 )     ? 'd15     : counter_2 - 1;
         
         clk20k    <= ( counter_1 <  2500)   ? 1 : 0;
-        clk6p25m  <= ( counter_2 <  8   )   ? 1 : 0;
     end
     
     SPO bl ( CLK100MHZ, btnC, rst );
@@ -75,7 +73,7 @@ module Top_Student (
                        .clk_samp(J_MIC3_Pin1),
                        .sclk(J_MIC3_Pin4),
                        .sample(mic_in) );
-    
+    /*
     wire ha1, ha2, ha3, ha4, ha5;
     Oled_Display  od ( .clk(clk6p25m),
                        .reset(rst),
@@ -91,7 +89,13 @@ module Top_Student (
                        .resn(JB[5]),
                        .vccen(JB[6]),
                        .pmoden(JB[7]),
-                       .teststate(ha5) );
+                       .teststate(ha5) );*/
+    /*
+    OLed_Volume_Display ovd ( .en(1),
+                              .rst(rst),
+                              .CLK100MHZ(CLK100MHZ),
+                              .num(volume),
+                              .JB(JB) );*/
     
     SegDisp sd ( .en(1),
                  .CLK100MHZ(CLK100MHZ),
@@ -104,25 +108,30 @@ module Top_Student (
              .num(volume),
              .leds(ledout) );
     
-    wire [100:0] mic_sum [0:`AVGNUM-1];
-    genvar j;
-    for (j=0; j<`AVGNUM; j=j+1) begin
-        assign mic_sum[j] = j==0 ? mic_in_reg[0] : mic_sum[j-1] + mic_in_reg[j];
-    end
-    wire [11:0] mic_avg;
-    assign mic_avg = mic_sum[`AVGNUM-1] / `AVGNUM;
-    
+    integer j = 0;
     always @ (mic_in) begin
-        for (i=0; i<`AVGNUM-1; i=i+1)
-            mic_in_reg[i] = mic_in_reg[i+1];
-        mic_in_reg[i] = mic_in;
+        mic_in_reg[j] <= mic_in;
+        j <= (j+1)<`AVGNUM ? j + 1 : 'd0;
     end
     
+    integer k;
+    reg [11:0] mic_in_max;
+    reg [11:0] volume_tmp = 'd0;
+    reg [11:0] mic_in_min;
+    always @ (mic_in) begin
+        mic_in_min = 'd4095;
+        mic_in_max = 'd0;
+        for (k=0; k<`AVGNUM; k=k+1) begin
+            mic_in_max = mic_in_reg[k]>mic_in_max ? mic_in_reg[k] : mic_in_max;
+            mic_in_min = mic_in_reg[k]<mic_in_min ? mic_in_reg[k] : mic_in_min;
+        end
+        volume_tmp = mic_in_max-mic_in_min;
+    end
     
     wire ccccc;
-    Clk2p00hz c2p0 (CLK100MHZ, ccccc);
-    always @ (posedge ccccc) begin //twice a sec
-        volume <= mic_avg / 64;
+    Clk10p0hz c10p0 (CLK100MHZ, ccccc);
+    always @ (ccccc) begin //10 times a sec
+        volume <= volume_tmp[11:8];
     end
     
 endmodule

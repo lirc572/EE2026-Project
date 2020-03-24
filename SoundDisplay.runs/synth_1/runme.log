@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 25142 
+INFO: Helper process launched with PID 29032 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1264.137 ; gain = 79.844 ; free physical = 657 ; free virtual = 11267
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1264.137 ; gain = 79.844 ; free physical = 3155 ; free virtual = 12373
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
 INFO: [Synth 8-6157] synthesizing module 'SPO' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SPO.v:42]
@@ -27,77 +27,31 @@ INFO: [Synth 8-6155] done synthesizing module 'My_Dff' (2#1) [/home/rochor/Deskt
 INFO: [Synth 8-6155] done synthesizing module 'SPO' (3#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SPO.v:42]
 INFO: [Synth 8-6157] synthesizing module 'Audio_Capture' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
 INFO: [Synth 8-6155] done synthesizing module 'Audio_Capture' (4#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
-INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
-	Parameter Width bound to: 96 - type: integer 
-	Parameter Height bound to: 64 - type: integer 
-	Parameter PixelCount bound to: 6144 - type: integer 
-	Parameter PixelCountWidth bound to: 13 - type: integer 
-	Parameter ClkFreq bound to: 6250000 - type: integer 
-	Parameter FrameFreq bound to: 60 - type: integer 
-	Parameter FrameDiv bound to: 104166 - type: integer 
-	Parameter FrameDivWidth bound to: 17 - type: integer 
-	Parameter PowerDelay bound to: 20 - type: integer 
-	Parameter ResetDelay bound to: 3 - type: integer 
-	Parameter VccEnDelay bound to: 20 - type: integer 
-	Parameter StartupCompleteDelay bound to: 100 - type: integer 
-	Parameter MaxDelay bound to: 100 - type: integer 
-	Parameter MaxDelayCount bound to: 625000 - type: integer 
-	Parameter StateCount bound to: 32 - type: integer 
-	Parameter StateWidth bound to: 5 - type: integer 
-	Parameter PowerUp bound to: 5'b00000 
-	Parameter Reset bound to: 5'b00001 
-	Parameter ReleaseReset bound to: 5'b00011 
-	Parameter EnableDriver bound to: 5'b00010 
-	Parameter DisplayOff bound to: 5'b00110 
-	Parameter SetRemapDisplayFormat bound to: 5'b00111 
-	Parameter SetStartLine bound to: 5'b00101 
-	Parameter SetOffset bound to: 5'b00100 
-	Parameter SetNormalDisplay bound to: 5'b01100 
-	Parameter SetMultiplexRatio bound to: 5'b01101 
-	Parameter SetMasterConfiguration bound to: 5'b01111 
-	Parameter DisablePowerSave bound to: 5'b01110 
-	Parameter SetPhaseAdjust bound to: 5'b01010 
-	Parameter SetDisplayClock bound to: 5'b01011 
-	Parameter SetSecondPrechargeA bound to: 5'b01001 
-	Parameter SetSecondPrechargeB bound to: 5'b01000 
-	Parameter SetSecondPrechargeC bound to: 5'b11000 
-	Parameter SetPrechargeLevel bound to: 5'b11001 
-	Parameter SetVCOMH bound to: 5'b11011 
-	Parameter SetMasterCurrent bound to: 5'b11010 
-	Parameter SetContrastA bound to: 5'b11110 
-	Parameter SetContrastB bound to: 5'b11111 
-	Parameter SetContrastC bound to: 5'b11101 
-	Parameter DisableScrolling bound to: 5'b11100 
-	Parameter ClearScreen bound to: 5'b10100 
-	Parameter VccEn bound to: 5'b10101 
-	Parameter DisplayOn bound to: 5'b10111 
-	Parameter PrepareNextFrame bound to: 5'b10110 
-	Parameter SetColAddress bound to: 5'b10010 
-	Parameter SetRowAddress bound to: 5'b10011 
-	Parameter WaitNextFrame bound to: 5'b10001 
-	Parameter SendPixel bound to: 5'b10000 
-	Parameter SpiCommandMaxWidth bound to: 40 - type: integer 
-	Parameter SpiCommandBitCountWidth bound to: 6 - type: integer 
-INFO: [Synth 8-226] default block is never used [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:124]
-INFO: [Synth 8-226] default block is never used [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:201]
-WARNING: [Synth 8-693] zero replication count - replication ignored [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:349]
-INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (5#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
-WARNING: [Synth 8-689] width (1) of port connection 'pixel_index' does not match port width (13) of module 'Oled_Display' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:85]
-WARNING: [Synth 8-689] width (1) of port connection 'teststate' does not match port width (5) of module 'Oled_Display' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:94]
 INFO: [Synth 8-6157] synthesizing module 'SegDisp' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SegDisp.v:92]
 INFO: [Synth 8-6157] synthesizing module 'Clk200p00hz' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SegDisp.v:61]
-INFO: [Synth 8-6155] done synthesizing module 'Clk200p00hz' (6#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SegDisp.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'Clk200p00hz' (5#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SegDisp.v:61]
 INFO: [Synth 8-6157] synthesizing module 'NumToSeg' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SegDisp.v:74]
-INFO: [Synth 8-6155] done synthesizing module 'NumToSeg' (7#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SegDisp.v:74]
-INFO: [Synth 8-6155] done synthesizing module 'SegDisp' (8#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SegDisp.v:92]
+INFO: [Synth 8-6155] done synthesizing module 'NumToSeg' (6#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SegDisp.v:74]
+INFO: [Synth 8-6155] done synthesizing module 'SegDisp' (7#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SegDisp.v:92]
 INFO: [Synth 8-6157] synthesizing module 'Led' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/led.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Led' (9#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/led.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Clk2p00hz' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:19]
-INFO: [Synth 8-6155] done synthesizing module 'Clk2p00hz' (10#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:19]
-INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (11#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'Led' (8#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/led.v:23]
+WARNING: [Synth 8-567] referenced signal 'j' should be on the sensitivity list [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:112]
+WARNING: [Synth 8-567] referenced signal 'mic_in_reg' should be on the sensitivity list [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:121]
+INFO: [Synth 8-6157] synthesizing module 'Clk10p0hz' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'Clk10p0hz' (9#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:19]
+WARNING: [Synth 8-567] referenced signal 'volume_tmp' should be on the sensitivity list [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:133]
+WARNING: [Synth 8-3848] Net JB in module/entity Top_Student does not have driver. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (10#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[7]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[6]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[5]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[4]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[3]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[2]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[1]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1308.762 ; gain = 124.469 ; free physical = 668 ; free virtual = 11279
+Finished RTL Elaboration : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1412.762 ; gain = 228.469 ; free physical = 3060 ; free virtual = 12281
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -110,10 +64,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1308.762 ; gain = 124.469 ; free physical = 668 ; free virtual = 11279
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1412.762 ; gain = 228.469 ; free physical = 3094 ; free virtual = 12316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1308.762 ; gain = 124.469 ; free physical = 668 ; free virtual = 11279
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1412.762 ; gain = 228.469 ; free physical = 3094 ; free virtual = 12316
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -129,116 +83,280 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1653.121 ; gain = 0.000 ; free physical = 411 ; free virtual = 11025
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1773.066 ; gain = 0.000 ; free physical = 2785 ; free virtual = 12007
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1653.121 ; gain = 468.828 ; free physical = 491 ; free virtual = 11105
+Finished Constraint Validation : Time (s): cpu = 00:00:51 ; elapsed = 00:00:59 . Memory (MB): peak = 1773.066 ; gain = 588.773 ; free physical = 2919 ; free virtual = 12141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1653.121 ; gain = 468.828 ; free physical = 491 ; free virtual = 11105
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:51 ; elapsed = 00:00:59 . Memory (MB): peak = 1773.066 ; gain = 588.773 ; free physical = 2919 ; free virtual = 12141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1653.121 ; gain = 468.828 ; free physical = 492 ; free virtual = 11107
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:59 . Memory (MB): peak = 1773.066 ; gain = 588.773 ; free physical = 2919 ; free virtual = 12140
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
-INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "fsm_next_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "counter_10" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "counter_20" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 PowerUp | 00000000100000000000000000000000 |                            00000
-                   Reset | 00000000000100000000000000000000 |                            00001
-            ReleaseReset | 00000000000000000000100000000000 |                            00011
-            EnableDriver | 00000000000000000001000000000000 |                            00010
-              DisplayOff | 00000000000000000100000000000000 |                            00110
-   SetRemapDisplayFormat | 00000100000000000000000000000000 |                            00111
-            SetStartLine | 00001000000000000000000000000000 |                            00101
-               SetOffset | 10000000000000000000000000000000 |                            00100
-        SetNormalDisplay | 00000000000000000000000010000000 |                            01100
-       SetMultiplexRatio | 00000000000000000000000000100000 |                            01101
-  SetMasterConfiguration | 00000000000000000000000001000000 |                            01111
-        DisablePowerSave | 00000000000000000000000000000100 |                            01110
-          SetPhaseAdjust | 00000000000000000000000000001000 |                            01010
-         SetDisplayClock | 00000000001000000000000000000000 |                            01011
-     SetSecondPrechargeA | 00000000010000000000000000000000 |                            01001
-     SetSecondPrechargeB | 01000000000000000000000000000000 |                            01000
-     SetSecondPrechargeC | 00000010000000000000000000000000 |                            11000
-       SetPrechargeLevel | 00000001000000000000000000000000 |                            11001
-                SetVCOMH | 00000000000000010000000000000000 |                            11011
-        SetMasterCurrent | 00000000000000100000000000000000 |                            11010
-            SetContrastA | 00000000000001000000000000000000 |                            11110
-            SetContrastB | 00100000000000000000000000000000 |                            11111
-            SetContrastC | 00000000000000000000000000000001 |                            11101
-        DisableScrolling | 00000000000000000000000000000010 |                            11100
-             ClearScreen | 00000000000000000000000000010000 |                            10100
-                   VccEn | 00010000000000000000000000000000 |                            10101
-               DisplayOn | 00000000000010000000000000000000 |                            10111
-        PrepareNextFrame | 00000000000000001000000000000000 |                            10110
-           SetColAddress | 00000000000000000000010000000000 |                            10010
-           SetRowAddress | 00000000000000000000000100000000 |                            10011
-           WaitNextFrame | 00000000000000000000001000000000 |                            10001
-               SendPixel | 00000000000000000010000000000000 |                            10000
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[18]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[24]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[25]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[26]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[27]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[36]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[37]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[38]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[39]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[40]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[41]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[42]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[43]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[49]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[50]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[51]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[52]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[53]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[54]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[55]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[56]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[57]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[58]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[59]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[60]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[61]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[62]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[63]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[64]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[65]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[66]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[67]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[68]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[69]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[70]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[71]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[72]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[73]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[74]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[75]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[76]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[77]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[78]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[79]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[80]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[81]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[82]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[83]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[84]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[85]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[86]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[87]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[88]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[89]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[90]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[91]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[92]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[93]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[94]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[95]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[96]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[97]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[98]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mic_in_reg_reg[99]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[0]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[1]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[3]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[2]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[5]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[4]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[7]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[6]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[9]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[8]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[11]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[10]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[13]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[12]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[15]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[14]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[17]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[16]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[19]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[18]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[21]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[20]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[23]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[22]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[25]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[24]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[27]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[26]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[29]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[28]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[31]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[30]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[33]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[32]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[35]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[34]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[37]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[36]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[39]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[38]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[41]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[40]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[43]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[42]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[45]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[44]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[47]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[46]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[49]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[48]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[51]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[50]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[53]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[52]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[55]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[54]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[57]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[56]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[59]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[58]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[61]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[60]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[63]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[62]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[65]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[64]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[67]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[66]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[69]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[68]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[71]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[70]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[73]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[72]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[75]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[74]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[77]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[76]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[79]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[78]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[81]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[80]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[83]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[82]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[85]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[84]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[87]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[86]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[89]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[88]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[91]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[90]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[93]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[92]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[95]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[94]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[97]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[96]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[99]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'mic_in_reg_reg[98]' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:113]
+INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 1653.121 ; gain = 468.828 ; free physical = 482 ; free virtual = 11097
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:28 ; elapsed = 00:01:39 . Memory (MB): peak = 1773.066 ; gain = 588.773 ; free physical = 2831 ; free virtual = 12055
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+------------------+------------+----------+
+|      |RTL Partition     |Replication |Instances |
++------+------------------+------------+----------+
+|1     |Top_Student__GB0  |           1|     25669|
+|2     |Top_Student__GB1  |           1|      8815|
+|3     |Top_Student__GB2  |           1|      8364|
+|4     |Top_Student__GB3  |           1|     11851|
+|5     |Top_Student__GB4  |           1|     19176|
+|6     |Top_Student__GB5  |           1|     19735|
+|7     |Top_Student__GB6  |           1|     25996|
+|8     |Top_Student__GB7  |           1|     28400|
+|9     |Top_Student__GB8  |           1|      6528|
+|10    |Top_Student__GB9  |           1|     30054|
+|11    |Top_Student__GB10 |           1|     13861|
+|12    |Top_Student__GB11 |           1|     11592|
+|13    |Top_Student__GB12 |           1|     24550|
+|14    |Top_Student__GB13 |           1|     12825|
+|15    |Top_Student__GB14 |           1|     10114|
+|16    |Top_Student__GB15 |           1|     13872|
+|17    |Top_Student__GB16 |           1|     14315|
++------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 2     
-	   2 Input     26 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     24 Bit       Adders := 1     
 	   2 Input     20 Bit       Adders := 2     
-	   2 Input     17 Bit       Adders := 1     
-	  10 Input     16 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 1     
 	   2 Input      1 Bit       Adders := 1     
 +---Registers : 
-	               40 Bit    Registers := 1     
-	               32 Bit    Registers := 2     
-	               26 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
 	               20 Bit    Registers := 2     
-	               17 Bit    Registers := 1     
 	               12 Bit    Registers := 2     
-	                6 Bit    Registers := 1     
-	                4 Bit    Registers := 3     
-	                1 Bit    Registers := 9     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
 +---Muxes : 
-	   2 Input     40 Bit        Muxes := 3     
-	  32 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 4     
-	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     24 Bit        Muxes := 1     
 	   2 Input     20 Bit        Muxes := 2     
-	  32 Input     20 Bit        Muxes := 1     
-	   2 Input     17 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 2997  
 	   2 Input      7 Bit        Muxes := 1     
-	  32 Input      6 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
-	  32 Input      5 Bit        Muxes := 2     
 	   3 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
 	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1000  
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -249,15 +367,16 @@ Hierarchical RTL Component report
 Module Top_Student 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 2     
-	  10 Input     16 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 3     
+	   3 Input     12 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 2     
-	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 2     
 	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 2997  
+	   2 Input      1 Bit        Muxes := 1000  
 Module Clk100p0hz 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -267,6 +386,10 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     20 Bit        Muxes := 1     
+Module My_Dff__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
 Module My_Dff 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -276,26 +399,15 @@ Detailed RTL Component Info :
 +---Registers : 
 	               12 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
-Module Oled_Display 
+Module Clk10p0hz 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     17 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
 +---Registers : 
-	               40 Bit    Registers := 1     
-	               17 Bit    Registers := 1     
-	                6 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     40 Bit        Muxes := 3     
-	  32 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 2     
-	  32 Input     20 Bit        Muxes := 1     
-	   2 Input     17 Bit        Muxes := 1     
-	  32 Input      6 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
-	  32 Input      5 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input     24 Bit        Muxes := 1     
 Module Clk200p00hz 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -318,15 +430,6 @@ Detailed RTL Component Info :
 	   3 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
 	   4 Input      4 Bit        Muxes := 1     
-Module Clk2p00hz 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     26 Bit       Adders := 1     
-+---Registers : 
-	               26 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     26 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -339,57 +442,116 @@ BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 4 processes.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "counter_10" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "counter_20" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[7]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[6]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[5]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[4]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[3]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[2]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[1]
+WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[0]
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-6014] Unused sequential element c10p0/counter_reg was removed.  [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:25]
+WARNING: [Synth 8-6014] Unused sequential element c10p0/cout_reg was removed.  [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:28]
 INFO: [Synth 8-3886] merging instance 'sd/an_reg_reg[2]' (FD) to 'sd/an_reg_reg[3]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sd/an_reg_reg[3] )
-WARNING: [Synth 8-3332] Sequential element (sd/an_reg_reg[3]) is unused and will be removed from module Top_Student.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (sd/\an_reg_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (an_reg_reg[3]) is unused and will be removed from module SegDisp.
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 1653.121 ; gain = 468.828 ; free physical = 460 ; free virtual = 11077
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:28 ; elapsed = 00:03:21 . Memory (MB): peak = 1773.066 ; gain = 588.773 ; free physical = 888 ; free virtual = 10155
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+------------------+------------+----------+
+|      |RTL Partition     |Replication |Instances |
++------+------------------+------------+----------+
+|1     |Top_Student__GB0  |           1|     18017|
+|2     |Top_Student__GB1  |           1|      5687|
+|3     |Top_Student__GB2  |           1|      6732|
+|4     |Top_Student__GB3  |           1|      8437|
+|5     |Top_Student__GB4  |           1|     13645|
+|6     |Top_Student__GB5  |           1|     14008|
+|7     |Top_Student__GB6  |           1|     18408|
+|8     |Top_Student__GB7  |           1|     19568|
+|9     |Top_Student__GB8  |           1|      5260|
+|10    |Top_Student__GB9  |           1|     20556|
+|11    |Top_Student__GB10 |           1|      9274|
+|12    |Top_Student__GB11 |           1|      7496|
+|13    |Top_Student__GB12 |           1|     17211|
+|14    |Top_Student__GB13 |           1|      7745|
+|15    |Top_Student__GB14 |           1|      7924|
+|16    |Top_Student__GB15 |           1|      9007|
+|17    |Top_Student__GB16 |           1|     11511|
++------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 1653.121 ; gain = 468.828 ; free physical = 341 ; free virtual = 10961
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:36 ; elapsed = 00:03:31 . Memory (MB): peak = 1773.066 ; gain = 588.773 ; free physical = 724 ; free virtual = 10024
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 1653.121 ; gain = 468.828 ; free physical = 340 ; free virtual = 10960
+Finished Timing Optimization : Time (s): cpu = 00:02:48 ; elapsed = 00:03:43 . Memory (MB): peak = 1852.082 ; gain = 667.789 ; free physical = 639 ; free virtual = 9950
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+------------------+------------+----------+
+|      |RTL Partition     |Replication |Instances |
++------+------------------+------------+----------+
+|1     |Top_Student__GB0  |           1|     18017|
+|2     |Top_Student__GB1  |           1|      5687|
+|3     |Top_Student__GB2  |           1|      6732|
+|4     |Top_Student__GB3  |           1|      8437|
+|5     |Top_Student__GB4  |           1|     13645|
+|6     |Top_Student__GB5  |           1|     14008|
+|7     |Top_Student__GB6  |           1|     18408|
+|8     |Top_Student__GB7  |           1|     19568|
+|9     |Top_Student__GB8  |           1|      5260|
+|10    |Top_Student__GB9  |           1|     20556|
+|11    |Top_Student__GB10 |           1|      9274|
+|12    |Top_Student__GB11 |           1|      7496|
+|13    |Top_Student__GB12 |           1|     17211|
+|14    |Top_Student__GB13 |           1|      7745|
+|15    |Top_Student__GB14 |           1|      7924|
+|16    |Top_Student__GB15 |           1|      9007|
+|17    |Top_Student__GB16 |           1|     11511|
++------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1653.121 ; gain = 468.828 ; free physical = 337 ; free virtual = 10957
+Finished Technology Mapping : Time (s): cpu = 00:03:06 ; elapsed = 00:04:15 . Memory (MB): peak = 1864.008 ; gain = 679.715 ; free physical = 240 ; free virtual = 9292
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+------------------+------------+----------+
+|      |RTL Partition     |Replication |Instances |
++------+------------------+------------+----------+
+|1     |Top_Student__GB0  |           1|      6071|
+|2     |Top_Student__GB1  |           1|      1926|
+|3     |Top_Student__GB2  |           1|      2244|
+|4     |Top_Student__GB3  |           1|      2836|
+|5     |Top_Student__GB4  |           1|      4585|
+|6     |Top_Student__GB5  |           1|      4709|
+|7     |Top_Student__GB6  |           1|      6184|
+|8     |Top_Student__GB7  |           1|      6589|
+|9     |Top_Student__GB8  |           1|      1744|
+|10    |Top_Student__GB9  |           1|      6936|
+|11    |Top_Student__GB10 |           1|      3129|
+|12    |Top_Student__GB11 |           1|      2551|
+|13    |Top_Student__GB12 |           1|      5795|
+|14    |Top_Student__GB13 |           1|      2637|
+|15    |Top_Student__GB14 |           1|      2716|
+|16    |Top_Student__GB15 |           1|      3141|
+|17    |Top_Student__GB16 |           1|      3843|
++------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -406,7 +568,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1653.121 ; gain = 468.828 ; free physical = 337 ; free virtual = 10958
+Finished IO Insertion : Time (s): cpu = 00:03:13 ; elapsed = 00:04:23 . Memory (MB): peak = 1876.047 ; gain = 691.754 ; free physical = 226 ; free virtual = 9295
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -419,7 +581,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1653.121 ; gain = 468.828 ; free physical = 337 ; free virtual = 10958
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:13 ; elapsed = 00:04:23 . Memory (MB): peak = 1876.047 ; gain = 691.754 ; free physical = 229 ; free virtual = 9298
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -427,29 +589,564 @@ Report RTL Partitions:
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /S[0] (CARRY4)
+     2: \mic_in_reg_reg[693][11]_i_12 /O (LUT2)
+     3: \mic_in_reg_reg[693][11]_i_12 /I1 (LUT2)
+     4: \mic_in_reg_reg[693][11]_i_18 /O[3] (CARRY4)
+     5: \mic_in_reg_reg[693][11]_i_18 /S[0] (CARRY4)
+     6: \mic_in_reg_reg[693][11]_i_33 /O (LUT2)
+     7: \mic_in_reg_reg[693][11]_i_33 /I1 (LUT2)
+     8: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from S[0] -to CO[2] \mic_in_reg_reg[693][11]_i_7 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[353][11]_i_25 /O (LUT2)
+     1: \mic_in_reg_reg[353][11]_i_25 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[353][11]_i_25 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[353][11]_i_17 /O (LUT2)
+     1: \mic_in_reg_reg[353][11]_i_17 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[353][11]_i_17 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[464][11]_i_27 /O (LUT2)
+     1: \mic_in_reg_reg[464][11]_i_27 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[464][11]_i_27 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[9][11]_i_7 /O (LUT2)
+     1: \mic_in_reg_reg[9][11]_i_7 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[9][11]_i_7 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[7][11]_i_8 /O (LUT2)
+     1: \mic_in_reg_reg[7][11]_i_8 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[7][11]_i_8 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[745][11]_i_7 /O (LUT2)
+     1: \mic_in_reg_reg[745][11]_i_7 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[745][11]_i_7 "
+Found timing loop:
+     0: \mic_in_reg_reg[513][11]_i_3 /O (LUT2)
+     1: \mic_in_reg_reg[513][11]_i_3 /I1 (LUT2)
+     2: \mic_in_reg_reg[871][11]_i_2 /O (LUT2)
+     3: \mic_in_reg_reg[871][11]_i_2 /I1 (LUT2)
+     4: \mic_in_reg_reg[513][11]_i_3 /O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[513][11]_i_3 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[745][11]_i_6 /O (LUT2)
+     1: \mic_in_reg_reg[745][11]_i_6 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[745][11]_i_6 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[745][11]_i_5 /O (LUT2)
+     1: \mic_in_reg_reg[745][11]_i_5 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[745][11]_i_5 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[745][11]_i_4 /O (LUT2)
+     1: \mic_in_reg_reg[745][11]_i_4 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[745][11]_i_4 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[7][11]_i_7 /O (LUT2)
+     1: \mic_in_reg_reg[7][11]_i_7 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[7][11]_i_7 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[7][11]_i_6 /O (LUT2)
+     1: \mic_in_reg_reg[7][11]_i_6 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[7][11]_i_6 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[7][11]_i_5 /O (LUT2)
+     1: \mic_in_reg_reg[7][11]_i_5 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[7][11]_i_5 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[9][11]_i_6 /O (LUT2)
+     1: \mic_in_reg_reg[9][11]_i_6 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[9][11]_i_6 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[9][11]_i_5 /O (LUT2)
+     1: \mic_in_reg_reg[9][11]_i_5 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[9][11]_i_5 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[9][11]_i_4 /O (LUT2)
+     1: \mic_in_reg_reg[9][11]_i_4 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[9][11]_i_4 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[464][11]_i_26 /O (LUT2)
+     1: \mic_in_reg_reg[464][11]_i_26 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[464][11]_i_26 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[464][11]_i_25 /O (LUT2)
+     1: \mic_in_reg_reg[464][11]_i_25 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[464][11]_i_25 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[464][11]_i_24 /O (LUT2)
+     1: \mic_in_reg_reg[464][11]_i_24 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[464][11]_i_24 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[353][11]_i_16 /O (LUT2)
+     1: \mic_in_reg_reg[353][11]_i_16 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[353][11]_i_16 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[353][11]_i_15 /O (LUT2)
+     1: \mic_in_reg_reg[353][11]_i_15 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[353][11]_i_15 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[353][11]_i_14 /O (LUT2)
+     1: \mic_in_reg_reg[353][11]_i_14 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[353][11]_i_14 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[353][11]_i_24 /O (LUT2)
+     1: \mic_in_reg_reg[353][11]_i_24 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[353][11]_i_24 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[353][11]_i_23 /O (LUT2)
+     1: \mic_in_reg_reg[353][11]_i_23 /I1 (LUT2)
+     2: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from I1 -to O \mic_in_reg_reg[353][11]_i_23 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[353][11]_i_12 /O[3] (CARRY4)
+     1: \mic_in_reg_reg[353][11]_i_12 /S[3] (CARRY4)
+     2: \mic_in_reg_reg[353][11]_i_22 /O (LUT2)
+     3: \mic_in_reg_reg[353][11]_i_22 /I1 (LUT2)
+     4: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     5: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from S[3] -to O[3] \mic_in_reg_reg[353][11]_i_12 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[353][11]_i_11 /O[0] (CARRY4)
+     1: \mic_in_reg_reg[353][11]_i_11 /S[0] (CARRY4)
+     2: \mic_in_reg_reg[353][11]_i_21 /O (LUT2)
+     3: \mic_in_reg_reg[353][11]_i_21 /I1 (LUT2)
+     4: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     5: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from S[0] -to O[0] \mic_in_reg_reg[353][11]_i_11 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[353][11]_i_11 /O[1] (CARRY4)
+     1: \mic_in_reg_reg[353][11]_i_11 /S[1] (CARRY4)
+     2: \mic_in_reg_reg[353][11]_i_20 /O (LUT2)
+     3: \mic_in_reg_reg[353][11]_i_20 /I1 (LUT2)
+     4: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     5: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from S[1] -to O[1] \mic_in_reg_reg[353][11]_i_11 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[353][11]_i_11 /O[2] (CARRY4)
+     1: \mic_in_reg_reg[353][11]_i_11 /S[2] (CARRY4)
+     2: \mic_in_reg_reg[353][11]_i_19 /O (LUT2)
+     3: \mic_in_reg_reg[353][11]_i_19 /I1 (LUT2)
+     4: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     5: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from S[2] -to O[2] \mic_in_reg_reg[353][11]_i_11 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /S[1] (CARRY4)
+     2: \mic_in_reg_reg[693][11]_i_11 /O (LUT2)
+     3: \mic_in_reg_reg[693][11]_i_11 /I1 (LUT2)
+     4: \mic_in_reg_reg[693][11]_i_9 /O[1] (CARRY4)
+     5: \mic_in_reg_reg[693][11]_i_9 /S[0] (CARRY4)
+     6: \mic_in_reg_reg[693][11]_i_22 /O (LUT2)
+     7: \mic_in_reg_reg[693][11]_i_22 /I1 (LUT2)
+     8: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from S[1] -to CO[2] \mic_in_reg_reg[693][11]_i_7 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[353][11]_i_11 /O[3] (CARRY4)
+     1: \mic_in_reg_reg[353][11]_i_11 /S[3] (CARRY4)
+     2: \mic_in_reg_reg[353][11]_i_18 /O (LUT2)
+     3: \mic_in_reg_reg[353][11]_i_18 /I1 (LUT2)
+     4: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     5: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from S[3] -to O[3] \mic_in_reg_reg[353][11]_i_11 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_34 /O[0] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_34 /S[0] (CARRY4)
+     2: \mic_in_reg_reg[693][11]_i_55 /O (LUT2)
+     3: \mic_in_reg_reg[693][11]_i_55 /I1 (LUT2)
+     4: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     5: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from S[0] -to O[0] \mic_in_reg_reg[693][11]_i_34 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /S[2] (CARRY4)
+     2: \mic_in_reg_reg[693][11]_i_10 /O (LUT2)
+     3: \mic_in_reg_reg[693][11]_i_10 /I1 (LUT2)
+     4: \mic_in_reg_reg[693][11]_i_9 /O[3] (CARRY4)
+     5: \mic_in_reg_reg[693][11]_i_9 /S[2] (CARRY4)
+     6: \mic_in_reg_reg[693][11]_i_20 /O (LUT2)
+     7: \mic_in_reg_reg[693][11]_i_20 /I1 (LUT2)
+     8: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from S[2] -to CO[2] \mic_in_reg_reg[693][11]_i_7 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /DI[2] (CARRY4)
+     2: \mic_in_reg_reg[693][11]_i_9 /O[3] (CARRY4)
+     3: \mic_in_reg_reg[693][11]_i_9 /S[2] (CARRY4)
+     4: \mic_in_reg_reg[693][11]_i_20 /O (LUT2)
+     5: \mic_in_reg_reg[693][11]_i_20 /I1 (LUT2)
+     6: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from DI[2] -to CO[2] \mic_in_reg_reg[693][11]_i_7 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_34 /O[1] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_34 /S[1] (CARRY4)
+     2: \mic_in_reg_reg[693][11]_i_54 /O (LUT2)
+     3: \mic_in_reg_reg[693][11]_i_54 /I1 (LUT2)
+     4: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     5: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from S[1] -to O[1] \mic_in_reg_reg[693][11]_i_34 "
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Found timing loop:
+     0: \mic_in_reg_reg[693][11]_i_34 /O[2] (CARRY4)
+     1: \mic_in_reg_reg[693][11]_i_34 /S[2] (CARRY4)
+     2: \mic_in_reg_reg[693][11]_i_53 /O (LUT2)
+     3: \mic_in_reg_reg[693][11]_i_53 /I1 (LUT2)
+     4: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+     5: \mic_in_reg_reg[693][11]_i_7 /CO[2] (CARRY4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:32]
+Inferred a: "set_disable_timing -from S[2] -to O[2] \mic_in_reg_reg[693][11]_i_34 "
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1653.121 ; gain = 468.828 ; free physical = 337 ; free virtual = 10958
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:16 ; elapsed = 00:04:25 . Memory (MB): peak = 1876.047 ; gain = 691.754 ; free physical = 230 ; free virtual = 9299
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1653.121 ; gain = 468.828 ; free physical = 337 ; free virtual = 10958
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:16 ; elapsed = 00:04:25 . Memory (MB): peak = 1876.047 ; gain = 691.754 ; free physical = 230 ; free virtual = 9299
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1653.121 ; gain = 468.828 ; free physical = 337 ; free virtual = 10958
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:16 ; elapsed = 00:04:26 . Memory (MB): peak = 1876.047 ; gain = 691.754 ; free physical = 231 ; free virtual = 9300
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1653.121 ; gain = 468.828 ; free physical = 337 ; free virtual = 10958
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:16 ; elapsed = 00:04:26 . Memory (MB): peak = 1876.047 ; gain = 691.754 ; free physical = 231 ; free virtual = 9300
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -466,59 +1163,53 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     2|
-|2     |CARRY4 |    69|
-|3     |LUT1   |    83|
-|4     |LUT2   |   115|
-|5     |LUT3   |    32|
-|6     |LUT4   |    63|
-|7     |LUT5   |    56|
-|8     |LUT6   |   146|
-|9     |FDRE   |   257|
-|10    |FDRE_1 |    31|
-|11    |FDSE   |    11|
-|12    |FDSE_1 |     1|
-|13    |IBUF   |     4|
-|14    |OBUF   |    37|
-|15    |OBUFT  |     1|
+|2     |CARRY4 |  6035|
+|3     |LUT1   |    39|
+|4     |LUT2   |   214|
+|5     |LUT3   |   140|
+|6     |LUT4   | 36092|
+|7     |LUT5   |   533|
+|8     |LUT6   | 12462|
+|9     |FDRE   |   199|
+|10    |FDSE   |     7|
+|11    |LD     | 12000|
+|12    |IBUF   |     3|
+|13    |OBUF   |    30|
+|14    |OBUFT  |     8|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+---------+--------------+------+
 |      |Instance |Module        |Cells |
 +------+---------+--------------+------+
-|1     |top      |              |   908|
-|2     |  ac     |Audio_Capture |   175|
-|3     |  bl     |SPO           |    40|
-|4     |    c1   |Clk100p0hz    |    35|
-|5     |    dff1 |My_Dff        |     2|
-|6     |    dff2 |My_Dff_0      |     3|
-|7     |  c2p0   |Clk2p00hz     |    45|
-|8     |  od     |Oled_Display  |   323|
-|9     |  sd     |SegDisp       |    54|
-|10    |    c200 |Clk200p00hz   |    35|
+|1     |top      |              | 67764|
+|2     |  ac     |Audio_Capture |   185|
+|3     |  sd     |SegDisp       |    54|
+|4     |    c200 |Clk200p00hz   |    35|
 +------+---------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1653.121 ; gain = 468.828 ; free physical = 337 ; free virtual = 10958
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:16 ; elapsed = 00:04:26 . Memory (MB): peak = 1876.047 ; gain = 691.754 ; free physical = 231 ; free virtual = 9300
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1653.121 ; gain = 124.469 ; free physical = 391 ; free virtual = 11012
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 1653.121 ; gain = 468.828 ; free physical = 391 ; free virtual = 11011
+Synthesis finished with 0 errors, 98 critical warnings and 1011 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:08 ; elapsed = 00:04:13 . Memory (MB): peak = 1879.957 ; gain = 335.359 ; free physical = 2879 ; free virtual = 11948
+Synthesis Optimization Complete : Time (s): cpu = 00:03:17 ; elapsed = 00:04:29 . Memory (MB): peak = 1879.957 ; gain = 695.664 ; free physical = 2883 ; free virtual = 11947
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 105 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 18038 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'Top_Student' is not ideal for floorplanning, since the cellview 'Top_Student' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 32 instances were transformed.
-  FDRE_1 => FDRE (inverted pins: C): 31 instances
-  FDSE_1 => FDSE (inverted pins: C): 1 instances
+  A total of 12000 instances were transformed.
+  LD => LDCE: 12000 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-49 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+140 Infos, 124 Warnings, 98 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:33 . Memory (MB): peak = 1671.145 ; gain = 487.008 ; free physical = 389 ; free virtual = 11010
+synth_design: Time (s): cpu = 00:03:26 ; elapsed = 00:04:38 . Memory (MB): peak = 1924.070 ; gain = 739.934 ; free physical = 2878 ; free virtual = 11943
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.runs/synth_1/Top_Student.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1948.082 ; gain = 24.012 ; free physical = 2864 ; free virtual = 11935
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1695.156 ; gain = 0.000 ; free physical = 389 ; free virtual = 11010
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 24 11:22:05 2020...
+report_utilization: Time (s): cpu = 00:00:00.35 ; elapsed = 00:00:00.38 . Memory (MB): peak = 1948.082 ; gain = 0.000 ; free physical = 2862 ; free virtual = 11933
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 24 17:06:08 2020...
