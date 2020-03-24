@@ -14,6 +14,8 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
+`define AVGNUM 10
+
 module Clk2p00hz(
     input cin,
     output reg cout
@@ -23,7 +25,7 @@ module Clk2p00hz(
         counter <= (counter==26'b10111110101111000010000000) ? 26'b0 : counter + 1;
     end
     always @ (posedge cin) begin
-        cout <= counter == 26'b0;
+        cout <= counter < 'b1011111010111100001000000;
     end
 endmodule
 
@@ -41,12 +43,20 @@ module Top_Student (
     output [7:0] JB
     );
     wire [11:0] mic_in;
+    reg [11:0] mic_in_reg [0:`AVGNUM-1];
     wire rst;
     reg clk20k, clk6p25m, clk100;
     wire [15:0] oled_data = {5'd0, 6'd0, mic_in[11:7]};
     reg [3:0] volume = 0;
     wire [15:0] ledout;
     assign led = sw[0] ? mic_in : ledout;
+    
+    integer i;
+    initial begin
+        for (i=0; i<`AVGNUM; i=i+1) begin
+            mic_in_reg[1] = 'd0;
+        end
+    end
     
     integer counter_1 = 'd4999, counter_2 = 'd15;
     always @ (posedge CLK100MHZ) begin
@@ -94,10 +104,25 @@ module Top_Student (
              .num(volume),
              .leds(ledout) );
     
+    wire [100:0] mic_sum [0:`AVGNUM-1];
+    genvar j;
+    for (j=0; j<`AVGNUM; j=j+1) begin
+        assign mic_sum[j] = j==0 ? mic_in_reg[0] : mic_sum[j-1] + mic_in_reg[j];
+    end
+    wire [11:0] mic_avg;
+    assign mic_avg = mic_sum[`AVGNUM-1] / `AVGNUM;
+    
+    always @ (mic_in) begin
+        for (i=0; i<`AVGNUM-1; i=i+1)
+            mic_in_reg[i] = mic_in_reg[i+1];
+        mic_in_reg[i] = mic_in;
+    end
+    
+    
     wire ccccc;
     Clk2p00hz c2p0 (CLK100MHZ, ccccc);
-    always @ (posedge ccccc) begin
-        volume <= volume + 1;
+    always @ (posedge ccccc) begin //twice a sec
+        volume <= mic_avg / 64;
     end
     
 endmodule
