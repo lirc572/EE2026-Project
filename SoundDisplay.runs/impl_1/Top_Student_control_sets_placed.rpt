@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Tue Mar 24 18:53:45 2020
+| Date         : Tue Mar 24 20:13:32 2020
 | Host         : rochor-Swift-SF315-51G running 64-bit Linux Mint 19.3 Tricia
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |   117 |
-| Unused register locations in slices containing registers |    28 |
+| Number of unique control sets                            |    18 |
+| Unused register locations in slices containing registers |    32 |
 +----------------------------------------------------------+-------+
 
 
@@ -36,9 +36,9 @@ Table of Contents
 +--------+--------------+
 |      2 |            1 |
 |      4 |            1 |
-|     12 |            1 |
+|      8 |            1 |
 |     14 |            1 |
-|    16+ |          113 |
+|    16+ |           14 |
 +--------+--------------+
 
 
@@ -48,138 +48,39 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |            2488 |          530 |
+| No           | No                    | No                     |             160 |           36 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             420 |           65 |
-| Yes          | No                    | No                     |              32 |            4 |
+| No           | Yes                   | No                     |             408 |           64 |
+| Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             104 |           16 |
+| Yes          | Yes                   | No                     |             104 |           14 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------------+-------------------------+------------------------------+------------------+----------------+
-|      Clock Signal      |      Enable Signal      |       Set/Reset Signal       | Slice Load Count | Bel Load Count |
-+------------------------+-------------------------+------------------------------+------------------+----------------+
-| ~clk6p25m              |                         |                              |                1 |              2 |
-|  bl/c1/cout            |                         |                              |                1 |              4 |
-|  CLK100MHZ_IBUF_BUFG   |                         |                              |                6 |             12 |
-|  sd/c200/cout          |                         |                              |                3 |             14 |
-|  mic_in_reg_reg[52]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[38]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[37]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[60]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[36]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[35]__0 |                         |                              |                8 |             24 |
-|  mic_in_reg_reg[27]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[26]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[25]__0 |                         |                              |                3 |             24 |
-|  mic_in_reg_reg[66]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[28]__0 |                         |                              |                3 |             24 |
-|  mic_in_reg_reg[65]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[43]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[16]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[2]__0  |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[5]__0  |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[24]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[23]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[22]__0 |                         |                              |                7 |             24 |
-|  mic_in_reg_reg[55]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[41]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[62]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[19]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[18]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[17]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[7]__0  |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[98]__0 |                         |                              |                3 |             24 |
-|  mic_in_reg_reg[81]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[69]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[68]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[49]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[42]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[94]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[93]__0 |                         |                              |                7 |             24 |
-|  mic_in_reg_reg[92]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[83]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[82]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[30]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[39]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[79]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[48]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[47]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[21]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[20]__0 |                         |                              |                5 |             24 |
-|  J_MIC3_Pin1_OBUF      |                         |                              |                4 |             24 |
-|  CLK100MHZ_IBUF_BUFG   |                         | J_MIC3_Pin1_OBUF             |                3 |             24 |
-|  mic_in_reg_reg[29]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[99]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[9]__0  |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[40]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[3]__0  |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[6]__0  |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[95]__0 |                         |                              |                9 |             24 |
-|  mic_in_reg_reg[46]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[34]__0 |                         |                              |                5 |             24 |
-| ~ac/J_MIC3_Pin4_OBUF   |                         |                              |                3 |             24 |
-|  mic_in_reg_reg[76]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[75]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[58]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[78]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[77]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[74]__0 |                         |                              |                3 |             24 |
-|  mic_in_reg_reg[73]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[70]__0 |                         |                              |                7 |             24 |
-|  mic_in_reg_reg[14]__0 |                         |                              |                7 |             24 |
-|  mic_in_reg_reg[61]__0 |                         |                              |                3 |             24 |
-|  mic_in_reg_reg[72]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[71]__0 |                         |                              |                7 |             24 |
-|  mic_in_reg_reg[31]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[96]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[57]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[56]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[54]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[53]__0 |                         |                              |                3 |             24 |
-|  mic_in_reg_reg[32]__0 |                         |                              |                3 |             24 |
-|  mic_in_reg_reg[59]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[1]__0  |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[84]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[15]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[13]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[12]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[11]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[10]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[90]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[8]__0  |                         |                              |                7 |             24 |
-|  mic_in_reg_reg[89]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[88]__0 |                         |                              |                7 |             24 |
-|  mic_in_reg_reg[86]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[85]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[64]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[63]__0 |                         |                              |                8 |             24 |
-|  mic_in_reg_reg[50]__0 |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[87]__0 |                         |                              |                7 |             24 |
-|  mic_in_reg_reg[80]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[33]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[44]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[45]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[51]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[4]__0  |                         |                              |                5 |             24 |
-|  mic_in_reg_reg[91]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[97]__0 |                         |                              |                4 |             24 |
-|  mic_in_reg_reg[67]__0 |                         |                              |                6 |             24 |
-|  mic_in_reg_reg[0]__0  |                         |                              |                8 |             32 |
-|  clk6p25m              | ovd/oled_data0          |                              |                4 |             32 |
-| ~clk6p25m              |                         | bl/dff1/rst                  |                8 |             34 |
-| ~clk6p25m              | ovd/od/delay[0]_i_1_n_0 | bl/dff1/rst                  |                5 |             40 |
-|  CLK100MHZ_IBUF_BUFG   |                         | bl/c1/counter[19]_i_1__0_n_0 |                6 |             40 |
-|  CLK100MHZ_IBUF_BUFG   |                         | sd/c200/counter[19]_i_1_n_0  |                6 |             40 |
-| ~clk6p25m              | ovd/od/state            | bl/dff1/rst                  |               11 |             64 |
-|  CLK100MHZ_IBUF_BUFG   |                         | counter_1[31]_i_1_n_0        |                9 |             64 |
-|  CLK100MHZ_IBUF_BUFG   |                         | ovd/counter_2[31]_i_1_n_0    |                9 |             64 |
-|  clk6p25m              |                         | ovd/ttt[31]_i_1_n_0          |                9 |             64 |
-| ~clk6p25m              |                         | ovd/od/spi_word[39]_i_1_n_0  |               15 |             90 |
-+------------------------+-------------------------+------------------------------+------------------+----------------+
++-----------------------+-------------------------+--------------------------------+------------------+----------------+
+|      Clock Signal     |      Enable Signal      |        Set/Reset Signal        | Slice Load Count | Bel Load Count |
++-----------------------+-------------------------+--------------------------------+------------------+----------------+
+| ~clk6p25m             |                         |                                |                1 |              2 |
+|  bl/c1/cout           |                         |                                |                1 |              4 |
+|  c1p0/volume_reg[0]   |                         |                                |                1 |              8 |
+|  sd/c200/dig_curr_reg |                         |                                |                3 |             14 |
+|  CLK100MHZ_IBUF_BUFG  |                         |                                |                7 |             16 |
+|  CLK100MHZ_IBUF_BUFG  |                         | J_MIC3_Pin1_OBUF               |                3 |             24 |
+|  J_MIC3_Pin1_OBUF     |                         |                                |                6 |             24 |
+| ~ac/J_MIC3_Pin4_OBUF  |                         |                                |                3 |             24 |
+| ~clk6p25m             |                         | bl/dff1/rst                    |                6 |             34 |
+|  CLK100MHZ_IBUF_BUFG  |                         | sd/c200/counter[19]_i_1__0_n_0 |                6 |             40 |
+|  CLK100MHZ_IBUF_BUFG  |                         | bl/c1/counter[19]_i_1_n_0      |                6 |             40 |
+| ~clk6p25m             | ovd/od/delay[0]_i_1_n_0 | bl/dff1/rst                    |                5 |             40 |
+|  CLK100MHZ_IBUF_BUFG  |                         | c1p0/counter[26]_i_1_n_0       |                7 |             52 |
+|  CLK100MHZ_IBUF_BUFG  |                         | counter_1[31]_i_1_n_0          |                9 |             64 |
+|  CLK100MHZ_IBUF_BUFG  |                         | ovd/counter_2[31]_i_1_n_0      |                9 |             64 |
+| ~clk6p25m             | ovd/od/state            | bl/dff1/rst                    |                9 |             64 |
+|  clk6p25m             |                         |                                |               14 |             68 |
+| ~clk6p25m             |                         | ovd/od/spi_word[39]_i_1_n_0    |               18 |             90 |
++-----------------------+-------------------------+--------------------------------+------------------+----------------+
 
 

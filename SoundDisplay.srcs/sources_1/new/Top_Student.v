@@ -16,6 +16,20 @@
 
 `define AVGNUM 100
 
+module Clk1p00hz(
+    input cin,
+    output reg cout
+    );
+    reg [26:0] counter = 27'b0;
+    always @ (posedge cin) begin
+        counter <= (counter==27'b101111101011110000100000000) ? 27'b0 : counter + 1;
+    end
+    always @ (posedge cin) begin
+        cout <= counter == 27'b0;
+    end
+endmodule
+
+
 module Clk10p0hz(
     input cin,
     output reg cout
@@ -90,7 +104,7 @@ module Top_Student (
     Led ld ( .en(1),
              .num(volume),
              .leds(ledout) );
-    
+    /*
     integer j = 'd0;
     always @ (mic_in) begin
         mic_in_reg[j] <= mic_in;
@@ -115,8 +129,13 @@ module Top_Student (
     
     wire ccccc;
     Clk10p0hz c10p0 (CLK100MHZ, ccccc);
+    
     always @ (posedge ccccc) begin //10 times a sec
         volume <= volume_tmp[11:8];
-    end
+    end*/
+    wire ccccc;
+    Clk1p00hz c1p0 (CLK100MHZ, ccccc);
+    always @ (posedge ccccc)
+        volume = volume + 1;
     
 endmodule

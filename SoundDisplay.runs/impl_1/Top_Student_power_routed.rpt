@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Tue Mar 24 18:54:45 2020
+| Date             : Tue Mar 24 20:13:56 2020
 | Host             : rochor-Swift-SF315-51G running 64-bit Linux Mint 19.3 Tricia
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.238        |
+| Total On-Chip Power (W)  | 0.165        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.165        |
+| Dynamic (W)              | 0.093        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 83.8         |
-| Junction Temperature (C) | 26.2         |
+| Max Ambient (C)          | 84.2         |
+| Junction Temperature (C) | 25.8         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,16 +53,16 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.060 |     9920 |       --- |             --- |
-|   LUT as Logic |     0.058 |     5273 |     20800 |           25.35 |
-|   CARRY4       |     0.001 |      673 |      8150 |            8.26 |
-|   Register     |    <0.001 |     1522 |     41600 |            3.66 |
+| Slice Logic    |     0.020 |     2650 |       --- |             --- |
+|   LUT as Logic |     0.018 |     1497 |     20800 |            7.20 |
+|   CARRY4       |     0.001 |      344 |      8150 |            4.22 |
+|   Register     |    <0.001 |      336 |     41600 |            0.81 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |       20 |       --- |             --- |
-| Signals        |     0.045 |     6156 |       --- |             --- |
-| I/O            |     0.059 |       42 |       106 |           39.62 |
+| Signals        |     0.017 |     1546 |       --- |             --- |
+| I/O            |     0.054 |       42 |       106 |           39.62 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.238 |          |           |                 |
+| Total          |     0.165 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +72,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.116 |       0.106 |      0.010 |
+| Vccint    |       1.000 |     0.048 |       0.039 |      0.010 |
 | Vccaux    |       1.800 |     0.015 |       0.002 |      0.013 |
-| Vcco33    |       3.300 |     0.018 |       0.017 |      0.001 |
+| Vcco33    |       3.300 |     0.016 |       0.015 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -141,15 +141,16 @@ Table of Contents
 +-------------+-----------+
 | Name        | Power (W) |
 +-------------+-----------+
-| Top_Student |     0.165 |
-|   ac        |     0.002 |
+| Top_Student |     0.093 |
+|   ac        |    <0.001 |
 |   bl        |    <0.001 |
 |     c1      |    <0.001 |
 |     dff1    |    <0.001 |
 |     dff2    |    <0.001 |
-|   ovd       |     0.002 |
+|   c1p0      |    <0.001 |
+|   ovd       |     0.031 |
 |     od      |    <0.001 |
-|   sd        |    <0.001 |
+|   sd        |     0.001 |
 |     c200    |    <0.001 |
 +-------------+-----------+
 
