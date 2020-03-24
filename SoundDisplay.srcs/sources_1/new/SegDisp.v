@@ -100,15 +100,15 @@ module SegDisp(
     
     reg [3:0] n_reg;
     reg dp_reg = `DpOff;
-    reg an_reg = `AnAll;
+    reg an_reg = `AnOff;
     wire [6:0] n2ss;
     assign seg = en ? n2ss : `SegOff;
-    assign dp = en ? dp_reg : `DpOff;
-    assign an = en ? an_reg : `AnOff;
+    assign dp  = en ? dp_reg : `DpOff;
+    assign an  = en ? an_reg : `AnOff;
     
     wire clk;
-    Clk200p00hz c200 (CLK100MHZ, clk);
-    
+    //Clk200p00hz c200 (CLK100MHZ, clk);
+    Clk2p00hz     c2   (CLK100MHZ, clk); //temporary slow clock
     NumToSeg n2s (n_reg, n2ss);
     reg [1:0] dig_curr = 0;
     
@@ -120,8 +120,15 @@ module SegDisp(
         end else begin
             n_reg <= 'd10;
         end
-        an_reg <= dig_curr==0 ? `AnZero : dig_curr==1 ? `AnOne : dig_curr==2 ? `AnTwo : `AnThree;
-        dig_curr <= dig_curr + 1;
     end
+    
+    always @ (posedge clk)
+        an_reg <= dig_curr==0 ? `AnZero :
+                  dig_curr==1 ? `AnOne  :
+                  dig_curr==2 ? `AnTwo  :
+                                `AnThree;
+    
+    always @ (posedge clk)
+        dig_curr <= dig_curr + 1;
     
 endmodule

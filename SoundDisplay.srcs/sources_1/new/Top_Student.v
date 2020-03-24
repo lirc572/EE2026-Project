@@ -40,7 +40,6 @@ module Top_Student (
     output [3:0] an,
     output [7:0] JB
     );
-    
     wire [11:0] mic_in;
     wire rst;
     reg clk20k, clk6p25m, clk100;
