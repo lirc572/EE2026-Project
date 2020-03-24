@@ -45,7 +45,7 @@ module Top_Student (
     reg clk20k, clk6p25m, clk100;
     wire [15:0] oled_data = {5'd0, 6'd0, mic_in[11:7]};
     reg [3:0] volume = 0;
-    wire ledout;
+    wire [15:0] ledout;
     assign led = sw[0] ? mic_in : ledout;
     
     integer counter_1 = 'd4999, counter_2 = 'd15;
