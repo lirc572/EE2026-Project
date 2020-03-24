@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Tue Mar 24 20:13:32 2020
+| Date         : Wed Mar 25 00:00:01 2020
 | Host         : rochor-Swift-SF315-51G running 64-bit Linux Mint 19.3 Tricia
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    18 |
-| Unused register locations in slices containing registers |    32 |
+| Number of unique control sets                            |    17 |
+| Unused register locations in slices containing registers |    28 |
 +----------------------------------------------------------+-------+
 
 
@@ -38,7 +38,7 @@ Table of Contents
 |      4 |            1 |
 |      8 |            1 |
 |     14 |            1 |
-|    16+ |           14 |
+|    16+ |           13 |
 +--------+--------------+
 
 
@@ -48,12 +48,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             160 |           36 |
+| No           | No                    | No                     |              92 |           20 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             408 |           64 |
+| No           | Yes                   | No                     |             408 |           66 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             104 |           14 |
+| Yes          | Yes                   | No                     |             104 |           13 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -65,22 +65,21 @@ Table of Contents
 +-----------------------+-------------------------+--------------------------------+------------------+----------------+
 | ~clk6p25m             |                         |                                |                1 |              2 |
 |  bl/c1/cout           |                         |                                |                1 |              4 |
-|  c1p0/volume_reg[0]   |                         |                                |                1 |              8 |
-|  sd/c200/dig_curr_reg |                         |                                |                3 |             14 |
+|  c2p0/volume_reg[0]   |                         |                                |                1 |              8 |
+|  sd/c200/dig_curr_reg |                         |                                |                2 |             14 |
 |  CLK100MHZ_IBUF_BUFG  |                         |                                |                7 |             16 |
 |  CLK100MHZ_IBUF_BUFG  |                         | J_MIC3_Pin1_OBUF               |                3 |             24 |
-|  J_MIC3_Pin1_OBUF     |                         |                                |                6 |             24 |
-| ~ac/J_MIC3_Pin4_OBUF  |                         |                                |                3 |             24 |
-| ~clk6p25m             |                         | bl/dff1/rst                    |                6 |             34 |
+|  J_MIC3_Pin1_OBUF     |                         |                                |                4 |             24 |
+| ~ac/J_MIC3_Pin4_OBUF  |                         |                                |                4 |             24 |
+| ~clk6p25m             |                         | bl/dff1/rst                    |                4 |             34 |
 |  CLK100MHZ_IBUF_BUFG  |                         | sd/c200/counter[19]_i_1__0_n_0 |                6 |             40 |
 |  CLK100MHZ_IBUF_BUFG  |                         | bl/c1/counter[19]_i_1_n_0      |                6 |             40 |
 | ~clk6p25m             | ovd/od/delay[0]_i_1_n_0 | bl/dff1/rst                    |                5 |             40 |
-|  CLK100MHZ_IBUF_BUFG  |                         | c1p0/counter[26]_i_1_n_0       |                7 |             52 |
+|  CLK100MHZ_IBUF_BUFG  |                         | c2p0/counter[26]_i_1_n_0       |                7 |             52 |
 |  CLK100MHZ_IBUF_BUFG  |                         | counter_1[31]_i_1_n_0          |                9 |             64 |
 |  CLK100MHZ_IBUF_BUFG  |                         | ovd/counter_2[31]_i_1_n_0      |                9 |             64 |
-| ~clk6p25m             | ovd/od/state            | bl/dff1/rst                    |                9 |             64 |
-|  clk6p25m             |                         |                                |               14 |             68 |
-| ~clk6p25m             |                         | ovd/od/spi_word[39]_i_1_n_0    |               18 |             90 |
+| ~clk6p25m             | ovd/od/state            | bl/dff1/rst                    |                8 |             64 |
+| ~clk6p25m             |                         | ovd/od/spi_word[39]_i_1_n_0    |               22 |             90 |
 +-----------------------+-------------------------+--------------------------------+------------------+----------------+
 
 

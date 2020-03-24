@@ -19,14 +19,75 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+`define CTDefaultVolumeBarL { 5'd0, ~6'd0, 5'd0}
+`define CTDefaultVolumeBarM {~5'd0, ~6'd0, 5'd0}
+`define CTDefaultVolumeBarH {~5'd0,  6'd0, 5'd0}
+`define CTDefaultBackground 16'd0
+`define CTDefaultBorder     ~16'd0
+
+`define CTLugeVolumeBarL    { 5'd5, 6'd50, 5'd0 }
+`define CTLugeVolumeBarM    {5'd28, 6'd31, 5'd0 }
+`define CTLugeVolumeBarH    {5'd30, 6'd0 , 5'd6 }
+`define CTLugeBackground    { 5'd1, 6'd5 , 5'd14}
+`define CTLugeBorder        { 5'd0, 6'd63, 5'd22}
+
+`define CTRochorVolumeBarL  {5'd11, 6'd24, 5'd13} //(89,97,110)
+`define CTRochorVolumeBarM  {5'd12, 6'd22, 5'd14} //(103,89,117)
+`define CTRochorVolumeBarH  {5'd10, 6'd27, 5'd13} //(84,111,110)
+`define CTRochorBackground  16'd103               //103
+`define CTRochorBorder      16'd9825              //\u9825
 
 module OLed_Volume_Display(
     input en,
     input rst,
     input CLK100MHZ,
     input [3:0] num,
+    input border_on,       //done
+    input volume_bar_on,   //done
+    input other_on,                            //todo.....................
+    input [1:0] theme_sel, //done
     output [7:0] JB
     );
+    
+    reg [15:0] color_volumebar_l;
+    reg [15:0] color_volumebar_m;
+    reg [15:0] color_volumebar_h;
+    reg [15:0] color_bg;
+    reg [15:0] color_bd;
+    
+    always @ (theme_sel) begin
+        case ( theme_sel )
+            'd0 : begin
+                      color_volumebar_l <= volume_bar_on ? `CTDefaultVolumeBarL : `CTDefaultBackground;
+                      color_volumebar_m <= volume_bar_on ? `CTDefaultVolumeBarM : `CTDefaultBackground;
+                      color_volumebar_h <= volume_bar_on ? `CTDefaultVolumeBarH : `CTDefaultBackground;
+                      color_bg          <= `CTDefaultBackground;
+                      color_bd          <= border_on     ? `CTDefaultBorder : `CTDefaultBackground;
+                  end
+            'd1 : begin
+                      color_volumebar_l <= volume_bar_on ? `CTDefaultVolumeBarL : `CTDefaultBackground;
+                      color_volumebar_m <= volume_bar_on ? `CTDefaultVolumeBarM : `CTDefaultBackground;
+                      color_volumebar_h <= volume_bar_on ? `CTDefaultVolumeBarH : `CTDefaultBackground;
+                      color_bg          <= `CTDefaultBackground;
+                      color_bd          <= border_on     ? `CTDefaultBorder : `CTDefaultBackground;
+                  end
+            'd2 : begin
+                      color_volumebar_l <= volume_bar_on ? `CTLugeVolumeBarL : `CTLugeBackground;
+                      color_volumebar_m <= volume_bar_on ? `CTLugeVolumeBarM : `CTLugeBackground;
+                      color_volumebar_h <= volume_bar_on ? `CTLugeVolumeBarH : `CTLugeBackground;
+                      color_bg          <=`CTLugeBackground;
+                      color_bd          <= border_on ? `CTLugeBorder : `CTLugeBackground;
+                  end
+            'd3 : begin
+                      color_volumebar_l <= volume_bar_on ? `CTRochorVolumeBarL : `CTRochorBackground;
+                      color_volumebar_m <= volume_bar_on ? `CTRochorVolumeBarM : `CTRochorBackground;
+                      color_volumebar_h <= volume_bar_on ? `CTRochorVolumeBarH : `CTRochorBackground;
+                      color_bg          <= volume_bar_on ? `CTRochorBackground : `CTRochorBackground;
+                      color_bg          <=`CTRochorBackground;
+                      color_bd          <= border_on ? `CTRochorBorder : `CTRochorBackground;
+                  end
+        endcase
+    end
 
     reg clk6p25m;
     integer counter_2 = 'd15;
@@ -36,76 +97,56 @@ module OLed_Volume_Display(
     end
     
     reg [15:0] oled_data = 'd0;
-    integer counter_screen = 'd6143;
-    always @ (posedge clk6p25m) begin
-        counter_screen = (counter_screen==6143) ? 0 : counter_screen + 1;
-        if ((counter_screen % 96 < 30) || (65 < counter_screen % 96)) begin
-            oled_data = {5'd0, 6'd0, 5'd0};
-        end else if (30 <= counter_screen % 96 && counter_screen % 96 <= 65) begin
-            oled_data = {5'd0, 6'd0, 5'd0};
-            if (num >= 0)
-                oled_data = (counter_screen / 96 >  0 && counter_screen / 96 <  4) ? { 5'd0, ~6'd0, 5'd0}  : {5'd0, 6'd0, 5'd0};
-            if (num >= 1)
-                oled_data = (counter_screen / 96 >  4 && counter_screen / 96 <  8) ? { 5'd0, ~6'd0, 5'd0}  : {5'd0, 6'd0, 5'd0};
-            if (num >= 2)
-                oled_data = (counter_screen / 96 >  8 && counter_screen / 96 < 12) ? { 5'd0, ~6'd0, 5'd0}  : {5'd0, 6'd0, 5'd0};
-            if (num >= 3)
-                oled_data = (counter_screen / 96 > 12 && counter_screen / 96 < 16) ? { 5'd0, ~6'd0, 5'd0}  : {5'd0, 6'd0, 5'd0};
-            if (num >= 4)
-                oled_data = (counter_screen / 96 > 16 && counter_screen / 96 < 20) ? { 5'd0, ~6'd0, 5'd0}  : {5'd0, 6'd0, 5'd0};
-            if (num >= 5)
-                oled_data = (counter_screen / 96 > 20 && counter_screen / 96 < 24) ? { 5'd0, ~6'd0, 5'd0}  : {5'd0, 6'd0, 5'd0};
-            if (num >= 6)
-                oled_data = (counter_screen / 96 > 24 && counter_screen / 96 < 28) ? {~5'd0, ~6'd0, 5'd0}  : {5'd0, 6'd0, 5'd0};
-            if (num >= 7)
-                oled_data = (counter_screen / 96 > 28 && counter_screen / 96 < 32) ? {~5'd0, ~6'd0, 5'd0}  : {5'd0, 6'd0, 5'd0};
-            if (num >= 8)
-                oled_data = (counter_screen / 96 > 32 && counter_screen / 96 < 36) ? {~5'd0, ~6'd0, 5'd0}  : {5'd0, 6'd0, 5'd0};
-            if (num >= 9)
-                oled_data = (counter_screen / 96 > 36 && counter_screen / 96 < 40) ? {~5'd0, ~6'd0, 5'd0}  : {5'd0, 6'd0, 5'd0};
-            if (num >= 10)
-                oled_data = (counter_screen / 96 > 40 && counter_screen / 96 < 44) ? {~5'd0, ~6'd0, 5'd0}  : {5'd0, 6'd0, 5'd0};
-            if (num >= 11)
-                oled_data = (counter_screen / 96 > 44 && counter_screen / 96 < 48) ? {~5'd0,  6'd0, 5'd0}  : {5'd0, 6'd0, 5'd0};
-            if (num >= 12)
-                oled_data = (counter_screen / 96 > 48 && counter_screen / 96 < 52) ? {~5'd0,  6'd0, 5'd0}  : {5'd0, 6'd0, 5'd0};
-            if (num >= 13)
-                oled_data = (counter_screen / 96 > 52 && counter_screen / 96 < 56) ? {~5'd0,  6'd0, 5'd0}  : {5'd0, 6'd0, 5'd0};
-            if (num >= 14)
-                oled_data = (counter_screen / 96 > 56 && counter_screen / 96 < 60) ? {~5'd0,  6'd0, 5'd0}  : {5'd0, 6'd0, 5'd0};
-            if (num >= 15)
-                oled_data = (counter_screen / 96 > 60 && counter_screen / 96 < 64) ? {~5'd0,  6'd0, 5'd0}  : {5'd0, 6'd0, 5'd0};
-        /*
-            case (num)
-                'd0 : oled_data = {5'd0, 6'd0, 5'd0};
-                'd1 : oled_data = (0 < counter_screen / 96 < 4 ) ? {5'd0, 6'd1, 5'd0}  : {5'd0, 6'd0, 5'd0};
-                'd2 : oled_data = (0 < counter_screen / 96 < 8 ) ? {5'd0, 6'd1, 5'd0}  : {5'd0, 6'd0, 5'd0};
-                'd3 : oled_data = (0 < counter_screen / 96 < 12) ? {5'd0, 6'd1, 5'd0}  : {5'd0, 6'd0, 5'd0};
-                'd4 : oled_data = (0 < counter_screen / 96 < 16) ? {5'd0, 6'd1, 5'd0}  : {5'd0, 6'd0, 5'd0};
-                'd5 : oled_data = (0 < counter_screen / 96 < 20) ? {5'd0, 6'd1, 5'd0}  : {5'd0, 6'd0, 5'd0};
-                'd6 : oled_data = (0 < counter_screen / 96 < 20) ? {5'd0, 6'd1, 5'd0}  : ((20 < counter_screen / 96 && counter_screen / 96 < 24) ? {5'd0, 6'd0, 5'd1}:{5'd0, 6'd0, 5'd0});
-                'd7 : oled_data = (0 < counter_screen / 96 < 20) ? {5'd0, 6'd1, 5'd0}  : ((20 < counter_screen / 96 && counter_screen / 96 < 28) ? {5'd0, 6'd0, 5'd1}:{5'd0, 6'd0, 5'd0});
-                'd8 : oled_data = (0 < counter_screen / 96 < 20) ? {5'd0, 6'd1, 5'd0}  : ((20 < counter_screen / 96 && counter_screen / 96 < 32) ? {5'd0, 6'd0, 5'd1}:{5'd0, 6'd0, 5'd0});
-                'd9 : oled_data = (0 < counter_screen / 96 < 20) ? {5'd0, 6'd1, 5'd0}  : ((20 < counter_screen / 96 && counter_screen / 96 < 36) ? {5'd0, 6'd0, 5'd1}:{5'd0, 6'd0, 5'd0});
-                'd10: oled_data = (0 < counter_screen / 96 < 20) ? {5'd0, 6'd1, 5'd0}  : ((20 < counter_screen / 96 && counter_screen / 96 < 40) ? {5'd0, 6'd0, 5'd1}:{5'd0, 6'd0, 5'd0});
-                'd11: oled_data = (0 < counter_screen / 96 < 20) ? {5'd0, 6'd1, 5'd0}  : ((20 < counter_screen / 96 && counter_screen / 96 < 40) ? {5'd0, 6'd0, 5'd1}:(40 < counter_screen / 96 && counter_screen / 96 < 44) ? {5'd1, 6'd0, 5'd0} : {5'd0, 6'd0, 5'd0});
-                'd12: oled_data = (0 < counter_screen / 96 < 20) ? {5'd0, 6'd1, 5'd0}  : ((20 < counter_screen / 96 && counter_screen / 96 < 40) ? {5'd0, 6'd0, 5'd1}:(40 < counter_screen / 96 && counter_screen / 96 < 48) ? {5'd1, 6'd0, 5'd0} : {5'd0, 6'd0, 5'd0});
-                'd13: oled_data = (0 < counter_screen / 96 < 20) ? {5'd0, 6'd1, 5'd0}  : ((20 < counter_screen / 96 && counter_screen / 96 < 40) ? {5'd0, 6'd0, 5'd1}:(40 < counter_screen / 96 && counter_screen / 96 < 52) ? {5'd1, 6'd0, 5'd0} : {5'd0, 6'd0, 5'd0});
-                'd14: oled_data = (0 < counter_screen / 96 < 20) ? {5'd0, 6'd1, 5'd0}  : ((20 < counter_screen / 96 && counter_screen / 96 < 40) ? {5'd0, 6'd0, 5'd1}:(40 < counter_screen / 96 && counter_screen / 96 < 56) ? {5'd1, 6'd0, 5'd0} : {5'd0, 6'd0, 5'd0});
-                'd15: oled_data = (0 < counter_screen / 96 < 20) ? {5'd0, 6'd1, 5'd0}  : ((20 < counter_screen / 96 && counter_screen / 96 < 40) ? {5'd0, 6'd0, 5'd1}:(40 < counter_screen / 96 && counter_screen / 96 < 60) ? {5'd1, 6'd0, 5'd0} : {5'd0, 6'd0, 5'd0});
-                default: oled_data = 16'b1; 
-            endcase
-        */
+    wire [12:0] pixel_index;
+    always @ (pixel_index) begin
+        if (pixel_index<'d96 || pixel_index>'d6047 || pixel_index%96==0 || pixel_index%96==95) begin
+            oled_data = color_bd;
+        end else if ((pixel_index % 96 < 30) || (65 < pixel_index % 96)) begin
+            oled_data = color_bg;
+        end else if (30 <= pixel_index % 96 && pixel_index % 96 <= 65) begin
+            oled_data = color_bg;
+            if (pixel_index / 96 < 64 && pixel_index / 96 > 60)
+                oled_data = num >=  0 ? color_volumebar_l  : color_bg;
+            else if (pixel_index / 96 < 60 && pixel_index / 96 > 56)
+                oled_data = num >=  1 ? color_volumebar_l  : color_bg;
+            else if (pixel_index / 96 < 56 && pixel_index / 96 > 52)
+                oled_data = num >=  2 ? color_volumebar_l  : color_bg;
+            else if (pixel_index / 96 < 52 && pixel_index / 96 > 48)
+                oled_data = num >=  3 ? color_volumebar_l  : color_bg;
+            else if (pixel_index / 96 < 48 && pixel_index / 96 > 44)
+                oled_data = num >=  4 ? color_volumebar_l  : color_bg;
+            else if (pixel_index / 96 < 44 && pixel_index / 96 > 40)
+                oled_data = num >=  5 ? color_volumebar_l  : color_bg;
+            else if (pixel_index / 96 < 40 && pixel_index / 96 > 36)
+                oled_data = num >=  6 ? color_volumebar_m  : color_bg;
+            else if (pixel_index / 96 < 36 && pixel_index / 96 > 32)
+                oled_data = num >=  7 ? color_volumebar_m  : color_bg;
+            else if (pixel_index / 96 < 32 && pixel_index / 96 > 28)
+                oled_data = num >=  8 ? color_volumebar_m  : color_bg;
+            else if (pixel_index / 96 < 28 && pixel_index / 96 > 24)
+                oled_data = num >=  9 ? color_volumebar_m  : color_bg;
+            else if (pixel_index / 96 < 24 && pixel_index / 96 > 20)
+                oled_data = num >= 10 ? color_volumebar_m  : color_bg;
+            else if (pixel_index / 96 < 20 && pixel_index / 96 > 16)
+                oled_data = num >= 11 ? color_volumebar_h  : color_bg;
+            else if (pixel_index / 96 < 16 && pixel_index / 96 > 12)
+                oled_data = num >= 12 ? color_volumebar_h  : color_bg;
+            else if (pixel_index / 96 < 12 && pixel_index / 96 >  8)
+                oled_data = num >= 13 ? color_volumebar_h  : color_bg;
+            else if (pixel_index / 96 <  8 && pixel_index / 96 >  4)
+                oled_data = num >= 14 ? color_volumebar_h  : color_bg;
+            else if (pixel_index / 96 <  4 && pixel_index / 96 >  0)
+                oled_data = num >= 15 ? color_volumebar_h  : color_bg;
         end
     end
     
-    wire ha1, ha2, ha3, ha4, ha5;
+    wire ha1, ha2, ha3, ha4;
     Oled_Display  od ( .clk(clk6p25m),
                        .reset(rst),
                        .frame_begin(ha1),
                        .sending_pixels(ha2),
                        .sample_pixel(ha3),
-                       .pixel_index(ha4),
+                       .pixel_index(pixel_index),
                        .pixel_data(oled_data),
                        .cs(JB[0]),
                        .sdin(JB[1]),
@@ -114,6 +155,6 @@ module OLed_Volume_Display(
                        .resn(JB[5]),
                        .vccen(JB[6]),
                        .pmoden(JB[7]),
-                       .teststate(ha5) );
+                       .teststate(ha4) );
     
 endmodule

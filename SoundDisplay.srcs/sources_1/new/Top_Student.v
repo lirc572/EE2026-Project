@@ -16,13 +16,13 @@
 
 `define AVGNUM 100
 
-module Clk1p00hz(
+module Clk2p00hz(
     input cin,
     output reg cout
     );
     reg [26:0] counter = 27'b0;
     always @ (posedge cin) begin
-        counter <= (counter==27'b101111101011110000100000000) ? 27'b0 : counter + 1;
+        counter <= (counter==27'b10111110101111000010000000) ? 27'b0 : counter + 1;
     end
     always @ (posedge cin) begin
         cout <= counter == 27'b0;
@@ -45,7 +45,7 @@ endmodule
 
 module Top_Student (
     input CLK100MHZ,
-    input [0:0] sw,
+    input [5:0] sw,
     input btnC,
     input  J_MIC3_Pin3,   // Connect from this signal to Audio_Capture.v
     output J_MIC3_Pin1,   // Connect to this signal from Audio_Capture.v
@@ -60,7 +60,6 @@ module Top_Student (
     reg [11:0] mic_in_reg [0:`AVGNUM-1];
     wire rst;
     reg clk20k, clk100;
-    //wire [15:0] oled_data = {5'd0, 6'd0, mic_in[11:7]};
     reg [3:0] volume = 0;
     wire [15:0] ledout;
     assign led = sw[0] ? mic_in : ledout;
@@ -92,6 +91,10 @@ module Top_Student (
                               .rst(rst),
                               .CLK100MHZ(CLK100MHZ),
                               .num(volume),
+                              .border_on(sw[1]),
+                              .volume_bar_on(sw[2]),
+                              .other_on(sw[3]),
+                              .theme_sel(sw[5:4]),
                               .JB(JB) );
     
     SegDisp sd ( .en(1),
@@ -134,7 +137,7 @@ module Top_Student (
         volume <= volume_tmp[11:8];
     end*/
     wire ccccc;
-    Clk1p00hz c1p0 (CLK100MHZ, ccccc);
+    Clk2p00hz c2p0 (CLK100MHZ, ccccc);
     always @ (posedge ccccc)
         volume = volume + 1;
     

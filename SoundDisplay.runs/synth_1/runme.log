@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 21081 
+INFO: Helper process launched with PID 27969 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1264.133 ; gain = 79.844 ; free physical = 1974 ; free virtual = 12429
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1264.137 ; gain = 79.844 ; free physical = 950 ; free virtual = 11907
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:46]
 INFO: [Synth 8-6157] synthesizing module 'SPO' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SPO.v:42]
@@ -27,7 +27,15 @@ INFO: [Synth 8-6155] done synthesizing module 'My_Dff' (2#1) [/home/rochor/Deskt
 INFO: [Synth 8-6155] done synthesizing module 'SPO' (3#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SPO.v:42]
 INFO: [Synth 8-6157] synthesizing module 'Audio_Capture' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
 INFO: [Synth 8-6155] done synthesizing module 'Audio_Capture' (4#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
-INFO: [Synth 8-6157] synthesizing module 'OLed_Volume_Display' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v:23]
+INFO: [Synth 8-6157] synthesizing module 'OLed_Volume_Display' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v:40]
+WARNING: [Synth 8-567] referenced signal 'volume_bar_on' should be on the sensitivity list [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v:58]
+WARNING: [Synth 8-567] referenced signal 'border_on' should be on the sensitivity list [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v:58]
+WARNING: [Synth 8-567] referenced signal 'color_bd' should be on the sensitivity list [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v:101]
+WARNING: [Synth 8-567] referenced signal 'color_bg' should be on the sensitivity list [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v:101]
+WARNING: [Synth 8-567] referenced signal 'num' should be on the sensitivity list [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v:101]
+WARNING: [Synth 8-567] referenced signal 'color_volumebar_l' should be on the sensitivity list [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v:101]
+WARNING: [Synth 8-567] referenced signal 'color_volumebar_m' should be on the sensitivity list [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v:101]
+WARNING: [Synth 8-567] referenced signal 'color_volumebar_h' should be on the sensitivity list [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v:101]
 INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
 	Parameter Width bound to: 96 - type: integer 
 	Parameter Height bound to: 64 - type: integer 
@@ -83,9 +91,8 @@ INFO: [Synth 8-226] default block is never used [/home/rochor/Desktop/lolol/pgm/
 INFO: [Synth 8-226] default block is never used [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:201]
 WARNING: [Synth 8-693] zero replication count - replication ignored [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:349]
 INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (5#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
-WARNING: [Synth 8-689] width (1) of port connection 'pixel_index' does not match port width (13) of module 'Oled_Display' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v:108]
-WARNING: [Synth 8-689] width (1) of port connection 'teststate' does not match port width (5) of module 'Oled_Display' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v:117]
-INFO: [Synth 8-6155] done synthesizing module 'OLed_Volume_Display' (6#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'teststate' does not match port width (5) of module 'Oled_Display' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v:158]
+INFO: [Synth 8-6155] done synthesizing module 'OLed_Volume_Display' (6#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v:40]
 INFO: [Synth 8-6157] synthesizing module 'SegDisp' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SegDisp.v:92]
 INFO: [Synth 8-6157] synthesizing module 'Clk200p00hz' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SegDisp.v:61]
 INFO: [Synth 8-6155] done synthesizing module 'Clk200p00hz' (7#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SegDisp.v:61]
@@ -94,13 +101,14 @@ INFO: [Synth 8-6155] done synthesizing module 'NumToSeg' (8#1) [/home/rochor/Des
 INFO: [Synth 8-6155] done synthesizing module 'SegDisp' (9#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SegDisp.v:92]
 INFO: [Synth 8-6157] synthesizing module 'Led' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/led.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Led' (10#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/led.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Clk1p00hz' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:19]
-INFO: [Synth 8-6155] done synthesizing module 'Clk1p00hz' (11#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:19]
+INFO: [Synth 8-6157] synthesizing module 'Clk2p00hz' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'Clk2p00hz' (11#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:19]
 INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (12#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:46]
 WARNING: [Synth 8-3331] design OLed_Volume_Display has unconnected port JB[2]
 WARNING: [Synth 8-3331] design OLed_Volume_Display has unconnected port en
+WARNING: [Synth 8-3331] design OLed_Volume_Display has unconnected port other_on
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1308.758 ; gain = 124.469 ; free physical = 1983 ; free virtual = 12439
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1308.762 ; gain = 124.469 ; free physical = 957 ; free virtual = 11915
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -113,10 +121,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1308.758 ; gain = 124.469 ; free physical = 1983 ; free virtual = 12439
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1308.762 ; gain = 124.469 ; free physical = 959 ; free virtual = 11916
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1308.758 ; gain = 124.469 ; free physical = 1983 ; free virtual = 12439
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1308.762 ; gain = 124.469 ; free physical = 959 ; free virtual = 11916
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -132,34 +140,28 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1673.102 ; gain = 0.000 ; free physical = 1729 ; free virtual = 12185
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1666.105 ; gain = 0.000 ; free physical = 698 ; free virtual = 11656
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1673.102 ; gain = 488.812 ; free physical = 1812 ; free virtual = 12268
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1666.105 ; gain = 481.812 ; free physical = 780 ; free virtual = 11738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1673.102 ; gain = 488.812 ; free physical = 1812 ; free virtual = 12268
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1666.105 ; gain = 481.812 ; free physical = 780 ; free virtual = 11738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1673.102 ; gain = 488.812 ; free physical = 1814 ; free virtual = 12270
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1666.105 ; gain = 481.812 ; free physical = 782 ; free virtual = 11740
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "fsm_next_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "counter_20" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "counter_screen0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "counter_screen0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "counter_screen0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "counter_screen0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "counter_20" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "counter_screen0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "counter_10" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -198,8 +200,9 @@ INFO: [Synth 8-5545] ROM "counter_10" won't be mapped to RAM because address siz
                SendPixel | 00000000000000000010000000000000 |                            10000
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
+WARNING: [Synth 8-327] inferring latch for variable 'oled_data_reg' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v:103]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 1673.102 ; gain = 488.812 ; free physical = 1802 ; free virtual = 12259
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 1666.105 ; gain = 481.812 ; free physical = 771 ; free virtual = 11729
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -212,7 +215,7 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 6     
+	   2 Input     32 Bit       Adders := 2     
 	   2 Input     27 Bit       Adders := 1     
 	   2 Input     20 Bit       Adders := 2     
 	   2 Input     17 Bit       Adders := 1     
@@ -221,11 +224,10 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit       Adders := 1     
 +---Registers : 
 	               40 Bit    Registers := 1     
-	               32 Bit    Registers := 3     
+	               32 Bit    Registers := 2     
 	               27 Bit    Registers := 1     
 	               20 Bit    Registers := 2     
 	               17 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
 	               12 Bit    Registers := 2     
 	                6 Bit    Registers := 1     
 	                4 Bit    Registers := 3     
@@ -233,15 +235,20 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     40 Bit        Muxes := 3     
 	  32 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 8     
+	   2 Input     32 Bit        Muxes := 4     
 	   2 Input     27 Bit        Muxes := 1     
 	   2 Input     20 Bit        Muxes := 2     
 	  32 Input     20 Bit        Muxes := 1     
 	   2 Input     17 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 2     
-	   3 Input     16 Bit        Muxes := 10    
-	   7 Input     11 Bit        Muxes := 1     
-	  12 Input     11 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 31    
+	   5 Input     16 Bit        Muxes := 2     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 7     
+	   5 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 1     
+	   4 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 1     
 	  32 Input      6 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
@@ -250,7 +257,7 @@ Detailed RTL Component Info :
 	   3 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
 	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -311,17 +318,22 @@ Detailed RTL Component Info :
 Module OLed_Volume_Display 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 5     
+	   2 Input     32 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 2     
-	               16 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 5     
-	   2 Input     16 Bit        Muxes := 1     
-	   3 Input     16 Bit        Muxes := 10    
-	   7 Input     11 Bit        Muxes := 1     
-	  12 Input     11 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 30    
+	   5 Input     16 Bit        Muxes := 2     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 7     
+	   5 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 1     
+	   4 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 Module Clk200p00hz 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -344,7 +356,7 @@ Detailed RTL Component Info :
 	   3 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
 	   4 Input      4 Bit        Muxes := 1     
-Module Clk1p00hz 
+Module Clk2p00hz 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     27 Bit       Adders := 1     
@@ -372,32 +384,17 @@ Warning: Parallel synthesis criteria is not met
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "counter_20" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "counter_screen0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "counter_10" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-3917] design Top_Student has port dp driven by constant 1
 WARNING: [Synth 8-3331] design OLed_Volume_Display has unconnected port JB[2]
 WARNING: [Synth 8-3331] design OLed_Volume_Display has unconnected port en
+WARNING: [Synth 8-3331] design OLed_Volume_Display has unconnected port other_on
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[2]
-INFO: [Synth 8-3886] merging instance 'ovd/oled_data_reg[0]' (FDRE) to 'ovd/oled_data_reg[1]'
-INFO: [Synth 8-3886] merging instance 'ovd/oled_data_reg[1]' (FDRE) to 'ovd/oled_data_reg[2]'
-INFO: [Synth 8-3886] merging instance 'ovd/oled_data_reg[2]' (FDRE) to 'ovd/oled_data_reg[3]'
-INFO: [Synth 8-3886] merging instance 'ovd/oled_data_reg[3]' (FDRE) to 'ovd/oled_data_reg[4]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (ovd/\oled_data_reg[4] )
-INFO: [Synth 8-3886] merging instance 'ovd/oled_data_reg[5]' (FDRE) to 'ovd/oled_data_reg[6]'
-INFO: [Synth 8-3886] merging instance 'ovd/oled_data_reg[6]' (FDRE) to 'ovd/oled_data_reg[7]'
-INFO: [Synth 8-3886] merging instance 'ovd/oled_data_reg[7]' (FDRE) to 'ovd/oled_data_reg[8]'
-INFO: [Synth 8-3886] merging instance 'ovd/oled_data_reg[8]' (FDRE) to 'ovd/oled_data_reg[9]'
-INFO: [Synth 8-3886] merging instance 'ovd/oled_data_reg[9]' (FDRE) to 'ovd/oled_data_reg[10]'
-INFO: [Synth 8-3886] merging instance 'ovd/oled_data_reg[11]' (FDRE) to 'ovd/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'ovd/oled_data_reg[12]' (FDRE) to 'ovd/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'ovd/oled_data_reg[13]' (FDRE) to 'ovd/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'ovd/oled_data_reg[14]' (FDRE) to 'ovd/oled_data_reg[15]'
 INFO: [Synth 8-3886] merging instance 'sd/an_reg_reg[2]' (FD) to 'sd/an_reg_reg[3]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sd/an_reg_reg[3] )
-WARNING: [Synth 8-3332] Sequential element (oled_data_reg[4]) is unused and will be removed from module OLed_Volume_Display.
 WARNING: [Synth 8-3332] Sequential element (sd/an_reg_reg[3]) is unused and will be removed from module Top_Student.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 1673.102 ; gain = 488.812 ; free physical = 1775 ; free virtual = 12234
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 1666.105 ; gain = 481.812 ; free physical = 744 ; free virtual = 11708
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -409,13 +406,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1673.102 ; gain = 488.812 ; free physical = 1663 ; free virtual = 12119
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:33 . Memory (MB): peak = 1666.105 ; gain = 481.812 ; free physical = 626 ; free virtual = 11586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1673.102 ; gain = 488.812 ; free physical = 1661 ; free virtual = 12116
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:33 . Memory (MB): peak = 1666.105 ; gain = 481.812 ; free physical = 623 ; free virtual = 11584
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -426,8 +423,24 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (ovd/oled_data_reg[15]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (ovd/oled_data_reg[14]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (ovd/oled_data_reg[13]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (ovd/oled_data_reg[12]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (ovd/oled_data_reg[11]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (ovd/oled_data_reg[10]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (ovd/oled_data_reg[9]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (ovd/oled_data_reg[8]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (ovd/oled_data_reg[7]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (ovd/oled_data_reg[6]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (ovd/oled_data_reg[5]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (ovd/oled_data_reg[4]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (ovd/oled_data_reg[3]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (ovd/oled_data_reg[2]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (ovd/oled_data_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (ovd/oled_data_reg[0]) is unused and will be removed from module Top_Student.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 1673.102 ; gain = 488.812 ; free physical = 1656 ; free virtual = 12112
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 1666.105 ; gain = 481.812 ; free physical = 619 ; free virtual = 11580
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -451,7 +464,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1673.102 ; gain = 488.812 ; free physical = 1656 ; free virtual = 12111
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1666.105 ; gain = 481.812 ; free physical = 619 ; free virtual = 11580
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -464,7 +477,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1673.102 ; gain = 488.812 ; free physical = 1656 ; free virtual = 12111
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1666.105 ; gain = 481.812 ; free physical = 619 ; free virtual = 11580
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -476,25 +489,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1673.102 ; gain = 488.812 ; free physical = 1656 ; free virtual = 12112
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1666.105 ; gain = 481.812 ; free physical = 619 ; free virtual = 11580
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1673.102 ; gain = 488.812 ; free physical = 1656 ; free virtual = 12112
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1666.105 ; gain = 481.812 ; free physical = 619 ; free virtual = 11580
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1673.102 ; gain = 488.812 ; free physical = 1656 ; free virtual = 12112
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1666.105 ; gain = 481.812 ; free physical = 619 ; free virtual = 11580
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1673.102 ; gain = 488.812 ; free physical = 1656 ; free virtual = 12112
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1666.105 ; gain = 481.812 ; free physical = 619 ; free virtual = 11580
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -511,18 +524,18 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     2|
-|2     |CARRY4 |   344|
-|3     |LUT1   |   103|
-|4     |LUT2   |   416|
-|5     |LUT3   |   205|
-|6     |LUT4   |   390|
-|7     |LUT5   |   642|
-|8     |LUT6   |   213|
-|9     |FDRE   |   292|
+|2     |CARRY4 |    69|
+|3     |LUT1   |    76|
+|4     |LUT2   |   134|
+|5     |LUT3   |    78|
+|6     |LUT4   |   102|
+|7     |LUT5   |    84|
+|8     |LUT6   |   222|
+|9     |FDRE   |   258|
 |10    |FDRE_1 |    31|
 |11    |FDSE   |    11|
 |12    |FDSE_1 |     1|
-|13    |IBUF   |     4|
+|13    |IBUF   |     8|
 |14    |OBUF   |    37|
 |15    |OBUFT  |     1|
 +------+-------+------+
@@ -531,26 +544,26 @@ Report Instance Areas:
 +------+---------+--------------------+------+
 |      |Instance |Module              |Cells |
 +------+---------+--------------------+------+
-|1     |top      |                    |  2692|
+|1     |top      |                    |  1114|
 |2     |  ac     |Audio_Capture       |    77|
 |3     |  bl     |SPO                 |    39|
 |4     |    c1   |Clk100p0hz          |    35|
 |5     |    dff1 |My_Dff              |     2|
 |6     |    dff2 |My_Dff_0            |     2|
-|7     |  c1p0   |Clk1p00hz           |    46|
-|8     |  ovd    |OLed_Volume_Display |  2131|
-|9     |    od   |Oled_Display        |   288|
+|7     |  c2p0   |Clk2p00hz           |    46|
+|8     |  ovd    |OLed_Volume_Display |   732|
+|9     |    od   |Oled_Display        |   612|
 |10    |  sd     |SegDisp             |    54|
 |11    |    c200 |Clk200p00hz         |    35|
 +------+---------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1673.102 ; gain = 488.812 ; free physical = 1656 ; free virtual = 12112
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1666.105 ; gain = 481.812 ; free physical = 619 ; free virtual = 11580
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1673.102 ; gain = 124.469 ; free physical = 1709 ; free virtual = 12165
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1673.102 ; gain = 488.812 ; free physical = 1710 ; free virtual = 12166
+Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1666.105 ; gain = 124.469 ; free physical = 675 ; free virtual = 11636
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1666.105 ; gain = 481.812 ; free physical = 675 ; free virtual = 11636
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 380 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 109 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -560,11 +573,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDSE_1 => FDSE (inverted pins: C): 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-72 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+51 Infos, 36 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 1693.117 ; gain = 508.984 ; free physical = 1710 ; free virtual = 12165
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 1683.121 ; gain = 498.984 ; free physical = 671 ; free virtual = 11632
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1717.129 ; gain = 0.000 ; free physical = 1710 ; free virtual = 12167
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 24 20:12:35 2020...
+report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1707.133 ; gain = 0.000 ; free physical = 671 ; free virtual = 11632
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 24 23:59:11 2020...
