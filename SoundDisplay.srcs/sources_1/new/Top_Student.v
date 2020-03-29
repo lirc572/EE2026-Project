@@ -14,7 +14,6 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-`define AVGNUM 100
 
 module Clk2p00hz(
     input cin,
@@ -51,25 +50,17 @@ module Top_Student (
     output J_MIC3_Pin1,   // Connect to this signal from Audio_Capture.v
     output J_MIC3_Pin4,   // Connect to this signal from Audio_Capture.v
     output [15:0] led,
-    output [6:0] seg,
+    output [6:0]  seg,
     output dp,
     output [3:0] an,
     output [7:0] JB
     );
     wire [11:0] mic_in;
-    reg [11:0] mic_in_reg [0:`AVGNUM-1];
     wire rst;
     reg clk20k, clk100;
-    reg [3:0] volume = 0;
+    wire [3:0] volume;
     wire [15:0] ledout;
-    assign led = sw[0] ? mic_in : ledout;
-    
-    integer i;
-    initial begin
-        for (i=0; i<`AVGNUM; i=i+1) begin
-            mic_in_reg[i] = 'd0;
-        end
-    end
+    assign led = sw[0] ? {4'd0, mic_in} : ledout;
     
     integer counter_1 = 'd4999;
     always @ (posedge CLK100MHZ) begin
@@ -97,6 +88,10 @@ module Top_Student (
                               .theme_sel(sw[5:4]),
                               .JB(JB) );
     
+    Volume_Calc vc ( .SampleClk(CLK100MHZ),
+                     .mic_in(mic_in),
+                     .volume(volume) );
+    
     SegDisp sd ( .en(1),
                  .CLK100MHZ(CLK100MHZ),
                  .num(volume),
@@ -107,38 +102,11 @@ module Top_Student (
     Led ld ( .en(1),
              .num(volume),
              .leds(ledout) );
+    
     /*
-    integer j = 'd0;
-    always @ (mic_in) begin
-        mic_in_reg[j] <= mic_in;
-        j <= (j+1)<`AVGNUM ? j + 1 : 'd0;
-    end
-    
-    integer k;
-    reg [11:0] mic_in_max;
-    reg [11:0] volume_tmp = 'd0;
-    reg [11:0] mic_in_min;
-    always @ (mic_in) begin
-        if (j==0) begin
-            mic_in_min = 'd4095;
-            mic_in_max = 'd0;
-            for (k=0; k<`AVGNUM; k=k+1) begin
-                mic_in_max = mic_in_reg[k]>mic_in_max ? mic_in_reg[k] : mic_in_max;
-                mic_in_min = mic_in_reg[k]<mic_in_min ? mic_in_reg[k] : mic_in_min;
-            end
-            volume_tmp = mic_in_max-mic_in_min;
-        end
-    end
-    
-    wire ccccc;
-    Clk10p0hz c10p0 (CLK100MHZ, ccccc);
-    
-    always @ (posedge ccccc) begin //10 times a sec
-        volume <= volume_tmp[11:8];
-    end*/
     wire ccccc;
     Clk2p00hz c2p0 (CLK100MHZ, ccccc);
     always @ (posedge ccccc)
         volume = volume + 1;
-    
+    */
 endmodule

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Wed Mar 25 00:00:01 2020
+| Date         : Mon Mar 30 07:45:44 2020
 | Host         : rochor-Swift-SF315-51G running 64-bit Linux Mint 19.3 Tricia
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
@@ -23,7 +23,7 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    17 |
+| Number of unique control sets                            |    18 |
 | Unused register locations in slices containing registers |    28 |
 +----------------------------------------------------------+-------+
 
@@ -37,6 +37,7 @@ Table of Contents
 |      2 |            1 |
 |      4 |            1 |
 |      8 |            1 |
+|     12 |            1 |
 |     14 |            1 |
 |    16+ |           13 |
 +--------+--------------+
@@ -48,38 +49,39 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              92 |           20 |
+| No           | No                    | No                     |              80 |           16 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             408 |           66 |
-| Yes          | No                    | No                     |               0 |            0 |
+| No           | Yes                   | No                     |             420 |           67 |
+| Yes          | No                    | No                     |               8 |            2 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             104 |           13 |
+| Yes          | Yes                   | No                     |             128 |           17 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------+-------------------------+--------------------------------+------------------+----------------+
-|      Clock Signal     |      Enable Signal      |        Set/Reset Signal        | Slice Load Count | Bel Load Count |
-+-----------------------+-------------------------+--------------------------------+------------------+----------------+
-| ~clk6p25m             |                         |                                |                1 |              2 |
-|  bl/c1/cout           |                         |                                |                1 |              4 |
-|  c2p0/volume_reg[0]   |                         |                                |                1 |              8 |
-|  sd/c200/dig_curr_reg |                         |                                |                2 |             14 |
-|  CLK100MHZ_IBUF_BUFG  |                         |                                |                7 |             16 |
-|  CLK100MHZ_IBUF_BUFG  |                         | J_MIC3_Pin1_OBUF               |                3 |             24 |
-|  J_MIC3_Pin1_OBUF     |                         |                                |                4 |             24 |
-| ~ac/J_MIC3_Pin4_OBUF  |                         |                                |                4 |             24 |
-| ~clk6p25m             |                         | bl/dff1/rst                    |                4 |             34 |
-|  CLK100MHZ_IBUF_BUFG  |                         | sd/c200/counter[19]_i_1__0_n_0 |                6 |             40 |
-|  CLK100MHZ_IBUF_BUFG  |                         | bl/c1/counter[19]_i_1_n_0      |                6 |             40 |
-| ~clk6p25m             | ovd/od/delay[0]_i_1_n_0 | bl/dff1/rst                    |                5 |             40 |
-|  CLK100MHZ_IBUF_BUFG  |                         | c2p0/counter[26]_i_1_n_0       |                7 |             52 |
-|  CLK100MHZ_IBUF_BUFG  |                         | counter_1[31]_i_1_n_0          |                9 |             64 |
-|  CLK100MHZ_IBUF_BUFG  |                         | ovd/counter_2[31]_i_1_n_0      |                9 |             64 |
-| ~clk6p25m             | ovd/od/state            | bl/dff1/rst                    |                8 |             64 |
-| ~clk6p25m             |                         | ovd/od/spi_word[39]_i_1_n_0    |               22 |             90 |
-+-----------------------+-------------------------+--------------------------------+------------------+----------------+
++-----------------------+------------------------------+--------------------------------+------------------+----------------+
+|      Clock Signal     |         Enable Signal        |        Set/Reset Signal        | Slice Load Count | Bel Load Count |
++-----------------------+------------------------------+--------------------------------+------------------+----------------+
+| ~clk6p25m             |                              |                                |                1 |              2 |
+|  bl/c1/cout           |                              |                                |                1 |              4 |
+|  CLK100MHZ_IBUF_BUFG  | vc/volume_0                  |                                |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG  |                              |                                |                6 |             12 |
+|  sd/c200/dig_curr_reg |                              |                                |                2 |             14 |
+| ~ac/J_MIC3_Pin4_OBUF  |                              |                                |                3 |             24 |
+|  J_MIC3_Pin1_OBUF     |                              |                                |                3 |             24 |
+|  CLK100MHZ_IBUF_BUFG  | vc/tmp_max_vol0_carry__0_n_2 | vc/volume_0                    |                4 |             24 |
+|  CLK100MHZ_IBUF_BUFG  |                              | J_MIC3_Pin1_OBUF               |                3 |             24 |
+| ~clk6p25m             |                              | bl/dff1/rst                    |                3 |             34 |
+|  CLK100MHZ_IBUF_BUFG  |                              | bl/c1/counter[19]_i_1_n_0      |                6 |             40 |
+|  CLK100MHZ_IBUF_BUFG  |                              | sd/c200/counter[19]_i_1__0_n_0 |                6 |             40 |
+| ~clk6p25m             | ovd/od/delay[0]_i_1_n_0      | bl/dff1/rst                    |                5 |             40 |
+|  CLK100MHZ_IBUF_BUFG  |                              | vc/volume_0                    |                8 |             64 |
+|  CLK100MHZ_IBUF_BUFG  |                              | counter_1[31]_i_1_n_0          |                9 |             64 |
+| ~clk6p25m             | ovd/od/state                 | bl/dff1/rst                    |                8 |             64 |
+|  CLK100MHZ_IBUF_BUFG  |                              | ovd/counter_2[31]_i_1_n_0      |                9 |             64 |
+| ~clk6p25m             |                              | ovd/od/spi_word[39]_i_1_n_0    |               23 |             90 |
++-----------------------+------------------------------+--------------------------------+------------------+----------------+
 
 
