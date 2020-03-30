@@ -17,7 +17,7 @@
 
 module Bottom_Student (
     input  CLK100MHZ,
-    input  [5:0] sw,
+    input  [15:0] sw,
     input  btnC,
     input  btnU,
     input  btnL,
