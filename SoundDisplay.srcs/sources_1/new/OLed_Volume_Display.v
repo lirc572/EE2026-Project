@@ -39,14 +39,14 @@
 
 module OLed_Volume_Display(
     input en,
-    input rst,
     input CLK100MHZ,
     input [3:0] num,
     input border_on,       //done
     input volume_bar_on,   //done
     input other_on,                            //todo.....................
     input [1:0] theme_sel, //done
-    output [7:0] JB
+    output reg [15:0] oled_data = 'd0,
+    input [12:0] pixel_index
     );
     
     reg [15:0] color_volumebar_l;
@@ -88,16 +88,7 @@ module OLed_Volume_Display(
                   end
         endcase
     end
-
-    reg clk6p25m;
-    integer counter_2 = 'd15;
-    always @ (posedge CLK100MHZ) begin
-        counter_2 <= ( counter_2 == 0 )     ? 'd15     : counter_2 - 1;
-        clk6p25m  <= ( counter_2 <  8   )   ? 'd1      : 'd0;
-    end
     
-    reg [15:0] oled_data = 'd0;
-    wire [12:0] pixel_index;
     always @ (pixel_index) begin
         if (pixel_index<'d96 || pixel_index>'d6047 || pixel_index%96==0 || pixel_index%96==95) begin
             oled_data = color_bd;
@@ -139,22 +130,5 @@ module OLed_Volume_Display(
                 oled_data = num >= 15 ? color_volumebar_h  : color_bg;
         end
     end
-    
-    wire ha1, ha2, ha3, ha4;
-    Oled_Display  od ( .clk(clk6p25m),
-                       .reset(rst),
-                       .frame_begin(ha1),
-                       .sending_pixels(ha2),
-                       .sample_pixel(ha3),
-                       .pixel_index(pixel_index),
-                       .pixel_data(oled_data),
-                       .cs(JB[0]),
-                       .sdin(JB[1]),
-                       .sclk(JB[3]),
-                       .d_cn(JB[4]),
-                       .resn(JB[5]),
-                       .vccen(JB[6]),
-                       .pmoden(JB[7]),
-                       .teststate(ha4) );
     
 endmodule

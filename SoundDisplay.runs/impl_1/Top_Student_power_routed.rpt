@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Mon Mar 30 07:46:11 2020
+| Date             : Mon Mar 30 08:54:29 2020
 | Host             : rochor-Swift-SF315-51G running 64-bit Linux Mint 19.3 Tricia
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.127        |
+| Total On-Chip Power (W)  | 0.121        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.055        |
+| Dynamic (W)              | 0.050        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.4         |
@@ -52,17 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.003 |     1141 |       --- |             --- |
-|   LUT as Logic |     0.003 |      602 |     20800 |            2.89 |
-|   CARRY4       |    <0.001 |       72 |      8150 |            0.88 |
-|   Register     |    <0.001 |      318 |     41600 |            0.76 |
+| Clocks         |     0.003 |        3 |       --- |             --- |
+| Slice Logic    |     0.006 |     2825 |       --- |             --- |
+|   LUT as Logic |     0.005 |     1666 |     20800 |            8.01 |
+|   CARRY4       |    <0.001 |      141 |      8150 |            1.73 |
+|   Register     |    <0.001 |      709 |     41600 |            1.70 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       20 |       --- |             --- |
-| Signals        |     0.003 |      850 |       --- |             --- |
-| I/O            |     0.048 |       46 |       106 |           43.40 |
+|   F7/F8 Muxes  |    <0.001 |       32 |     32600 |            0.10 |
+|   Others       |     0.000 |       26 |       --- |             --- |
+| Signals        |     0.006 |     2404 |       --- |             --- |
+| I/O            |     0.034 |       47 |       106 |           44.34 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.127 |          |           |                 |
+| Total          |     0.121 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.018 |       0.008 |      0.010 |
-| Vccaux    |       1.800 |     0.014 |       0.002 |      0.013 |
-| Vcco33    |       3.300 |     0.014 |       0.013 |      0.001 |
+| Vccint    |       1.000 |     0.025 |       0.015 |      0.010 |
+| Vccaux    |       1.800 |     0.014 |       0.001 |      0.013 |
+| Vcco33    |       3.300 |     0.011 |       0.010 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -95,7 +96,7 @@ Table of Contents
 | User Input Data             | Confidence | Details                                                | Action                                                                                                             |
 +-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | Design implementation state | High       | Design is routed                                       |                                                                                                                    |
-| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification  | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
 | I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
 | Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
 | Device models               | High       | Device models are Production                           |                                                                                                                    |
@@ -138,20 +139,24 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-------------+-----------+
-| Name        | Power (W) |
-+-------------+-----------+
-| Top_Student |     0.055 |
-|   ac        |    <0.001 |
-|   bl        |    <0.001 |
-|     c1      |    <0.001 |
-|     dff1    |    <0.001 |
-|     dff2    |    <0.001 |
-|   ovd       |     0.004 |
-|     od      |     0.002 |
-|   sd        |    <0.001 |
-|     c200    |    <0.001 |
-|   vc        |    <0.001 |
-+-------------+-----------+
++------------------+-----------+
+| Name             | Power (W) |
++------------------+-----------+
+| Top_Student      |     0.050 |
+|   ac             |    <0.001 |
+|   bl             |    <0.001 |
+|     c1           |    <0.001 |
+|     dff1         |     0.000 |
+|     dff2         |     0.000 |
+|   control1       |     0.002 |
+|     ovd          |     0.001 |
+|     sd           |    <0.001 |
+|       c200       |    <0.001 |
+|   control2       |     0.008 |
+|     cpu_instance |     0.007 |
+|       iR         |    <0.001 |
+|   od             |     0.002 |
+|   vc             |    <0.001 |
++------------------+-----------+
 
 

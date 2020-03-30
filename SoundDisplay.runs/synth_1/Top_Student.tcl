@@ -34,11 +34,16 @@ set_property ip_output_repo /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/So
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Audio_Capture.v
+  /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Bottom_Student.v
+  /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/ArchDef.v
+  /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/CPU.v
+  /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/NECPU_Peripherals.v
   /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v
   /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v
   /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SPO.v
   /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/SegDisp.v
   /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Volume_Calc.v
+  /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/instRom.v
   /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/led.v
   /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v
 }
