@@ -55,7 +55,7 @@ module OLed_Volume_Display(
     reg [15:0] color_bg;
     reg [15:0] color_bd;
     
-    always @ (theme_sel) begin
+    always @ (theme_sel, volume_bar_on) begin
         case ( theme_sel )
             'd0 : begin
                       color_volumebar_l <= volume_bar_on ? `CTDefaultVolumeBarL : `CTDefaultBackground;

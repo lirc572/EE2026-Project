@@ -16,7 +16,7 @@
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
-// 
+//   The RAM's clock is twice as fast as the CPU's clock
 //////////////////////////////////////////////////////////////////////////////////
 
 
@@ -34,9 +34,23 @@ module NECPU_Peripherals(
     output reg [ 6:0] seg,       // MEM[2147483651][6:0]   (R/W)
     output reg dp,               // MEM[2147483651][7]     (R/W)
     output reg [3:0] an,         // MEM[2147483651][19:16] (R/W)
-    output reg [15:0] oled_data, // MEM[2147483652][15:0]  (R/W)
-    input [12:0] pixel_index     // MEM[2147483652][28:16] (Read Only)
+    output reg [15:0] oled_data, //
+    input [12:0] pixel_index     //
     );
+    
+    reg CLK50MHZ = 0;
+    
+    always @ (posedge CLK100MHZ) begin
+        CLK50MHZ = ~ CLK50MHZ;
+    end
+    
+    // MEM[214750000:2147506143][15:0]
+    reg [15:0] oled_buffer [0:6143];
+    
+    always @ (pixel_index) begin
+        oled_data <= oled_buffer[pixel_index];
+    end
+    
     
     wire cpu_write, cpu_read;
     wire [31:0] cpu_addr;
@@ -44,7 +58,7 @@ module NECPU_Peripherals(
     reg  [31:0] cpu_din;
     
     CPU cpu_instance (
-      .clk(CLK100MHZ),          // clock
+      .clk(CLK50MHZ),           // clock
       .rst(btnC),               // reset
       .write(cpu_write),        // CPU write request
       .read(cpu_read),          // CPU read request
@@ -59,6 +73,7 @@ module NECPU_Peripherals(
     wire [31:0] ram_dout;
     
     RAM ram (
+      .clk(CLK100MHZ),
       .address(ram_addr),
       .data_in(ram_din),
       .data_out(ram_dout),
@@ -69,8 +84,9 @@ module NECPU_Peripherals(
     // accessing ram if address within ram range
     assign ram_write = cpu_addr < 'd65536 ? cpu_write : 'b0;
     assign ram_read  = cpu_addr < 'd65536 ? cpu_write : 'b1;
+    assign ram_addr  = cpu_addr[15:0];
     
-    always @ (negedge CLK100MHZ) begin
+    always @ (negedge CLK50MHZ) begin
         cpu_din <= 32'hxxxxxxxx;
         if (cpu_addr < 'd65536) begin
             if (cpu_write) begin
@@ -104,11 +120,11 @@ module NECPU_Peripherals(
             end else if (cpu_read) begin
                 cpu_din <= {12'hxxx, an[3:0], 8'hxx, dp, seg[6:0]};
             end
-        end else if (cpu_addr == 'd2147483652) begin // {3'bxxx, pixel_index[12:0], oled_data[15:0]}
+        end else if (cpu_addr >= 'd2147500000 && cpu_addr <= 'd2147506143) begin // {16'hxxxx, oled_buffer[cpu_addr - 'd2147500000]}
             if (cpu_write) begin
-                oled_data <= cpu_dout[15:0];
+                oled_buffer[cpu_addr - 'd2147500000] <= cpu_dout[15:0];
             end else if (cpu_read) begin
-                cpu_din <= {3'bxxx, pixel_index[12:0], oled_data[15:0]};
+                cpu_din <= {16'hxxxx, oled_buffer[cpu_addr - 'd2147500000]};
             end
         end
     end
