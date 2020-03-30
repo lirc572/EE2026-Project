@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Mon Mar 30 22:07:16 2020
+| Date             : Mon Mar 30 23:33:07 2020
 | Host             : rochor-Swift-SF315-51G running 64-bit Linux Mint 19.3 Tricia
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.003 |        3 |       --- |             --- |
-| Slice Logic              |     0.007 |     8923 |       --- |             --- |
-|   LUT as Logic           |     0.005 |     2419 |     20800 |           11.63 |
+| Slice Logic              |     0.007 |     8925 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     2403 |     20800 |           11.55 |
 |   LUT as Distributed RAM |     0.001 |     3200 |      9600 |           33.33 |
 |   CARRY4                 |    <0.001 |      144 |      8150 |            1.77 |
 |   Register               |    <0.001 |      866 |     41600 |            2.08 |
 |   F7/F8 Muxes            |    <0.001 |     1952 |     32600 |            5.99 |
 |   BUFG                   |    <0.001 |        2 |        32 |            6.25 |
 |   Others                 |     0.000 |       25 |       --- |             --- |
-| Signals                  |     0.018 |     4648 |       --- |             --- |
+| Signals                  |     0.018 |     4636 |       --- |             --- |
 | I/O                      |     0.034 |       61 |       106 |           57.55 |
 | Static Power             |     0.072 |          |           |                 |
 | Total                    |     0.134 |          |           |                 |
@@ -153,10 +153,10 @@ Table of Contents
 |     ovd                             |     0.001 |
 |     sd                              |    <0.001 |
 |       c200                          |    <0.001 |
-|   control2                          |     0.013 |
+|   control2                          |     0.014 |
 |     cpu_instance                    |     0.009 |
 |     oled_buffer_reg_0_127_0_0       |    <0.001 |
-|     oled_buffer_reg_0_127_10_10     |    <0.001 |
+|     oled_buffer_reg_0_127_10_10     |     0.000 |
 |     oled_buffer_reg_0_127_11_11     |    <0.001 |
 |     oled_buffer_reg_0_127_12_12     |    <0.001 |
 |     oled_buffer_reg_0_127_13_13     |    <0.001 |
@@ -172,7 +172,7 @@ Table of Contents
 |     oled_buffer_reg_0_127_8_8       |    <0.001 |
 |     oled_buffer_reg_0_127_9_9       |    <0.001 |
 |     oled_buffer_reg_1024_1151_0_0   |    <0.001 |
-|     oled_buffer_reg_1024_1151_10_10 |    <0.001 |
+|     oled_buffer_reg_1024_1151_10_10 |     0.000 |
 |     oled_buffer_reg_1024_1151_11_11 |    <0.001 |
 |     oled_buffer_reg_1024_1151_12_12 |    <0.001 |
 |     oled_buffer_reg_1024_1151_13_13 |    <0.001 |
@@ -188,7 +188,7 @@ Table of Contents
 |     oled_buffer_reg_1024_1151_8_8   |    <0.001 |
 |     oled_buffer_reg_1024_1151_9_9   |    <0.001 |
 |     oled_buffer_reg_1152_1279_0_0   |    <0.001 |
-|     oled_buffer_reg_1152_1279_10_10 |    <0.001 |
+|     oled_buffer_reg_1152_1279_10_10 |     0.000 |
 |     oled_buffer_reg_1152_1279_11_11 |    <0.001 |
 |     oled_buffer_reg_1152_1279_12_12 |    <0.001 |
 |     oled_buffer_reg_1152_1279_13_13 |    <0.001 |
@@ -204,7 +204,7 @@ Table of Contents
 |     oled_buffer_reg_1152_1279_8_8   |    <0.001 |
 |     oled_buffer_reg_1152_1279_9_9   |    <0.001 |
 |     oled_buffer_reg_1280_1407_0_0   |    <0.001 |
-|     oled_buffer_reg_1280_1407_10_10 |    <0.001 |
+|     oled_buffer_reg_1280_1407_10_10 |     0.000 |
 |     oled_buffer_reg_1280_1407_11_11 |    <0.001 |
 |     oled_buffer_reg_1280_1407_12_12 |    <0.001 |
 |     oled_buffer_reg_1280_1407_13_13 |    <0.001 |
@@ -220,7 +220,7 @@ Table of Contents
 |     oled_buffer_reg_1280_1407_8_8   |    <0.001 |
 |     oled_buffer_reg_1280_1407_9_9   |    <0.001 |
 |     oled_buffer_reg_128_255_0_0     |    <0.001 |
-|     oled_buffer_reg_128_255_10_10   |    <0.001 |
+|     oled_buffer_reg_128_255_10_10   |     0.000 |
 |     oled_buffer_reg_128_255_11_11   |    <0.001 |
 |     oled_buffer_reg_128_255_12_12   |    <0.001 |
 |     oled_buffer_reg_128_255_13_13   |    <0.001 |
@@ -236,7 +236,7 @@ Table of Contents
 |     oled_buffer_reg_128_255_8_8     |    <0.001 |
 |     oled_buffer_reg_128_255_9_9     |    <0.001 |
 |     oled_buffer_reg_1408_1535_0_0   |    <0.001 |
-|     oled_buffer_reg_1408_1535_10_10 |    <0.001 |
+|     oled_buffer_reg_1408_1535_10_10 |     0.000 |
 |     oled_buffer_reg_1408_1535_11_11 |    <0.001 |
 |     oled_buffer_reg_1408_1535_12_12 |    <0.001 |
 |     oled_buffer_reg_1408_1535_13_13 |    <0.001 |
@@ -252,7 +252,7 @@ Table of Contents
 |     oled_buffer_reg_1408_1535_8_8   |    <0.001 |
 |     oled_buffer_reg_1408_1535_9_9   |    <0.001 |
 |     oled_buffer_reg_1536_1663_0_0   |    <0.001 |
-|     oled_buffer_reg_1536_1663_10_10 |    <0.001 |
+|     oled_buffer_reg_1536_1663_10_10 |     0.000 |
 |     oled_buffer_reg_1536_1663_11_11 |    <0.001 |
 |     oled_buffer_reg_1536_1663_12_12 |    <0.001 |
 |     oled_buffer_reg_1536_1663_13_13 |    <0.001 |
@@ -268,7 +268,7 @@ Table of Contents
 |     oled_buffer_reg_1536_1663_8_8   |    <0.001 |
 |     oled_buffer_reg_1536_1663_9_9   |    <0.001 |
 |     oled_buffer_reg_1664_1791_0_0   |    <0.001 |
-|     oled_buffer_reg_1664_1791_10_10 |    <0.001 |
+|     oled_buffer_reg_1664_1791_10_10 |     0.000 |
 |     oled_buffer_reg_1664_1791_11_11 |    <0.001 |
 |     oled_buffer_reg_1664_1791_12_12 |    <0.001 |
 |     oled_buffer_reg_1664_1791_13_13 |    <0.001 |
@@ -284,7 +284,7 @@ Table of Contents
 |     oled_buffer_reg_1664_1791_8_8   |    <0.001 |
 |     oled_buffer_reg_1664_1791_9_9   |    <0.001 |
 |     oled_buffer_reg_1792_1919_0_0   |    <0.001 |
-|     oled_buffer_reg_1792_1919_10_10 |    <0.001 |
+|     oled_buffer_reg_1792_1919_10_10 |     0.000 |
 |     oled_buffer_reg_1792_1919_11_11 |    <0.001 |
 |     oled_buffer_reg_1792_1919_12_12 |    <0.001 |
 |     oled_buffer_reg_1792_1919_13_13 |    <0.001 |
@@ -300,7 +300,7 @@ Table of Contents
 |     oled_buffer_reg_1792_1919_8_8   |    <0.001 |
 |     oled_buffer_reg_1792_1919_9_9   |    <0.001 |
 |     oled_buffer_reg_1920_2047_0_0   |    <0.001 |
-|     oled_buffer_reg_1920_2047_10_10 |    <0.001 |
+|     oled_buffer_reg_1920_2047_10_10 |     0.000 |
 |     oled_buffer_reg_1920_2047_11_11 |    <0.001 |
 |     oled_buffer_reg_1920_2047_12_12 |    <0.001 |
 |     oled_buffer_reg_1920_2047_13_13 |    <0.001 |
@@ -316,7 +316,7 @@ Table of Contents
 |     oled_buffer_reg_1920_2047_8_8   |    <0.001 |
 |     oled_buffer_reg_1920_2047_9_9   |    <0.001 |
 |     oled_buffer_reg_2048_2175_0_0   |    <0.001 |
-|     oled_buffer_reg_2048_2175_10_10 |    <0.001 |
+|     oled_buffer_reg_2048_2175_10_10 |     0.000 |
 |     oled_buffer_reg_2048_2175_11_11 |    <0.001 |
 |     oled_buffer_reg_2048_2175_12_12 |    <0.001 |
 |     oled_buffer_reg_2048_2175_13_13 |    <0.001 |
@@ -332,7 +332,7 @@ Table of Contents
 |     oled_buffer_reg_2048_2175_8_8   |    <0.001 |
 |     oled_buffer_reg_2048_2175_9_9   |    <0.001 |
 |     oled_buffer_reg_2176_2303_0_0   |    <0.001 |
-|     oled_buffer_reg_2176_2303_10_10 |    <0.001 |
+|     oled_buffer_reg_2176_2303_10_10 |     0.000 |
 |     oled_buffer_reg_2176_2303_11_11 |    <0.001 |
 |     oled_buffer_reg_2176_2303_12_12 |    <0.001 |
 |     oled_buffer_reg_2176_2303_13_13 |    <0.001 |
@@ -348,7 +348,7 @@ Table of Contents
 |     oled_buffer_reg_2176_2303_8_8   |    <0.001 |
 |     oled_buffer_reg_2176_2303_9_9   |    <0.001 |
 |     oled_buffer_reg_2304_2431_0_0   |    <0.001 |
-|     oled_buffer_reg_2304_2431_10_10 |    <0.001 |
+|     oled_buffer_reg_2304_2431_10_10 |     0.000 |
 |     oled_buffer_reg_2304_2431_11_11 |    <0.001 |
 |     oled_buffer_reg_2304_2431_12_12 |    <0.001 |
 |     oled_buffer_reg_2304_2431_13_13 |    <0.001 |
@@ -364,7 +364,7 @@ Table of Contents
 |     oled_buffer_reg_2304_2431_8_8   |    <0.001 |
 |     oled_buffer_reg_2304_2431_9_9   |    <0.001 |
 |     oled_buffer_reg_2432_2559_0_0   |    <0.001 |
-|     oled_buffer_reg_2432_2559_10_10 |    <0.001 |
+|     oled_buffer_reg_2432_2559_10_10 |     0.000 |
 |     oled_buffer_reg_2432_2559_11_11 |    <0.001 |
 |     oled_buffer_reg_2432_2559_12_12 |    <0.001 |
 |     oled_buffer_reg_2432_2559_13_13 |    <0.001 |
@@ -380,7 +380,7 @@ Table of Contents
 |     oled_buffer_reg_2432_2559_8_8   |    <0.001 |
 |     oled_buffer_reg_2432_2559_9_9   |    <0.001 |
 |     oled_buffer_reg_2560_2687_0_0   |    <0.001 |
-|     oled_buffer_reg_2560_2687_10_10 |    <0.001 |
+|     oled_buffer_reg_2560_2687_10_10 |     0.000 |
 |     oled_buffer_reg_2560_2687_11_11 |    <0.001 |
 |     oled_buffer_reg_2560_2687_12_12 |    <0.001 |
 |     oled_buffer_reg_2560_2687_13_13 |    <0.001 |
@@ -396,7 +396,7 @@ Table of Contents
 |     oled_buffer_reg_2560_2687_8_8   |    <0.001 |
 |     oled_buffer_reg_2560_2687_9_9   |    <0.001 |
 |     oled_buffer_reg_256_383_0_0     |    <0.001 |
-|     oled_buffer_reg_256_383_10_10   |    <0.001 |
+|     oled_buffer_reg_256_383_10_10   |     0.000 |
 |     oled_buffer_reg_256_383_11_11   |    <0.001 |
 |     oled_buffer_reg_256_383_12_12   |    <0.001 |
 |     oled_buffer_reg_256_383_13_13   |    <0.001 |
@@ -412,7 +412,7 @@ Table of Contents
 |     oled_buffer_reg_256_383_8_8     |    <0.001 |
 |     oled_buffer_reg_256_383_9_9     |    <0.001 |
 |     oled_buffer_reg_2688_2815_0_0   |    <0.001 |
-|     oled_buffer_reg_2688_2815_10_10 |    <0.001 |
+|     oled_buffer_reg_2688_2815_10_10 |     0.000 |
 |     oled_buffer_reg_2688_2815_11_11 |    <0.001 |
 |     oled_buffer_reg_2688_2815_12_12 |    <0.001 |
 |     oled_buffer_reg_2688_2815_13_13 |    <0.001 |
@@ -428,7 +428,7 @@ Table of Contents
 |     oled_buffer_reg_2688_2815_8_8   |    <0.001 |
 |     oled_buffer_reg_2688_2815_9_9   |    <0.001 |
 |     oled_buffer_reg_2816_2943_0_0   |    <0.001 |
-|     oled_buffer_reg_2816_2943_10_10 |    <0.001 |
+|     oled_buffer_reg_2816_2943_10_10 |     0.000 |
 |     oled_buffer_reg_2816_2943_11_11 |    <0.001 |
 |     oled_buffer_reg_2816_2943_12_12 |    <0.001 |
 |     oled_buffer_reg_2816_2943_13_13 |    <0.001 |
@@ -444,7 +444,7 @@ Table of Contents
 |     oled_buffer_reg_2816_2943_8_8   |    <0.001 |
 |     oled_buffer_reg_2816_2943_9_9   |    <0.001 |
 |     oled_buffer_reg_2944_3071_0_0   |    <0.001 |
-|     oled_buffer_reg_2944_3071_10_10 |    <0.001 |
+|     oled_buffer_reg_2944_3071_10_10 |     0.000 |
 |     oled_buffer_reg_2944_3071_11_11 |    <0.001 |
 |     oled_buffer_reg_2944_3071_12_12 |    <0.001 |
 |     oled_buffer_reg_2944_3071_13_13 |    <0.001 |
@@ -460,7 +460,7 @@ Table of Contents
 |     oled_buffer_reg_2944_3071_8_8   |    <0.001 |
 |     oled_buffer_reg_2944_3071_9_9   |    <0.001 |
 |     oled_buffer_reg_3072_3199_0_0   |    <0.001 |
-|     oled_buffer_reg_3072_3199_10_10 |    <0.001 |
+|     oled_buffer_reg_3072_3199_10_10 |     0.000 |
 |     oled_buffer_reg_3072_3199_11_11 |    <0.001 |
 |     oled_buffer_reg_3072_3199_12_12 |    <0.001 |
 |     oled_buffer_reg_3072_3199_13_13 |    <0.001 |
@@ -476,7 +476,7 @@ Table of Contents
 |     oled_buffer_reg_3072_3199_8_8   |    <0.001 |
 |     oled_buffer_reg_3072_3199_9_9   |    <0.001 |
 |     oled_buffer_reg_3200_3327_0_0   |    <0.001 |
-|     oled_buffer_reg_3200_3327_10_10 |    <0.001 |
+|     oled_buffer_reg_3200_3327_10_10 |     0.000 |
 |     oled_buffer_reg_3200_3327_11_11 |    <0.001 |
 |     oled_buffer_reg_3200_3327_12_12 |    <0.001 |
 |     oled_buffer_reg_3200_3327_13_13 |    <0.001 |
@@ -492,7 +492,7 @@ Table of Contents
 |     oled_buffer_reg_3200_3327_8_8   |    <0.001 |
 |     oled_buffer_reg_3200_3327_9_9   |    <0.001 |
 |     oled_buffer_reg_3328_3455_0_0   |    <0.001 |
-|     oled_buffer_reg_3328_3455_10_10 |    <0.001 |
+|     oled_buffer_reg_3328_3455_10_10 |     0.000 |
 |     oled_buffer_reg_3328_3455_11_11 |    <0.001 |
 |     oled_buffer_reg_3328_3455_12_12 |    <0.001 |
 |     oled_buffer_reg_3328_3455_13_13 |    <0.001 |
@@ -508,7 +508,7 @@ Table of Contents
 |     oled_buffer_reg_3328_3455_8_8   |    <0.001 |
 |     oled_buffer_reg_3328_3455_9_9   |    <0.001 |
 |     oled_buffer_reg_3456_3583_0_0   |    <0.001 |
-|     oled_buffer_reg_3456_3583_10_10 |    <0.001 |
+|     oled_buffer_reg_3456_3583_10_10 |     0.000 |
 |     oled_buffer_reg_3456_3583_11_11 |    <0.001 |
 |     oled_buffer_reg_3456_3583_12_12 |    <0.001 |
 |     oled_buffer_reg_3456_3583_13_13 |    <0.001 |
@@ -524,7 +524,7 @@ Table of Contents
 |     oled_buffer_reg_3456_3583_8_8   |    <0.001 |
 |     oled_buffer_reg_3456_3583_9_9   |    <0.001 |
 |     oled_buffer_reg_3584_3711_0_0   |    <0.001 |
-|     oled_buffer_reg_3584_3711_10_10 |    <0.001 |
+|     oled_buffer_reg_3584_3711_10_10 |     0.000 |
 |     oled_buffer_reg_3584_3711_11_11 |    <0.001 |
 |     oled_buffer_reg_3584_3711_12_12 |    <0.001 |
 |     oled_buffer_reg_3584_3711_13_13 |    <0.001 |
@@ -540,7 +540,7 @@ Table of Contents
 |     oled_buffer_reg_3584_3711_8_8   |    <0.001 |
 |     oled_buffer_reg_3584_3711_9_9   |    <0.001 |
 |     oled_buffer_reg_3712_3839_0_0   |    <0.001 |
-|     oled_buffer_reg_3712_3839_10_10 |    <0.001 |
+|     oled_buffer_reg_3712_3839_10_10 |     0.000 |
 |     oled_buffer_reg_3712_3839_11_11 |    <0.001 |
 |     oled_buffer_reg_3712_3839_12_12 |    <0.001 |
 |     oled_buffer_reg_3712_3839_13_13 |    <0.001 |
@@ -556,7 +556,7 @@ Table of Contents
 |     oled_buffer_reg_3712_3839_8_8   |    <0.001 |
 |     oled_buffer_reg_3712_3839_9_9   |    <0.001 |
 |     oled_buffer_reg_3840_3967_0_0   |    <0.001 |
-|     oled_buffer_reg_3840_3967_10_10 |    <0.001 |
+|     oled_buffer_reg_3840_3967_10_10 |     0.000 |
 |     oled_buffer_reg_3840_3967_11_11 |    <0.001 |
 |     oled_buffer_reg_3840_3967_12_12 |    <0.001 |
 |     oled_buffer_reg_3840_3967_13_13 |    <0.001 |
@@ -572,7 +572,7 @@ Table of Contents
 |     oled_buffer_reg_3840_3967_8_8   |    <0.001 |
 |     oled_buffer_reg_3840_3967_9_9   |    <0.001 |
 |     oled_buffer_reg_384_511_0_0     |    <0.001 |
-|     oled_buffer_reg_384_511_10_10   |    <0.001 |
+|     oled_buffer_reg_384_511_10_10   |     0.000 |
 |     oled_buffer_reg_384_511_11_11   |    <0.001 |
 |     oled_buffer_reg_384_511_12_12   |    <0.001 |
 |     oled_buffer_reg_384_511_13_13   |    <0.001 |
@@ -588,7 +588,7 @@ Table of Contents
 |     oled_buffer_reg_384_511_8_8     |    <0.001 |
 |     oled_buffer_reg_384_511_9_9     |    <0.001 |
 |     oled_buffer_reg_3968_4095_0_0   |    <0.001 |
-|     oled_buffer_reg_3968_4095_10_10 |    <0.001 |
+|     oled_buffer_reg_3968_4095_10_10 |     0.000 |
 |     oled_buffer_reg_3968_4095_11_11 |    <0.001 |
 |     oled_buffer_reg_3968_4095_12_12 |    <0.001 |
 |     oled_buffer_reg_3968_4095_13_13 |    <0.001 |
@@ -604,7 +604,7 @@ Table of Contents
 |     oled_buffer_reg_3968_4095_8_8   |    <0.001 |
 |     oled_buffer_reg_3968_4095_9_9   |    <0.001 |
 |     oled_buffer_reg_4096_4223_0_0   |    <0.001 |
-|     oled_buffer_reg_4096_4223_10_10 |    <0.001 |
+|     oled_buffer_reg_4096_4223_10_10 |     0.000 |
 |     oled_buffer_reg_4096_4223_11_11 |    <0.001 |
 |     oled_buffer_reg_4096_4223_12_12 |    <0.001 |
 |     oled_buffer_reg_4096_4223_13_13 |    <0.001 |
@@ -620,7 +620,7 @@ Table of Contents
 |     oled_buffer_reg_4096_4223_8_8   |    <0.001 |
 |     oled_buffer_reg_4096_4223_9_9   |    <0.001 |
 |     oled_buffer_reg_4224_4351_0_0   |    <0.001 |
-|     oled_buffer_reg_4224_4351_10_10 |    <0.001 |
+|     oled_buffer_reg_4224_4351_10_10 |     0.000 |
 |     oled_buffer_reg_4224_4351_11_11 |    <0.001 |
 |     oled_buffer_reg_4224_4351_12_12 |    <0.001 |
 |     oled_buffer_reg_4224_4351_13_13 |    <0.001 |
@@ -636,7 +636,7 @@ Table of Contents
 |     oled_buffer_reg_4224_4351_8_8   |    <0.001 |
 |     oled_buffer_reg_4224_4351_9_9   |    <0.001 |
 |     oled_buffer_reg_4352_4479_0_0   |    <0.001 |
-|     oled_buffer_reg_4352_4479_10_10 |    <0.001 |
+|     oled_buffer_reg_4352_4479_10_10 |     0.000 |
 |     oled_buffer_reg_4352_4479_11_11 |    <0.001 |
 |     oled_buffer_reg_4352_4479_12_12 |    <0.001 |
 |     oled_buffer_reg_4352_4479_13_13 |    <0.001 |
@@ -652,7 +652,7 @@ Table of Contents
 |     oled_buffer_reg_4352_4479_8_8   |    <0.001 |
 |     oled_buffer_reg_4352_4479_9_9   |    <0.001 |
 |     oled_buffer_reg_4480_4607_0_0   |    <0.001 |
-|     oled_buffer_reg_4480_4607_10_10 |    <0.001 |
+|     oled_buffer_reg_4480_4607_10_10 |     0.000 |
 |     oled_buffer_reg_4480_4607_11_11 |    <0.001 |
 |     oled_buffer_reg_4480_4607_12_12 |    <0.001 |
 |     oled_buffer_reg_4480_4607_13_13 |    <0.001 |
@@ -668,7 +668,7 @@ Table of Contents
 |     oled_buffer_reg_4480_4607_8_8   |    <0.001 |
 |     oled_buffer_reg_4480_4607_9_9   |    <0.001 |
 |     oled_buffer_reg_4608_4735_0_0   |    <0.001 |
-|     oled_buffer_reg_4608_4735_10_10 |    <0.001 |
+|     oled_buffer_reg_4608_4735_10_10 |     0.000 |
 |     oled_buffer_reg_4608_4735_11_11 |    <0.001 |
 |     oled_buffer_reg_4608_4735_12_12 |    <0.001 |
 |     oled_buffer_reg_4608_4735_13_13 |    <0.001 |
@@ -684,7 +684,7 @@ Table of Contents
 |     oled_buffer_reg_4608_4735_8_8   |    <0.001 |
 |     oled_buffer_reg_4608_4735_9_9   |    <0.001 |
 |     oled_buffer_reg_4736_4863_0_0   |    <0.001 |
-|     oled_buffer_reg_4736_4863_10_10 |    <0.001 |
+|     oled_buffer_reg_4736_4863_10_10 |     0.000 |
 |     oled_buffer_reg_4736_4863_11_11 |    <0.001 |
 |     oled_buffer_reg_4736_4863_12_12 |    <0.001 |
 |     oled_buffer_reg_4736_4863_13_13 |    <0.001 |
@@ -700,7 +700,7 @@ Table of Contents
 |     oled_buffer_reg_4736_4863_8_8   |    <0.001 |
 |     oled_buffer_reg_4736_4863_9_9   |    <0.001 |
 |     oled_buffer_reg_4864_4991_0_0   |    <0.001 |
-|     oled_buffer_reg_4864_4991_10_10 |    <0.001 |
+|     oled_buffer_reg_4864_4991_10_10 |     0.000 |
 |     oled_buffer_reg_4864_4991_11_11 |    <0.001 |
 |     oled_buffer_reg_4864_4991_12_12 |    <0.001 |
 |     oled_buffer_reg_4864_4991_13_13 |    <0.001 |
@@ -716,7 +716,7 @@ Table of Contents
 |     oled_buffer_reg_4864_4991_8_8   |    <0.001 |
 |     oled_buffer_reg_4864_4991_9_9   |    <0.001 |
 |     oled_buffer_reg_4992_5119_0_0   |    <0.001 |
-|     oled_buffer_reg_4992_5119_10_10 |    <0.001 |
+|     oled_buffer_reg_4992_5119_10_10 |     0.000 |
 |     oled_buffer_reg_4992_5119_11_11 |    <0.001 |
 |     oled_buffer_reg_4992_5119_12_12 |    <0.001 |
 |     oled_buffer_reg_4992_5119_13_13 |    <0.001 |
@@ -732,7 +732,7 @@ Table of Contents
 |     oled_buffer_reg_4992_5119_8_8   |    <0.001 |
 |     oled_buffer_reg_4992_5119_9_9   |    <0.001 |
 |     oled_buffer_reg_5120_5247_0_0   |    <0.001 |
-|     oled_buffer_reg_5120_5247_10_10 |    <0.001 |
+|     oled_buffer_reg_5120_5247_10_10 |     0.000 |
 |     oled_buffer_reg_5120_5247_11_11 |    <0.001 |
 |     oled_buffer_reg_5120_5247_12_12 |    <0.001 |
 |     oled_buffer_reg_5120_5247_13_13 |    <0.001 |
@@ -748,7 +748,7 @@ Table of Contents
 |     oled_buffer_reg_5120_5247_8_8   |    <0.001 |
 |     oled_buffer_reg_5120_5247_9_9   |    <0.001 |
 |     oled_buffer_reg_512_639_0_0     |    <0.001 |
-|     oled_buffer_reg_512_639_10_10   |    <0.001 |
+|     oled_buffer_reg_512_639_10_10   |     0.000 |
 |     oled_buffer_reg_512_639_11_11   |    <0.001 |
 |     oled_buffer_reg_512_639_12_12   |    <0.001 |
 |     oled_buffer_reg_512_639_13_13   |    <0.001 |
@@ -764,7 +764,7 @@ Table of Contents
 |     oled_buffer_reg_512_639_8_8     |    <0.001 |
 |     oled_buffer_reg_512_639_9_9     |    <0.001 |
 |     oled_buffer_reg_5248_5375_0_0   |    <0.001 |
-|     oled_buffer_reg_5248_5375_10_10 |    <0.001 |
+|     oled_buffer_reg_5248_5375_10_10 |     0.000 |
 |     oled_buffer_reg_5248_5375_11_11 |    <0.001 |
 |     oled_buffer_reg_5248_5375_12_12 |    <0.001 |
 |     oled_buffer_reg_5248_5375_13_13 |    <0.001 |
@@ -780,7 +780,7 @@ Table of Contents
 |     oled_buffer_reg_5248_5375_8_8   |    <0.001 |
 |     oled_buffer_reg_5248_5375_9_9   |    <0.001 |
 |     oled_buffer_reg_5376_5503_0_0   |    <0.001 |
-|     oled_buffer_reg_5376_5503_10_10 |    <0.001 |
+|     oled_buffer_reg_5376_5503_10_10 |     0.000 |
 |     oled_buffer_reg_5376_5503_11_11 |    <0.001 |
 |     oled_buffer_reg_5376_5503_12_12 |    <0.001 |
 |     oled_buffer_reg_5376_5503_13_13 |    <0.001 |
@@ -796,7 +796,7 @@ Table of Contents
 |     oled_buffer_reg_5376_5503_8_8   |    <0.001 |
 |     oled_buffer_reg_5376_5503_9_9   |    <0.001 |
 |     oled_buffer_reg_5504_5631_0_0   |    <0.001 |
-|     oled_buffer_reg_5504_5631_10_10 |    <0.001 |
+|     oled_buffer_reg_5504_5631_10_10 |     0.000 |
 |     oled_buffer_reg_5504_5631_11_11 |    <0.001 |
 |     oled_buffer_reg_5504_5631_12_12 |    <0.001 |
 |     oled_buffer_reg_5504_5631_13_13 |    <0.001 |
@@ -812,7 +812,7 @@ Table of Contents
 |     oled_buffer_reg_5504_5631_8_8   |    <0.001 |
 |     oled_buffer_reg_5504_5631_9_9   |    <0.001 |
 |     oled_buffer_reg_5632_5759_0_0   |    <0.001 |
-|     oled_buffer_reg_5632_5759_10_10 |    <0.001 |
+|     oled_buffer_reg_5632_5759_10_10 |     0.000 |
 |     oled_buffer_reg_5632_5759_11_11 |    <0.001 |
 |     oled_buffer_reg_5632_5759_12_12 |    <0.001 |
 |     oled_buffer_reg_5632_5759_13_13 |    <0.001 |
@@ -828,7 +828,7 @@ Table of Contents
 |     oled_buffer_reg_5632_5759_8_8   |    <0.001 |
 |     oled_buffer_reg_5632_5759_9_9   |    <0.001 |
 |     oled_buffer_reg_5760_5887_0_0   |    <0.001 |
-|     oled_buffer_reg_5760_5887_10_10 |    <0.001 |
+|     oled_buffer_reg_5760_5887_10_10 |     0.000 |
 |     oled_buffer_reg_5760_5887_11_11 |    <0.001 |
 |     oled_buffer_reg_5760_5887_12_12 |    <0.001 |
 |     oled_buffer_reg_5760_5887_13_13 |    <0.001 |
@@ -844,7 +844,7 @@ Table of Contents
 |     oled_buffer_reg_5760_5887_8_8   |    <0.001 |
 |     oled_buffer_reg_5760_5887_9_9   |    <0.001 |
 |     oled_buffer_reg_5888_6015_0_0   |    <0.001 |
-|     oled_buffer_reg_5888_6015_10_10 |    <0.001 |
+|     oled_buffer_reg_5888_6015_10_10 |     0.000 |
 |     oled_buffer_reg_5888_6015_11_11 |    <0.001 |
 |     oled_buffer_reg_5888_6015_12_12 |    <0.001 |
 |     oled_buffer_reg_5888_6015_13_13 |    <0.001 |
@@ -860,7 +860,7 @@ Table of Contents
 |     oled_buffer_reg_5888_6015_8_8   |    <0.001 |
 |     oled_buffer_reg_5888_6015_9_9   |    <0.001 |
 |     oled_buffer_reg_6016_6143_0_0   |    <0.001 |
-|     oled_buffer_reg_6016_6143_10_10 |    <0.001 |
+|     oled_buffer_reg_6016_6143_10_10 |     0.000 |
 |     oled_buffer_reg_6016_6143_11_11 |    <0.001 |
 |     oled_buffer_reg_6016_6143_12_12 |    <0.001 |
 |     oled_buffer_reg_6016_6143_13_13 |    <0.001 |
@@ -876,7 +876,7 @@ Table of Contents
 |     oled_buffer_reg_6016_6143_8_8   |    <0.001 |
 |     oled_buffer_reg_6016_6143_9_9   |    <0.001 |
 |     oled_buffer_reg_640_767_0_0     |    <0.001 |
-|     oled_buffer_reg_640_767_10_10   |    <0.001 |
+|     oled_buffer_reg_640_767_10_10   |     0.000 |
 |     oled_buffer_reg_640_767_11_11   |    <0.001 |
 |     oled_buffer_reg_640_767_12_12   |    <0.001 |
 |     oled_buffer_reg_640_767_13_13   |    <0.001 |
@@ -892,7 +892,7 @@ Table of Contents
 |     oled_buffer_reg_640_767_8_8     |    <0.001 |
 |     oled_buffer_reg_640_767_9_9     |    <0.001 |
 |     oled_buffer_reg_768_895_0_0     |    <0.001 |
-|     oled_buffer_reg_768_895_10_10   |    <0.001 |
+|     oled_buffer_reg_768_895_10_10   |     0.000 |
 |     oled_buffer_reg_768_895_11_11   |    <0.001 |
 |     oled_buffer_reg_768_895_12_12   |    <0.001 |
 |     oled_buffer_reg_768_895_13_13   |    <0.001 |
@@ -908,7 +908,7 @@ Table of Contents
 |     oled_buffer_reg_768_895_8_8     |    <0.001 |
 |     oled_buffer_reg_768_895_9_9     |    <0.001 |
 |     oled_buffer_reg_896_1023_0_0    |    <0.001 |
-|     oled_buffer_reg_896_1023_10_10  |    <0.001 |
+|     oled_buffer_reg_896_1023_10_10  |     0.000 |
 |     oled_buffer_reg_896_1023_11_11  |    <0.001 |
 |     oled_buffer_reg_896_1023_12_12  |    <0.001 |
 |     oled_buffer_reg_896_1023_13_13  |    <0.001 |

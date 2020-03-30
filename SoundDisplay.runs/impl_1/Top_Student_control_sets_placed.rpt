@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Mon Mar 30 22:06:43 2020
+| Date         : Mon Mar 30 23:32:13 2020
 | Host         : rochor-Swift-SF315-51G running 64-bit Linux Mint 19.3 Tricia
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
@@ -24,7 +24,7 @@ Table of Contents
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
 | Number of unique control sets                            |    93 |
-| Unused register locations in slices containing registers |    28 |
+| Unused register locations in slices containing registers |    36 |
 +----------------------------------------------------------+-------+
 
 
@@ -48,12 +48,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             154 |           34 |
+| No           | No                    | No                     |             154 |           29 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             420 |           67 |
-| Yes          | No                    | No                     |             358 |           91 |
+| No           | Yes                   | No                     |             420 |           63 |
+| Yes          | No                    | No                     |             362 |           83 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             800 |          173 |
+| Yes          | Yes                   | No                     |             796 |          153 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -65,96 +65,96 @@ Table of Contents
 +--------------------------------+-----------------------------------------------+-------------------------------------------+------------------+----------------+
 | ~clk6p25m_BUFG                 |                                               |                                           |                1 |              2 |
 |  bl/c1/cout                    |                                               |                                           |                1 |              4 |
-|  CLK50MHZ                      |                                               |                                           |                3 |              8 |
-|  CLK100MHZ_IBUF_BUFG           | vc/tmp_max_vol[11]_i_1_n_0                    |                                           |                1 |              8 |
+|  CLK50MHZ                      |                                               |                                           |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG           | vc/tmp_max_vol[11]_i_1_n_0                    |                                           |                2 |              8 |
 |  control1/sd/c200/dig_curr_reg |                                               |                                           |                2 |             14 |
 |  CLK100MHZ_IBUF_BUFG           |                                               |                                           |                7 |             14 |
-| ~CLK50MHZ                      | control2/cpu_instance/dp_reg[0]               |                                           |                4 |             24 |
+| ~CLK50MHZ                      | control2/cpu_instance/dp_reg[0]               |                                           |                7 |             24 |
 |  J_MIC3_Pin1_OBUF              |                                               |                                           |                2 |             24 |
 |  CLK100MHZ_IBUF_BUFG           | vc/tmp_max_vol0_carry__0_n_2                  | vc/tmp_max_vol[11]_i_1_n_0                |                4 |             24 |
 |  CLK100MHZ_IBUF_BUFG           |                                               | J_MIC3_Pin1_OBUF                          |                3 |             24 |
-| ~ac/J_MIC3_Pin4_OBUF           |                                               |                                           |                5 |             24 |
+| ~ac/J_MIC3_Pin4_OBUF           |                                               |                                           |                2 |             24 |
 |  CLK50MHZ                      | control2/cpu_instance/rf_data[1][31]_i_1_n_0  | btnC_IBUF                                 |                7 |             32 |
-|  CLK50MHZ                      | control2/cpu_instance/rf_data[31][31]_i_1_n_0 | btnC_IBUF                                 |                8 |             32 |
-|  CLK50MHZ                      | control2/cpu_instance/rf_data[31][15]_i_1_n_0 | btnC_IBUF                                 |               14 |             32 |
+|  CLK50MHZ                      | control2/cpu_instance/rf_data[31][31]_i_1_n_0 | btnC_IBUF                                 |               10 |             32 |
+|  CLK50MHZ                      | control2/cpu_instance/rf_data[31][15]_i_1_n_0 | btnC_IBUF                                 |                8 |             32 |
 |  CLK50MHZ                      | control2/cpu_instance/rf_data[30][31]_i_1_n_0 | btnC_IBUF                                 |                8 |             32 |
 |  CLK50MHZ                      | control2/cpu_instance/rf_data[30][15]_i_1_n_0 | btnC_IBUF                                 |                8 |             32 |
 |  CLK50MHZ                      | control2/cpu_instance/rf_data[2][31]_i_1_n_0  | btnC_IBUF                                 |                4 |             32 |
-|  CLK50MHZ                      | control2/cpu_instance/rf_data[2][15]_i_1_n_0  | btnC_IBUF                                 |                8 |             32 |
-|  CLK50MHZ                      | control2/cpu_instance/rf_data[29][31]_i_1_n_0 | btnC_IBUF                                 |                7 |             32 |
-|  CLK50MHZ                      | control2/cpu_instance/rf_data[29][15]_i_1_n_0 | btnC_IBUF                                 |                9 |             32 |
-|  CLK50MHZ                      | control2/cpu_instance/rf_data[28][31]_i_1_n_0 | btnC_IBUF                                 |                4 |             32 |
+|  CLK50MHZ                      | control2/cpu_instance/rf_data[2][15]_i_1_n_0  | btnC_IBUF                                 |                5 |             32 |
+|  CLK50MHZ                      | control2/cpu_instance/rf_data[29][31]_i_1_n_0 | btnC_IBUF                                 |                3 |             32 |
+|  CLK50MHZ                      | control2/cpu_instance/rf_data[29][15]_i_1_n_0 | btnC_IBUF                                 |                8 |             32 |
+|  CLK50MHZ                      | control2/cpu_instance/rf_data[28][31]_i_1_n_0 | btnC_IBUF                                 |                5 |             32 |
 |  CLK50MHZ                      | control2/cpu_instance/rf_data[28][15]_i_1_n_0 | btnC_IBUF                                 |                8 |             32 |
-|  CLK50MHZ                      | control2/cpu_instance/rf_data[1][15]_i_1_n_0  | btnC_IBUF                                 |                6 |             32 |
-|  CLK50MHZ                      | control2/cpu_instance/rf_data[0][31]_i_1_n_0  | btnC_IBUF                                 |                8 |             32 |
-|  CLK50MHZ                      | control2/cpu_instance/rf_data[0][15]_i_1_n_0  | btnC_IBUF                                 |                6 |             32 |
-|  CLK50MHZ                      | control2/cpu_instance/rf_data[3][15]_i_1_n_0  | btnC_IBUF                                 |                6 |             32 |
-|  CLK50MHZ                      | control2/cpu_instance/rf_data[3][31]_i_1_n_0  | btnC_IBUF                                 |                6 |             32 |
-| ~CLK50MHZ                      | control2/cpu_instance/led_reg[0][0]           |                                           |               13 |             32 |
-| ~clk6p25m_BUFG                 |                                               | bl/dff1/rst                               |                5 |             34 |
+|  CLK50MHZ                      | control2/cpu_instance/rf_data[1][15]_i_1_n_0  | btnC_IBUF                                 |                5 |             32 |
+|  CLK50MHZ                      | control2/cpu_instance/rf_data[0][31]_i_1_n_0  | btnC_IBUF                                 |                5 |             32 |
+|  CLK50MHZ                      | control2/cpu_instance/rf_data[0][15]_i_1_n_0  | btnC_IBUF                                 |                9 |             32 |
+|  CLK50MHZ                      | control2/cpu_instance/rf_data[3][15]_i_1_n_0  | btnC_IBUF                                 |                4 |             32 |
+|  CLK50MHZ                      | control2/cpu_instance/rf_data[3][31]_i_1_n_0  | btnC_IBUF                                 |                7 |             32 |
+| ~CLK50MHZ                      | control2/cpu_instance/led_reg[0][0]           |                                           |                8 |             32 |
+| ~clk6p25m_BUFG                 |                                               | bl/dff1/rst                               |                3 |             34 |
 | ~clk6p25m_BUFG                 | od/delay[0]_i_1_n_0                           | bl/dff1/rst                               |                5 |             40 |
 |  CLK100MHZ_IBUF_BUFG           |                                               | control1/sd/c200/counter[19]_i_1_n_0      |                6 |             40 |
 |  CLK100MHZ_IBUF_BUFG           |                                               | bl/c1/counter[19]_i_1__0_n_0              |                6 |             40 |
-|  CLK50MHZ                      | control2/cpu_instance/write_i_1_n_0           | control2/cpu_instance/address[31]_i_1_n_0 |               11 |             48 |
-|  CLK50MHZ                      | control2/cpu_instance/write_i_1_n_0           | control2/cpu_instance/dout[31]_i_1_n_0    |                8 |             48 |
-| ~CLK50MHZ                      | control2/cpu_instance/ram_din_reg[31][0]      |                                           |               15 |             64 |
-| ~clk6p25m_BUFG                 | od/state                                      | bl/dff1/rst                               |                9 |             64 |
+|  CLK50MHZ                      | control2/cpu_instance/write_i_1_n_0           | control2/cpu_instance/dout[31]_i_1_n_0    |                6 |             44 |
+|  CLK50MHZ                      | control2/cpu_instance/write_i_1_n_0           | control2/cpu_instance/address[31]_i_1_n_0 |                8 |             48 |
+| ~CLK50MHZ                      | control2/cpu_instance/ram_din_reg[31][0]      |                                           |               12 |             64 |
+| ~clk6p25m_BUFG                 | od/state                                      | bl/dff1/rst                               |                7 |             64 |
 |  CLK100MHZ_IBUF_BUFG           |                                               | vc/tmp_max_vol[11]_i_1_n_0                |                8 |             64 |
 |  CLK100MHZ_IBUF_BUFG           |                                               | counter_1[31]_i_1_n_0                     |                9 |             64 |
 |  CLK100MHZ_IBUF_BUFG           |                                               | counter_2[31]_i_1_n_0                     |                9 |             64 |
 | ~CLK100MHZ_IBUF_BUFG           | control2/cpu_instance/E[0]                    |                                           |                9 |             64 |
 |  CLK50MHZ                      | control2/cpu_instance/p_2_in                  | btnC_IBUF                                 |               19 |             64 |
-| ~CLK50MHZ                      |                                               |                                           |               13 |             64 |
-| ~clk6p25m_BUFG                 |                                               | od/spi_word[39]_i_1_n_0                   |               21 |             90 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_23      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_25      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_22      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_21      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_20      |                                           |               16 |            128 |
+| ~CLK50MHZ                      |                                               |                                           |               12 |             64 |
+| ~clk6p25m_BUFG                 |                                               | od/spi_word[39]_i_1_n_0                   |               19 |             90 |
 | ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_2       |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_21      |                                           |               16 |            128 |
 | ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_19      |                                           |               16 |            128 |
 | ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_18      |                                           |               16 |            128 |
 | ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_17      |                                           |               16 |            128 |
 | ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_16      |                                           |               16 |            128 |
 | ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_15      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_24      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_14      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_13      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_12      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_11      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_20      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_33      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_34      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_35      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_36      |                                           |               16 |            128 |
 | ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_37      |                                           |               16 |            128 |
 | ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_38      |                                           |               16 |            128 |
 | ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_39      |                                           |               16 |            128 |
 | ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_4       |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_32      |                                           |               16 |            128 |
 | ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_40      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_41      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_42      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_43      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_36      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_3       |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_7       |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_1       |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_45      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_23      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_24      |                                           |               16 |            128 |
 | ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_27      |                                           |               16 |            128 |
 | ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_28      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_3       |                                           |               16 |            128 |
 | ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_30      |                                           |               16 |            128 |
 | ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_31      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_33      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_34      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_35      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_46      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]         |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_0       |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_14      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_44      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_45      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_5       |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_6       |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_8       |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_42      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_7       |                                           |               16 |            128 |
 | ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_9       |                                           |               16 |            128 |
 | ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_26      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_29      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_32      |                                           |               16 |            128 |
 | ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_10      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_11      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_12      |                                           |               16 |            128 |
-| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_13      |                                           |               16 |            128 |
-|  CLK50MHZ                      | control2/cpu_instance/write_i_1_n_0           |                                           |               49 |            166 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_41      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_43      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_44      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_46      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_5       |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_8       |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_6       |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_22      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_25      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_29      |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]         |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_0       |                                           |               16 |            128 |
+| ~CLK50MHZ                      | control2/cpu_instance/cpu_din_reg[15]_1       |                                           |               16 |            128 |
+|  CLK50MHZ                      | control2/cpu_instance/write_i_1_n_0           |                                           |               45 |            170 |
 | ~CLK100MHZ_IBUF_BUFG           |                                               |                                           |               32 |            256 |
 +--------------------------------+-----------------------------------------------+-------------------------------------------+------------------+----------------+
 

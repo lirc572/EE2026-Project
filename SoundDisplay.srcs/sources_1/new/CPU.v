@@ -63,7 +63,7 @@ module CPU (
   
   reg [`InstAddrBus-1:0] PC;
   wire [`InstBusWidth-1:0] ir_inst;
-  instRom iR ( .address(PC), .inst(ir_inst) );  // program ROM
+  instMem iR ( .address(PC), .inst(ir_inst) );  // program ROM
   
   wire [5:0]  op;         // opcode
   wire [4:0]  rs;         // source reg

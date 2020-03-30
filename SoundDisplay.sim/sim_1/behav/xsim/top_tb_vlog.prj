@@ -1,0 +1,22 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../SoundDisplay.srcs/sources_1/new/Audio_Capture.v" \
+"../../../../SoundDisplay.srcs/sources_1/new/Bottom_Student.v" \
+"../../../../SoundDisplay.srcs/sources_1/new/CPU.v" \
+"../../../../SoundDisplay.srcs/sources_1/new/NECPU_Peripherals.v" \
+"../../../../SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v" \
+"../../../../SoundDisplay.srcs/sources_1/new/Oled_Display.v" \
+"../../../../SoundDisplay.srcs/sources_1/new/RAM.v" \
+"../../../../SoundDisplay.srcs/sources_1/new/SPO.v" \
+"../../../../SoundDisplay.srcs/sources_1/new/SegDisp.v" \
+"../../../../SoundDisplay.srcs/sources_1/new/Top_Student.v" \
+"../../../../SoundDisplay.srcs/sources_1/new/Volume_Calc.v" \
+"../../../../SoundDisplay.srcs/sources_1/new/instRom.v" \
+"../../../../SoundDisplay.srcs/sources_1/new/led.v" \
+"../../../../SoundDisplay.srcs/sim_1/new/top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
