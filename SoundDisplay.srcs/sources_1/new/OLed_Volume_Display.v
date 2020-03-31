@@ -55,7 +55,7 @@ module OLed_Volume_Display(
     reg [15:0] color_bg;
     reg [15:0] color_bd;
     
-    always @ (theme_sel, volume_bar_on) begin
+    always @ (theme_sel, volume_bar_on, border_on) begin
         case ( theme_sel )
             'd0 : begin
                       color_volumebar_l <= volume_bar_on ? `CTDefaultVolumeBarL : `CTDefaultBackground;
@@ -89,7 +89,7 @@ module OLed_Volume_Display(
         endcase
     end
     
-    always @ (pixel_index) begin
+    always @ (pixel_index, color_bd, color_bg, num, color_volumebar_l, color_volumebar_m, color_volumebar_h) begin
         if (pixel_index<'d96 || pixel_index>'d6047 || pixel_index%96==0 || pixel_index%96==95) begin
             oled_data = color_bd;
         end else if ((pixel_index % 96 < 30) || (65 < pixel_index % 96)) begin

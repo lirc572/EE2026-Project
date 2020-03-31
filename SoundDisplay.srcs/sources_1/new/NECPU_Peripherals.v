@@ -40,9 +40,19 @@ module NECPU_Peripherals(
     
     reg CLK50MHZ = 0;
     
-    always @ (posedge CLK100MHZ) begin
-        CLK50MHZ = ~ CLK50MHZ;
+    initial begin //so that 7-seg display does not light up at the start...
+        seg <= 'b1111111;
+        dp  <= 'b1;
+        an  <= 'b1111;
     end
+    
+    always @ (posedge CLK100MHZ)
+        CLK50MHZ = ~ CLK50MHZ;
+    
+    reg CLK25MHZ = 0;
+    
+    always @ (posedge CLK50MHZ)
+        CLK25MHZ = ~ CLK25MHZ;
     
     // MEM[214750000:2147506143][15:0]
     reg [15:0] oled_buffer [0:6143];
@@ -58,7 +68,7 @@ module NECPU_Peripherals(
     reg  [31:0] cpu_din;
     
     CPU cpu_instance (
-      .clk(CLK50MHZ),           // clock
+      .clk(CLK25MHZ),           // clock
       .rst(btnC),               // reset
       .write(cpu_write),        // CPU write request
       .read(cpu_read),          // CPU read request
@@ -73,7 +83,7 @@ module NECPU_Peripherals(
     wire [31:0] ram_dout;
     
     RAM ram (
-      .clk(CLK100MHZ),
+      .clk(CLK50MHZ),
       .address(ram_addr),
       .data_in(ram_din),
       .data_out(ram_dout),
@@ -83,10 +93,10 @@ module NECPU_Peripherals(
     
     // accessing ram if address within ram range
     assign ram_write = cpu_addr < 'd65536 ? cpu_write : 'b0;
-    assign ram_read  = cpu_addr < 'd65536 ? cpu_write : 'b1;
+    assign ram_read  = cpu_addr < 'd65536 ? cpu_read  : 'b0;
     assign ram_addr  = cpu_addr[15:0];
     
-    always @ (negedge CLK50MHZ) begin
+    always @ (negedge CLK25MHZ) begin
         cpu_din <= 32'hxxxxxxxx;
         if (cpu_addr < 'd65536) begin
             if (cpu_write) begin

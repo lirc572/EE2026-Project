@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Tue Mar 31 13:25:18 2020
+| Date             : Tue Mar 31 20:17:23 2020
 | Host             : rochor-Swift-SF315-51G running 64-bit Linux Mint 19.3 Tricia
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.344        |
+| Total On-Chip Power (W)  | 0.132        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.272        |
-| Device Static (W)        | 0.072        |
+| Dynamic (W)              | 0.059        |
+| Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 83.3         |
-| Junction Temperature (C) | 26.7         |
+| Max Ambient (C)          | 84.3         |
+| Junction Temperature (C) | 25.7         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,19 +52,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.004 |        3 |       --- |             --- |
-| Slice Logic              |     0.104 |    14187 |       --- |             --- |
-|   LUT as Logic           |     0.101 |     7110 |     20800 |           34.18 |
-|   LUT as Distributed RAM |     0.002 |     3200 |      9600 |           33.33 |
-|   F7/F8 Muxes            |    <0.001 |     2213 |     32600 |            6.79 |
-|   CARRY4                 |    <0.001 |      144 |      8150 |            1.77 |
-|   Register               |    <0.001 |      963 |     41600 |            2.31 |
-|   BUFG                   |    <0.001 |        2 |        32 |            6.25 |
+| Clocks                   |     0.002 |        3 |       --- |             --- |
+| Slice Logic              |     0.007 |     9327 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     2692 |     20800 |           12.94 |
+|   LUT as Distributed RAM |     0.001 |     3072 |      9600 |           32.00 |
+|   CARRY4                 |    <0.001 |      143 |      8150 |            1.75 |
+|   Register               |    <0.001 |     1210 |     41600 |            2.91 |
+|   F7/F8 Muxes            |    <0.001 |     1824 |     32600 |            5.60 |
+|   BUFG                   |    <0.001 |        3 |        32 |            9.38 |
 |   Others                 |     0.000 |       27 |       --- |             --- |
-| Signals                  |     0.130 |     9277 |       --- |             --- |
+| Signals                  |     0.015 |     5310 |       --- |             --- |
+| Block RAM                |    <0.001 |       32 |        50 |           64.00 |
 | I/O                      |     0.034 |       61 |       106 |           57.55 |
-| Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.344 |          |           |                 |
+| Static Power             |     0.073 |          |           |                 |
+| Total                    |     0.132 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.248 |       0.238 |      0.010 |
+| Vccint    |       1.000 |     0.035 |       0.025 |      0.010 |
 | Vccaux    |       1.800 |     0.014 |       0.001 |      0.013 |
 | Vcco33    |       3.300 |     0.011 |       0.010 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -83,7 +84,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -143,7 +144,7 @@ Table of Contents
 +-------------------------------------+-----------+
 | Name                                | Power (W) |
 +-------------------------------------+-----------+
-| Top_Student                         |     0.272 |
+| Top_Student                         |     0.059 |
 |   ac                                |    <0.001 |
 |   bl                                |    <0.001 |
 |     c1                              |    <0.001 |
@@ -153,9 +154,9 @@ Table of Contents
 |     ovd                             |     0.001 |
 |     sd                              |    <0.001 |
 |       c200                          |    <0.001 |
-|   control2                          |     0.223 |
-|     cpu_instance                    |     0.218 |
-|       iR                            |     0.171 |
+|   control2                          |     0.009 |
+|     cpu_instance                    |     0.006 |
+|       iR                            |    <0.001 |
 |     oled_buffer_reg_0_127_0_0       |    <0.001 |
 |     oled_buffer_reg_0_127_10_10     |    <0.001 |
 |     oled_buffer_reg_0_127_11_11     |    <0.001 |
@@ -924,39 +925,7 @@ Table of Contents
 |     oled_buffer_reg_896_1023_7_7    |    <0.001 |
 |     oled_buffer_reg_896_1023_8_8    |    <0.001 |
 |     oled_buffer_reg_896_1023_9_9    |    <0.001 |
-|     ram                             |     0.002 |
-|       memory0_reg_13056_13311_0_0   |    <0.001 |
-|       memory0_reg_13056_13311_10_10 |    <0.001 |
-|       memory0_reg_13056_13311_11_11 |    <0.001 |
-|       memory0_reg_13056_13311_12_12 |    <0.001 |
-|       memory0_reg_13056_13311_13_13 |    <0.001 |
-|       memory0_reg_13056_13311_14_14 |    <0.001 |
-|       memory0_reg_13056_13311_15_15 |    <0.001 |
-|       memory0_reg_13056_13311_16_16 |    <0.001 |
-|       memory0_reg_13056_13311_17_17 |    <0.001 |
-|       memory0_reg_13056_13311_18_18 |    <0.001 |
-|       memory0_reg_13056_13311_19_19 |    <0.001 |
-|       memory0_reg_13056_13311_1_1   |    <0.001 |
-|       memory0_reg_13056_13311_20_20 |    <0.001 |
-|       memory0_reg_13056_13311_21_21 |    <0.001 |
-|       memory0_reg_13056_13311_22_22 |    <0.001 |
-|       memory0_reg_13056_13311_23_23 |    <0.001 |
-|       memory0_reg_13056_13311_24_24 |    <0.001 |
-|       memory0_reg_13056_13311_25_25 |    <0.001 |
-|       memory0_reg_13056_13311_26_26 |    <0.001 |
-|       memory0_reg_13056_13311_27_27 |    <0.001 |
-|       memory0_reg_13056_13311_28_28 |    <0.001 |
-|       memory0_reg_13056_13311_29_29 |    <0.001 |
-|       memory0_reg_13056_13311_2_2   |    <0.001 |
-|       memory0_reg_13056_13311_30_30 |    <0.001 |
-|       memory0_reg_13056_13311_31_31 |    <0.001 |
-|       memory0_reg_13056_13311_3_3   |    <0.001 |
-|       memory0_reg_13056_13311_4_4   |    <0.001 |
-|       memory0_reg_13056_13311_5_5   |    <0.001 |
-|       memory0_reg_13056_13311_6_6   |    <0.001 |
-|       memory0_reg_13056_13311_7_7   |    <0.001 |
-|       memory0_reg_13056_13311_8_8   |    <0.001 |
-|       memory0_reg_13056_13311_9_9   |    <0.001 |
+|     ram                             |    <0.001 |
 |   od                                |     0.008 |
 |   vc                                |     0.001 |
 +-------------------------------------+-----------+

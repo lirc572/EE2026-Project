@@ -29,13 +29,19 @@ module RAM(
     input  write
     );
     
-    reg [31:0] memory0 [0:65535];
+    reg [31:0] memory [0:32767];
+    
+    initial begin
+        memory[0] <= 16'b1010101010101010;
+        memory[1] <= 16'b0101010101010101;
+    end
+    
     
     always @ (negedge clk) begin //negedge!!!
         if (read)
-            data_out <= memory0[address[15:0]];
+            data_out <= memory[address[14:0]];
         else if (write)
-            memory0[address[15:0]] <= data_in;
+            memory[address[14:0]] <= data_in;
     end
     
 endmodule
