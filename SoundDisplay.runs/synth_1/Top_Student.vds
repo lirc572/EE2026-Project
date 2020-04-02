@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Apr  2 13:00:09 2020
-# Process ID: 23411
+# Start of session at: Thu Apr  2 22:51:47 2020
+# Process ID: 16870
 # Current directory: /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.runs/synth_1
 # Command line: vivado -log Top_Student.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
 # Log file: /home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.runs/synth_1/Top_Student.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23481 
+INFO: Helper process launched with PID 16884 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1276.133 ; gain = 91.844 ; free physical = 427 ; free virtual = 9659
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1278.129 ; gain = 93.844 ; free physical = 2819 ; free virtual = 11323
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
 INFO: [Synth 8-6157] synthesizing module 'Audio_Capture' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
@@ -134,6 +134,16 @@ WARNING: [Synth 8-6014] Unused sequential element CLK50MHZ_reg was removed.  [/h
 INFO: [Synth 8-6155] done synthesizing module 'NECPU_Peripherals' (16#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/NECPU_Peripherals.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (17#1) [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
 WARNING: [Synth 8-3331] design RAM has unconnected port address[15]
+WARNING: [Synth 8-3331] design RAM has unconnected port address[14]
+WARNING: [Synth 8-3331] design RAM has unconnected port address[13]
+WARNING: [Synth 8-3331] design RAM has unconnected port address[12]
+WARNING: [Synth 8-3331] design RAM has unconnected port address[11]
+WARNING: [Synth 8-3331] design RAM has unconnected port address[10]
+WARNING: [Synth 8-3331] design RAM has unconnected port address[9]
+WARNING: [Synth 8-3331] design RAM has unconnected port address[8]
+WARNING: [Synth 8-3331] design RAM has unconnected port address[7]
+WARNING: [Synth 8-3331] design RAM has unconnected port address[6]
+WARNING: [Synth 8-3331] design RAM has unconnected port address[5]
 WARNING: [Synth 8-3331] design OLed_Volume_Display has unconnected port en
 WARNING: [Synth 8-3331] design OLed_Volume_Display has unconnected port CLK100MHZ
 WARNING: [Synth 8-3331] design OLed_Volume_Display has unconnected port other_on
@@ -153,7 +163,7 @@ WARNING: [Synth 8-3331] design Bottom_Student has unconnected port btnR
 WARNING: [Synth 8-3331] design Bottom_Student has unconnected port btnD
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1417.922 ; gain = 233.633 ; free physical = 377 ; free virtual = 9614
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1421.965 ; gain = 237.680 ; free physical = 2764 ; free virtual = 11269
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -166,10 +176,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1417.922 ; gain = 233.633 ; free physical = 390 ; free virtual = 9628
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1421.965 ; gain = 237.680 ; free physical = 2779 ; free virtual = 11285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1417.922 ; gain = 233.633 ; free physical = 390 ; free virtual = 9628
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1421.965 ; gain = 237.680 ; free physical = 2779 ; free virtual = 11285
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -185,22 +195,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1745.383 ; gain = 0.000 ; free physical = 142 ; free virtual = 9345
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1756.902 ; gain = 0.000 ; free physical = 2496 ; free virtual = 11002
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 1745.383 ; gain = 561.094 ; free physical = 249 ; free virtual = 9453
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 1756.902 ; gain = 572.617 ; free physical = 2609 ; free virtual = 11116
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 1745.383 ; gain = 561.094 ; free physical = 249 ; free virtual = 9453
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 1756.902 ; gain = 572.617 ; free physical = 2609 ; free virtual = 11116
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 1745.383 ; gain = 561.094 ; free physical = 251 ; free virtual = 9455
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 1756.902 ; gain = 572.617 ; free physical = 2611 ; free virtual = 11118
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
@@ -348,17 +358,17 @@ INFO: [Synth 8-5545] ROM "counter_20" won't be mapped to RAM because address siz
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
 WARNING: [Synth 8-327] inferring latch for variable 'oled_data_reg' [/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.srcs/sources_1/new/OLed_Volume_Display.v:94]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:51 ; elapsed = 00:02:07 . Memory (MB): peak = 2525.789 ; gain = 1341.500 ; free physical = 982 ; free virtual = 9462
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:34 ; elapsed = 00:02:49 . Memory (MB): peak = 2943.168 ; gain = 1758.883 ; free physical = 2285 ; free virtual = 10842
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+-----------------------+------------+----------+
 |      |RTL Partition          |Replication |Instances |
 +------+-----------------------+------------+----------+
-|1     |muxpart__16            |           1|     93420|
-|2     |instMem__GB1           |           1|        48|
+|1     |muxpart__16            |           1|    119727|
+|2     |instMem__GB1           |           1|        47|
 |3     |CPU__GC0               |           1|     49582|
-|4     |NECPU_Peripherals__GC0 |           1|       545|
+|4     |NECPU_Peripherals__GC0 |           1|       514|
 |5     |Top_Student__GC0       |           1|      8636|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -390,15 +400,15 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 4     
 	                1 Bit    Registers := 15    
 +---RAMs : 
-	            1024K Bit         RAMs := 1     
 	              96K Bit         RAMs := 1     
+	             1024 Bit         RAMs := 1     
 +---Muxes : 
 	   2 Input     40 Bit        Muxes := 3     
 	   2 Input     32 Bit        Muxes := 137   
 	   4 Input     32 Bit        Muxes := 66    
 	  23 Input     32 Bit        Muxes := 32    
 	  32 Input     32 Bit        Muxes := 1     
-	26122 Input     31 Bit        Muxes := 1     
+	36679 Input     31 Bit        Muxes := 1     
 	   2 Input     31 Bit        Muxes := 1     
 	   2 Input     20 Bit        Muxes := 3     
 	  32 Input     20 Bit        Muxes := 1     
@@ -448,7 +458,7 @@ Detailed RTL Component Info :
 Module instMem 
 Detailed RTL Component Info : 
 +---Muxes : 
-	26122 Input     31 Bit        Muxes := 1     
+	36679 Input     31 Bit        Muxes := 1     
 	   2 Input     31 Bit        Muxes := 1     
 Module CPU 
 Detailed RTL Component Info : 
@@ -475,7 +485,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	               32 Bit    Registers := 1     
 +---RAMs : 
-	            1024K Bit         RAMs := 1     
+	             1024 Bit         RAMs := 1     
 Module NECPU_Peripherals 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -622,140 +632,8 @@ INFO: [Synth 8-5545] ROM "counter_20" won't be mapped to RAM because address siz
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[2]
 INFO: [Synth 8-3886] merging instance 'i_0/control1/sd/an_reg_reg[2]' (FD) to 'i_0/control1/sd/an_reg_reg[3]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_0/\control1/sd/an_reg_reg[3] )
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/writereg_reg[2]' (FDE) to 'cpu_instancei_2/writereg_reg[3]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[27][0]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][0]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[26][0]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][0]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[25][0]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][0]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[24][0]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][0]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[20][0]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][0]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[23][0]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][0]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[22][0]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][0]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[11][0]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][0]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[10][0]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][0]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[9][0]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][0]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[8][0]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][0]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[4][0]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][0]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[7][0]' (FDRE) to 'cpu_instancei_2/rf_data_reg[6][0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[6][0] )
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[20][1]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][1]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[23][1]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][1]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[22][1]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][1]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[27][1]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][1]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[26][1]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][1]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[25][1]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][1]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[24][1]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][1]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[11][1]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][1]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[10][1]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][1]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[9][1]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][1]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[8][1]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][1]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[4][1]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][1]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[7][1]' (FDRE) to 'cpu_instancei_2/rf_data_reg[6][1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[6][1] )
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[20][2]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][2]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[23][2]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][2]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[22][2]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][2]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[27][2]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][2]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[26][2]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][2]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[25][2]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][2]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[24][2]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][2]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[4][2]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][2]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[7][2]' (FDRE) to 'cpu_instancei_2/rf_data_reg[9][2]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[6][2]' (FDRE) to 'cpu_instancei_2/rf_data_reg[9][2]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[11][2]' (FDRE) to 'cpu_instancei_2/rf_data_reg[9][2]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[10][2]' (FDRE) to 'cpu_instancei_2/rf_data_reg[9][2]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[9][2]' (FDRE) to 'cpu_instancei_2/rf_data_reg[8][2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[8][2] )
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[20][3]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][3]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[23][3]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][3]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[22][3]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][3]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[27][3]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][3]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[26][3]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][3]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[25][3]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][3]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[24][3]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][3]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[4][3]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][3]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[7][3]' (FDRE) to 'cpu_instancei_2/rf_data_reg[9][3]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[6][3]' (FDRE) to 'cpu_instancei_2/rf_data_reg[9][3]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[11][3]' (FDRE) to 'cpu_instancei_2/rf_data_reg[9][3]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[10][3]' (FDRE) to 'cpu_instancei_2/rf_data_reg[9][3]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[9][3]' (FDRE) to 'cpu_instancei_2/rf_data_reg[8][3]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[8][3] )
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[11][4]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][4]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[10][4]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][4]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[9][4]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][4]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[8][4]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][4]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[7][4]' (FDRE) to 'cpu_instancei_2/rf_data_reg[23][4]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[6][4]' (FDRE) to 'cpu_instancei_2/rf_data_reg[23][4]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[4][4]' (FDRE) to 'cpu_instancei_2/rf_data_reg[23][4]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[27][4]' (FDRE) to 'cpu_instancei_2/rf_data_reg[23][4]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[26][4]' (FDRE) to 'cpu_instancei_2/rf_data_reg[23][4]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[25][4]' (FDRE) to 'cpu_instancei_2/rf_data_reg[23][4]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[24][4]' (FDRE) to 'cpu_instancei_2/rf_data_reg[23][4]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[23][4]' (FDRE) to 'cpu_instancei_2/rf_data_reg[22][4]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[22][4]' (FDRE) to 'cpu_instancei_2/rf_data_reg[20][4]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[20][4] )
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[20][5]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][5]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[23][5]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][5]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[22][5]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][5]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[27][5]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][5]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[26][5]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][5]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[25][5]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][5]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[24][5]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][5]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[4][5]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][5]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[7][5]' (FDRE) to 'cpu_instancei_2/rf_data_reg[9][5]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[6][5]' (FDRE) to 'cpu_instancei_2/rf_data_reg[9][5]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[11][5]' (FDRE) to 'cpu_instancei_2/rf_data_reg[9][5]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[10][5]' (FDRE) to 'cpu_instancei_2/rf_data_reg[9][5]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[9][5]' (FDRE) to 'cpu_instancei_2/rf_data_reg[8][5]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[8][5] )
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[20][6]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][6]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[23][6]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][6]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[22][6]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][6]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[27][6]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][6]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[26][6]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][6]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[25][6]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][6]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[24][6]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][6]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[4][6]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][6]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[7][6]' (FDRE) to 'cpu_instancei_2/rf_data_reg[9][6]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[6][6]' (FDRE) to 'cpu_instancei_2/rf_data_reg[9][6]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[11][6]' (FDRE) to 'cpu_instancei_2/rf_data_reg[9][6]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[10][6]' (FDRE) to 'cpu_instancei_2/rf_data_reg[9][6]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[9][6]' (FDRE) to 'cpu_instancei_2/rf_data_reg[8][6]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[8][6] )
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[20][7]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][7]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[23][7]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][7]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[22][7]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][7]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[27][7]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][7]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[26][7]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][7]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[25][7]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][7]'
-INFO: [Synth 8-3886] merging instance 'cpu_instancei_2/rf_data_reg[24][7]' (FDRE) to 'cpu_instancei_2/rf_data_reg[7][7]'
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[8][7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[6][8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[8][9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[6][10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[6][11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[8][12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[6][13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[8][14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[6][15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[6][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[8][17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[6][18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[8][19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[6][20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[6][21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[8][22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[8][23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[8][24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[8][25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[8][26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[8][27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[8][28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[6][29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[6][30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_instancei_2/\rf_data_reg[8][31] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:08 ; elapsed = 00:05:30 . Memory (MB): peak = 2923.391 ; gain = 1739.102 ; free physical = 1174 ; free virtual = 9420
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:06:31 ; elapsed = 00:06:48 . Memory (MB): peak = 3418.168 ; gain = 2233.883 ; free physical = 2376 ; free virtual = 10968
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -765,7 +643,7 @@ ROM:
 +------------+------------+---------------+----------------+
 |Module Name | RTL Object | Depth x Width | Implemented As | 
 +------------+------------+---------------+----------------+
-|Top_Student | inst       | 32768x31      | LUT            | 
+|Top_Student | inst       | 65536x31      | LUT            | 
 +------------+------------+---------------+----------------+
 
 
@@ -773,7 +651,7 @@ Block RAM: Preliminary Mapping  Report (see note below)
 +------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|RAM:        | memory_reg | 32 K x 32(READ_FIRST)  | W |   | 32 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 32     | 
+|RAM:        | memory_reg | 32 x 32(READ_FIRST)    | W |   | 32 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
 +------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
@@ -789,60 +667,29 @@ Note: The table above is a preliminary report that shows the Distributed RAMs at
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_4 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_5 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_6 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_7 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_8 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_9 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_10 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_11 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_12 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_13 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_14 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_15 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_16 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_17 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_18 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_19 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_20 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_21 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_22 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_23 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_24 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_25 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_26 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_27 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_28 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_29 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_30 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg_0_31 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance control2i_3/i_1/ram/memory_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 
 Report RTL Partitions: 
 +------+-----------------------+------------+----------+
 |      |RTL Partition          |Replication |Instances |
 +------+-----------------------+------------+----------+
-|1     |muxpart__16            |           1|     12408|
-|2     |instMem__GB1           |           1|        45|
-|3     |CPU__GC0               |           1|      5055|
-|4     |NECPU_Peripherals__GC0 |           1|      2821|
+|1     |muxpart__16            |           1|     16861|
+|2     |instMem__GB1           |           1|        46|
+|3     |CPU__GC0               |           1|      6990|
+|4     |NECPU_Peripherals__GC0 |           1|      2790|
 |5     |Top_Student__GC0       |           1|      2614|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:16 ; elapsed = 00:05:42 . Memory (MB): peak = 2923.391 ; gain = 1739.102 ; free physical = 1031 ; free virtual = 9307
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:38 ; elapsed = 00:06:58 . Memory (MB): peak = 3418.168 ; gain = 2233.883 ; free physical = 2266 ; free virtual = 10859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:05:56 ; elapsed = 00:06:23 . Memory (MB): peak = 2923.391 ; gain = 1739.102 ; free physical = 950 ; free virtual = 9230
+Finished Timing Optimization : Time (s): cpu = 00:07:14 ; elapsed = 00:07:34 . Memory (MB): peak = 3418.168 ; gain = 2233.883 ; free physical = 2149 ; free virtual = 10744
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -852,7 +699,7 @@ Block RAM: Final Mapping  Report
 +------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|RAM:        | memory_reg | 32 K x 32(READ_FIRST)  | W |   | 32 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 32     | 
+|RAM:        | memory_reg | 32 x 32(READ_FIRST)    | W |   | 32 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
 +------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 
@@ -871,111 +718,32 @@ Report RTL Partitions:
 +------+-----------------------+------------+----------+
 |      |RTL Partition          |Replication |Instances |
 +------+-----------------------+------------+----------+
-|1     |NECPU_Peripherals__GC0 |           1|      2821|
+|1     |NECPU_Peripherals__GC0 |           1|      2790|
 |2     |Top_Student__GC0       |           1|      2614|
-|3     |Top_Student_GT0        |           1|     17508|
+|3     |Top_Student_GT0        |           1|     23790|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[19][21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[19][18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[19][7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[19][14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control2/cpu_instance/rf_data_reg[15][15] )
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[19][21]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[19][18]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[19][7]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[19][14]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][24]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][23]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][26]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][25]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][28]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][27]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][30]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][29]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][20]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][22]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][31]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][10]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][16]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][17]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][19]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][0]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][1]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][2]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][3]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][4]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][5]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][6]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][8]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][9]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][11]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][12]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][13]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/rf_data_reg[15][15]) is unused and will be removed from module Top_Student.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_4 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_5 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_6 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_7 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_8 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_9 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_10 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_11 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_12 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_13 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_14 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_15 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_16 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_17 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_18 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_19 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_20 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_21 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_22 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_23 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_24 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_25 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_26 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_27 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_28 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_29 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_30 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg_0_31 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+WARNING: [Synth 8-3332] Sequential element (control1/ovd/oled_data_reg[15]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (control1/ovd/oled_data_reg[14]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (control1/ovd/oled_data_reg[13]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (control1/ovd/oled_data_reg[12]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (control1/ovd/oled_data_reg[11]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (control1/ovd/oled_data_reg[10]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (control1/ovd/oled_data_reg[9]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (control1/ovd/oled_data_reg[8]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (control1/ovd/oled_data_reg[7]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (control1/ovd/oled_data_reg[6]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (control1/ovd/oled_data_reg[5]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (control1/ovd/oled_data_reg[4]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (control1/ovd/oled_data_reg[3]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (control1/ovd/oled_data_reg[2]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (control1/ovd/oled_data_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (control1/ovd/oled_data_reg[0]) is unused and will be removed from module Top_Student.
+INFO: [Synth 8-4480] The timing for the instance control2/ram/memory_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:06:14 ; elapsed = 00:06:41 . Memory (MB): peak = 2923.391 ; gain = 1739.102 ; free physical = 1024 ; free virtual = 9305
+Finished Technology Mapping : Time (s): cpu = 00:07:21 ; elapsed = 00:07:41 . Memory (MB): peak = 3418.168 ; gain = 2233.883 ; free physical = 2266 ; free virtual = 10860
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -995,41 +763,11 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6064] Net \control2/cpu_instance/address_reg[4]_rep_n_0  is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_instance/address_reg[6]_rep_n_0  is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_instance/address_reg[7]_rep_n_0  is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_instance/address_reg[8]_rep_n_0  is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_instance/address_reg[9]_rep_n_0  is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_instance/address_reg[10]_rep_n_0  is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_instance/address_reg[11]_rep_n_0  is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_instance/address_reg[12]_rep_n_0  is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net n_0_8937 is driving 128 big block pins (URAM, BRAM and DSP loads). Created 13 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_instance/address_reg[2]_rep__14_n_0  is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_instance/address_reg[3]_rep__14_n_0  is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_addr [0] is driving 40 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_addr [1] is driving 40 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_instance/address_reg[2]_rep__15_n_0  is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_instance/address_reg[3]_rep__15_n_0  is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_addr [4] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_addr [5] is driving 36 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_addr [6] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_addr [7] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_addr [8] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_addr [9] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_addr [10] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_addr [11] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_addr [12] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_addr [13] is driving 64 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/cpu_addr [14] is driving 64 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/ram_read  is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-INFO: [Synth 8-6064] Net \control2/ram_write  is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/address_reg[3]_rep__15) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (control2/cpu_instance/address_reg[2]_rep__15) is unused and will be removed from module Top_Student.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:06:17 ; elapsed = 00:06:44 . Memory (MB): peak = 2923.391 ; gain = 1739.102 ; free physical = 1022 ; free virtual = 9306
+Finished IO Insertion : Time (s): cpu = 00:07:25 ; elapsed = 00:07:46 . Memory (MB): peak = 3418.168 ; gain = 2233.883 ; free physical = 2261 ; free virtual = 10855
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1042,7 +780,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:06:17 ; elapsed = 00:06:45 . Memory (MB): peak = 2923.391 ; gain = 1739.102 ; free physical = 1022 ; free virtual = 9306
+Finished Renaming Generated Instances : Time (s): cpu = 00:07:25 ; elapsed = 00:07:46 . Memory (MB): peak = 3418.168 ; gain = 2233.883 ; free physical = 2261 ; free virtual = 10855
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1054,25 +792,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:18 ; elapsed = 00:06:46 . Memory (MB): peak = 2923.391 ; gain = 1739.102 ; free physical = 1021 ; free virtual = 9306
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:26 ; elapsed = 00:07:47 . Memory (MB): peak = 3418.168 ; gain = 2233.883 ; free physical = 2266 ; free virtual = 10861
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:06:18 ; elapsed = 00:06:46 . Memory (MB): peak = 2923.391 ; gain = 1739.102 ; free physical = 1021 ; free virtual = 9306
+Finished Renaming Generated Ports : Time (s): cpu = 00:07:26 ; elapsed = 00:07:47 . Memory (MB): peak = 3418.168 ; gain = 2233.883 ; free physical = 2266 ; free virtual = 10861
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:06:19 ; elapsed = 00:06:47 . Memory (MB): peak = 2923.391 ; gain = 1739.102 ; free physical = 1021 ; free virtual = 9307
+Finished Handling Custom Attributes : Time (s): cpu = 00:07:28 ; elapsed = 00:07:49 . Memory (MB): peak = 3418.168 ; gain = 2233.883 ; free physical = 2265 ; free virtual = 10860
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:06:19 ; elapsed = 00:06:47 . Memory (MB): peak = 2923.391 ; gain = 1739.102 ; free physical = 1021 ; free virtual = 9307
+Finished Renaming Generated Nets : Time (s): cpu = 00:07:28 ; elapsed = 00:07:49 . Memory (MB): peak = 3418.168 ; gain = 2233.883 ; free physical = 2265 ; free virtual = 10860
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1085,106 +823,74 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+------------+------+
-|      |Cell        |Count |
-+------+------------+------+
-|1     |BUFG        |     2|
-|2     |CARRY4      |   144|
-|3     |LUT1        |   229|
-|4     |LUT2        |   451|
-|5     |LUT3        |   322|
-|6     |LUT4        |   476|
-|7     |LUT5        |  1680|
-|8     |LUT6        |  4836|
-|9     |MUXF7       |   955|
-|10    |MUXF8       |   182|
-|11    |RAM128X1D   |   768|
-|12    |RAMB36E1    |     1|
-|13    |RAMB36E1_1  |     1|
-|14    |RAMB36E1_10 |     1|
-|15    |RAMB36E1_11 |     1|
-|16    |RAMB36E1_12 |     1|
-|17    |RAMB36E1_13 |     1|
-|18    |RAMB36E1_14 |     1|
-|19    |RAMB36E1_15 |     1|
-|20    |RAMB36E1_16 |     1|
-|21    |RAMB36E1_17 |     1|
-|22    |RAMB36E1_18 |     1|
-|23    |RAMB36E1_19 |     1|
-|24    |RAMB36E1_2  |     1|
-|25    |RAMB36E1_20 |     1|
-|26    |RAMB36E1_21 |     1|
-|27    |RAMB36E1_22 |     1|
-|28    |RAMB36E1_23 |     1|
-|29    |RAMB36E1_24 |     1|
-|30    |RAMB36E1_25 |     1|
-|31    |RAMB36E1_26 |     1|
-|32    |RAMB36E1_27 |     1|
-|33    |RAMB36E1_28 |     1|
-|34    |RAMB36E1_29 |     1|
-|35    |RAMB36E1_3  |     1|
-|36    |RAMB36E1_30 |     1|
-|37    |RAMB36E1_31 |     1|
-|38    |RAMB36E1_4  |     1|
-|39    |RAMB36E1_5  |     1|
-|40    |RAMB36E1_6  |     1|
-|41    |RAMB36E1_7  |     1|
-|42    |RAMB36E1_8  |     1|
-|43    |RAMB36E1_9  |     1|
-|44    |FDRE        |  1030|
-|45    |FDRE_1      |    31|
-|46    |FDSE        |    19|
-|47    |FDSE_1      |     1|
-|48    |LD          |    16|
-|49    |IBUF        |    23|
-|50    |OBUF        |    37|
-|51    |OBUFT       |     1|
-+------+------------+------+
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     2|
+|2     |CARRY4    |   144|
+|3     |LUT1      |   128|
+|4     |LUT2      |   453|
+|5     |LUT3      |   751|
+|6     |LUT4      |   533|
+|7     |LUT5      |  1651|
+|8     |LUT6      |  6905|
+|9     |MUXF7     |  1453|
+|10    |MUXF8     |   279|
+|11    |RAM128X1D |   768|
+|12    |RAMB18E1  |     1|
+|13    |FDRE      |  1706|
+|14    |FDRE_1    |    31|
+|15    |FDSE      |    19|
+|16    |FDSE_1    |     1|
+|17    |IBUF      |    23|
+|18    |OBUF      |    37|
+|19    |OBUFT     |     1|
++------+----------+------+
 
 Report Instance Areas: 
 +------+-----------------+--------------------+------+
 |      |Instance         |Module              |Cells |
 +------+-----------------+--------------------+------+
-|1     |top              |                    | 11235|
+|1     |top              |                    | 14886|
 |2     |  ac             |Audio_Capture       |    71|
 |3     |  bl             |SPO                 |    39|
 |4     |    c1           |Clk100p0hz          |    35|
 |5     |    dff1         |My_Dff              |     2|
 |6     |    dff2         |My_Dff_0            |     2|
-|7     |  control1       |Bottom_Student      |   184|
-|8     |    ovd          |OLed_Volume_Display |   132|
+|7     |  control1       |Bottom_Student      |   162|
+|8     |    ovd          |OLed_Volume_Display |   110|
 |9     |    sd           |SegDisp             |    52|
 |10    |      c200       |Clk200p00hz         |    35|
-|11    |  control2       |NECPU_Peripherals   |  9914|
-|12    |    cpu_instance |CPU                 |  8618|
-|13    |    ram          |RAM                 |    32|
-|14    |  od             |Oled_Display        |   566|
-|15    |  vc             |Volume_Calc         |   188|
+|11    |  control2       |NECPU_Peripherals   | 13576|
+|12    |    cpu_instance |CPU                 | 12358|
+|13    |    ram          |RAM                 |     1|
+|14    |  od             |Oled_Display        |   575|
+|15    |  vc             |Volume_Calc         |   191|
 +------+-----------------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:06:19 ; elapsed = 00:06:47 . Memory (MB): peak = 2923.391 ; gain = 1739.102 ; free physical = 1021 ; free virtual = 9308
+Finished Writing Synthesis Report : Time (s): cpu = 00:07:28 ; elapsed = 00:07:49 . Memory (MB): peak = 3418.168 ; gain = 2233.883 ; free physical = 2265 ; free virtual = 10860
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 36 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:06:08 ; elapsed = 00:06:25 . Memory (MB): peak = 2923.391 ; gain = 1411.641 ; free physical = 1074 ; free virtual = 9361
-Synthesis Optimization Complete : Time (s): cpu = 00:06:19 ; elapsed = 00:06:48 . Memory (MB): peak = 2923.398 ; gain = 1739.102 ; free physical = 1073 ; free virtual = 9363
+Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:07:17 ; elapsed = 00:07:27 . Memory (MB): peak = 3418.168 ; gain = 1898.945 ; free physical = 2318 ; free virtual = 10913
+Synthesis Optimization Complete : Time (s): cpu = 00:07:28 ; elapsed = 00:07:49 . Memory (MB): peak = 3418.176 ; gain = 2233.883 ; free physical = 2318 ; free virtual = 10913
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 2152 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 2700 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'Top_Student' is not ideal for floorplanning, since the cellview 'CPU' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 800 load pin(s).
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 769 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 816 instances were transformed.
+  A total of 800 instances were transformed.
   FDRE_1 => FDRE (inverted pins: C): 31 instances
   FDSE_1 => FDSE (inverted pins: C): 1 instances
-  LD => LDCE: 16 instances
   RAM128X1D => RAM128X1D (inverted pins: WCLK) (RAMD64E, RAMD64E, MUXF7, MUXF7, RAMD64E, RAMD64E): 768 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-419 Infos, 58 Warnings, 0 Critical Warnings and 0 Errors encountered.
+165 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:06:24 ; elapsed = 00:06:57 . Memory (MB): peak = 2955.406 ; gain = 1771.273 ; free physical = 1113 ; free virtual = 9451
+synth_design: Time (s): cpu = 00:07:33 ; elapsed = 00:07:53 . Memory (MB): peak = 3450.184 ; gain = 2266.055 ; free physical = 2381 ; free virtual = 10976
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/rochor/Desktop/lolol/pgm/FPGA/Xilinx/EE2026/SoundDisplay/SoundDisplay.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.99 . Memory (MB): peak = 2979.418 ; gain = 0.000 ; free physical = 1093 ; free virtual = 9455
-INFO: [Common 17-206] Exiting Vivado at Thu Apr  2 13:07:39 2020...
+report_utilization: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.27 . Memory (MB): peak = 3474.195 ; gain = 0.000 ; free physical = 2382 ; free virtual = 10979
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  2 22:59:51 2020...
