@@ -68,7 +68,7 @@ module NECPU_Peripherals(
     reg  [31:0] cpu_din;
     
     CPU cpu_instance (
-      .clk(CLK25MHZ),           // clock
+      .clk(CLK100MHZ),           // clock
       .rst(btnC),               // reset
       .write(cpu_write),        // CPU write request
       .read(cpu_read),          // CPU read request
@@ -83,7 +83,7 @@ module NECPU_Peripherals(
     wire [31:0] ram_dout;
     
     RAM ram (
-      .clk(CLK50MHZ),
+      .clk(CLK100MHZ),
       .address(ram_addr),
       .data_in(ram_din),
       .data_out(ram_dout),
@@ -96,7 +96,7 @@ module NECPU_Peripherals(
     assign ram_read  = cpu_addr < 'd65536 ? cpu_read  : 'b0;
     assign ram_addr  = cpu_addr[15:0];
     
-    always @ (negedge CLK25MHZ) begin
+    always @ (negedge CLK100MHZ) begin
         cpu_din <= 32'hxxxxxxxx;
         if (cpu_addr < 'd65536) begin
             if (cpu_write) begin

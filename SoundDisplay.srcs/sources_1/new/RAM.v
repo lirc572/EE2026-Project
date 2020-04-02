@@ -1,3 +1,4 @@
+
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
@@ -19,7 +20,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+//Only 32 words... because it cannot be used anyway...
 module RAM(
     input clk,
     input  [15:0] address,
@@ -29,19 +30,13 @@ module RAM(
     input  write
     );
     
-    reg [31:0] memory [0:32767];
-    
-    initial begin
-        memory[0] <= 16'b1010101010101010;
-        memory[1] <= 16'b0101010101010101;
-    end
-    
+    reg [31:0] memory [0:31];
     
     always @ (negedge clk) begin //negedge!!!
         if (read)
-            data_out <= memory[address[14:0]];
+            data_out <= memory[address[4:0]];
         else if (write)
-            memory[address[14:0]] <= data_in;
+            memory[address[4:0]] <= data_in;
     end
     
 endmodule
