@@ -30,7 +30,8 @@ module Bottom_Student (
     output dp,
     output [3:0] an,
     output [15:0] oled_data,
-    input [12:0] pixel_index
+    input [12:0] pixel_index,
+    input next
     );
     wire [15:0] ledout;
     assign led = sw[0] ? {4'd0, mic_in} : ledout;
@@ -41,10 +42,12 @@ module Bottom_Student (
                               .num(volume),
                               .border_on(sw[1]),
                               .volume_bar_on(sw[2]),
-                              .other_on(sw[3]),
                               .theme_sel(sw[5:4]),
                               .oled_data(oled_data),
-                              .pixel_index(pixel_index) );
+                              .pixel_index(pixel_index),
+                              .freeze(sw[14]),
+                              .border_sel(sw[3]),
+                              .next(next) );
     
     SegDisp sd ( .en(1),
                  .CLK100MHZ(CLK100MHZ),

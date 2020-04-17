@@ -108,7 +108,8 @@ module Top_Student (
         .dp(dp_1),
         .an(an_1),
         .oled_data(oled_data_1),
-        .pixel_index(pixel_index)
+        .pixel_index(pixel_index),
+        .next(rst)
     );
     
     NECPU_Peripherals control2 (
